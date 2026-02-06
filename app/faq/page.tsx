@@ -51,12 +51,29 @@ export default function FAQ() {
   ]
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#050505] text-gray-200">
       {/* Header */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">Frequently Asked Questions</h1>
-          <p className="text-xl md:text-2xl text-slate-300 max-w-3xl leading-relaxed">
+      <header className="fixed top-0 w-full z-40 p-4 md:p-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5">
+        <a href="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 bg-white text-black flex items-center justify-center font-bold font-mono text-sm rounded-sm group-hover:scale-105 transition shadow-[0_0_15px_rgba(255,255,255,0.3)]">FE</div>
+          <div className="hidden md:block">
+            <div className="font-bold tracking-tight text-sm leading-none text-white">FIRST EPIC</div>
+            <div className="text-[10px] font-mono text-gray-400 tracking-widest uppercase mt-1">GLOBAL STUDIO</div>
+          </div>
+        </a>
+        <nav className="flex items-center gap-6">
+          <a href="/about" className="text-gray-400 hover:text-white transition text-sm">About</a>
+          <a href="/faq" className="text-white font-medium text-sm">FAQ</a>
+          <a href="/#contact" className="bg-white/10 border border-white/10 px-5 py-2 rounded-sm hover:bg-white hover:text-black transition text-sm font-mono">CONTACT</a>
+        </nav>
+      </header>
+
+      {/* Hero */}
+      <div className="pt-32 pb-20 border-b border-white/5">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// FAQ</div>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">Frequently Asked<br />Questions</h1>
+          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
             Everything you need to know about working with First Epic.
           </p>
         </div>
@@ -64,29 +81,29 @@ export default function FAQ() {
 
       {/* FAQs */}
       <div className="max-w-4xl mx-auto px-6 py-20 md:py-32">
-        <div className="space-y-10">
+        <div className="space-y-8">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b-2 border-slate-200 pb-10 last:border-b-0">
-              <h3 className="text-2xl font-bold mb-5 text-slate-900 flex items-start gap-4">
-                <span className="text-blue-600 flex-shrink-0 bg-blue-50 px-4 py-2 rounded-lg font-mono">Q{index + 1}</span>
+            <div key={index} className="border-b border-white/10 pb-8 last:border-b-0">
+              <h3 className="text-xl font-bold mb-4 text-white flex items-start gap-4">
+                <span className="text-blue-500 font-mono text-sm bg-blue-500/10 px-3 py-1 rounded flex-shrink-0">Q{String(index + 1).padStart(2, '0')}</span>
                 <span>{faq.question}</span>
               </h3>
-              <div className="pl-20">
-                <p className="text-lg text-slate-700 leading-relaxed">{faq.answer}</p>
+              <div className="pl-16">
+                <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="mt-20 bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-12 text-center shadow-md">
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-slate-900">Still have questions?</h3>
-          <p className="text-lg text-slate-700 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <div className="mt-20 bg-white/5 border border-white/10 rounded-xl p-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">Still have questions?</h3>
+          <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
             Book 30 minutes with Davis. Founder-to-founder.
           </p>
           <a 
             href="/#contact" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-10 py-4 rounded-xl text-lg transition-all hover:scale-105 shadow-lg"
+            className="inline-block bg-white text-black font-bold px-10 py-4 rounded-sm text-lg transition-all hover:scale-105"
           >
             Get in Touch
           </a>
@@ -94,11 +111,27 @@ export default function FAQ() {
 
         {/* Back to Home */}
         <div className="mt-12 text-center">
-          <a href="/" className="text-blue-600 hover:text-blue-700 font-semibold text-lg inline-flex items-center gap-2 transition-colors">
+          <a href="/" className="text-blue-400 hover:text-blue-300 font-semibold text-lg inline-flex items-center gap-2 transition-colors">
             <span>←</span> Back to Home
           </a>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="py-12 px-6 border-t border-white/5 bg-[#030303]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
+            <span className="text-gray-500 text-sm">Full-time embedded talent with adult supervision.</span>
+          </div>
+          <div className="flex gap-8 text-sm">
+            <a href="/about" className="text-gray-400 hover:text-white transition">About</a>
+            <a href="/faq" className="text-white font-medium">FAQ</a>
+            <a href="/#contact" className="text-gray-400 hover:text-white transition">Contact</a>
+          </div>
+          <div className="text-gray-600 text-xs font-mono">© 2026 First Epic</div>
+        </div>
+      </footer>
     </main>
   )
 }
