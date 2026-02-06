@@ -334,7 +334,7 @@ export default function Home() {
             )}
             <p className="text-gray-500 text-sm mt-6 text-center">
               Or connect on{' '}
-              <a href="https://linkedin.com/in/davisbrimer" className="text-blue-400 hover:text-blue-300 underline transition">
+              <a href="https://linkedin.com/in/davisbrimer" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline transition">
                 LinkedIn
               </a>
             </p>
