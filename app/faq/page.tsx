@@ -52,34 +52,50 @@ export default function FAQ() {
 
   return (
     <main className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <h1 className="text-5xl font-bold mb-8 text-slate-900">Frequently Asked Questions</h1>
-        
+      {/* Header */}
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white">
+        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">Frequently Asked Questions</h1>
+          <p className="text-xl md:text-2xl text-slate-300 max-w-3xl">
+            Everything you need to know about working with First Epic.
+          </p>
+        </div>
+      </div>
+
+      {/* FAQs */}
+      <div className="max-w-4xl mx-auto px-6 py-20 md:py-32">
         <div className="space-y-8">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-slate-200 pb-8">
-              <h3 className="text-2xl font-semibold mb-4 text-slate-900">{faq.question}</h3>
-              <p className="text-lg text-slate-700">{faq.answer}</p>
+            <div key={index} className="border-b border-slate-200 pb-8 last:border-b-0">
+              <h3 className="text-2xl font-bold mb-4 text-slate-900 flex items-start gap-3">
+                <span className="text-blue-600 flex-shrink-0">Q{index + 1}.</span>
+                <span>{faq.question}</span>
+              </h3>
+              <div className="pl-10">
+                <p className="text-lg text-slate-700 leading-relaxed">{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 p-8 bg-slate-50 rounded-lg border border-slate-200">
-          <h3 className="text-2xl font-bold mb-4 text-slate-900">Still have questions?</h3>
-          <p className="text-slate-700 mb-6">
+        {/* CTA */}
+        <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 border border-slate-200 rounded-2xl p-10 md:p-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">Still have questions?</h3>
+          <p className="text-lg text-slate-700 mb-8 max-w-2xl mx-auto">
             Book 30 minutes with Davis. Founder-to-founder.
           </p>
           <a 
             href="mailto:davis@firstepic.studio" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 shadow-lg"
           >
             Email Davis
           </a>
         </div>
 
-        <div className="mt-8 text-center">
-          <a href="/" className="text-blue-600 hover:text-blue-700 font-semibold">
-            ← Back to Home
+        {/* Back to Home */}
+        <div className="mt-12 text-center">
+          <a href="/" className="text-blue-600 hover:text-blue-700 font-semibold text-lg inline-flex items-center gap-2 transition-colors">
+            <span>←</span> Back to Home
           </a>
         </div>
       </div>
