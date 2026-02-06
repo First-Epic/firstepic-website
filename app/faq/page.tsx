@@ -2,35 +2,35 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How is this different from Upwork/Toptal/Arc/Turing?",
-      answer: "Upwork is freelancers juggling multiple clients. Toptal/Arc/Turing are marketplaces connecting you to individual contractors. First Epic provides a physical workspace with HR, IT, performance management, and daily oversight. Your talent is dedicated to you full-time, not splitting attention across projects."
+      answer: "Upwork is freelancers juggling multiple clients. Toptal/Arc/Turing are marketplaces connecting you to individual contractors. First Epic provides a physical workspace with HR, IT, career development, and professional oversight. Your talent is dedicated to you full-time, not splitting attention across projects."
     },
     {
       question: "Where is the talent located?",
-      answer: "We operate a physical studio in Islamabad/Rawalpindi with workspace, internet, IT support, HR, and daily supervision in a secure location. This gives you professional infrastructure with adult oversight - not random contractors working from coffee shops."
+      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi - a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not random contractors working from coffee shops."
     },
     {
       question: "Do you offer managed services?",
-      answer: "No. We provide embedded talent who work as part of your remote team. You manage the work day-to-day (Slack, Jira, your workflow). We handle recruiting, HR, payroll, workspace, and performance management. Think: remote employee, not outsourced project."
+      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team - you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
     },
     {
       question: "What if it doesn't work out?",
-      answer: "Free replacements. If someone isn't working out, we'll find someone who will. No additional fees."
+      answer: "Free replacements - if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
     },
     {
       question: "How long does hiring take?",
-      answer: "Typically 2-4 weeks for a new client. We source, screen, you interview, we hire and onboard. Timeline depends on role specificity and your availability for interviews."
+      answer: "Typically 2-4 weeks for a new client, but as fast as a few days for straightforward roles. We source, screen, you interview, we hire and onboard. Timeline depends on role specificity and your availability for interviews."
     },
     {
       question: "What roles can you fill?",
-      answer: "We specialize in technical and creative roles: software engineers (full-stack, frontend, backend, mobile), designers (UI/UX, product), AI specialists, and hybrid creative+technical roles. If you're looking for dedicated remote talent in these areas, we can help."
+      answer: "Technical roles (full-stack, frontend, backend, mobile, AI), creative roles (UI/UX, product design), and business support roles (project managers, operations, admin). Startup founders need support across the board - we can help you build out multiple functions without paying US rates for everything."
     },
     {
       question: "Do you charge per-hire fees?",
-      answer: "No. Recruiting, screening, and onboarding are included. You pay a monthly fee for the talent, not separate placement fees."
+      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore - you only pay if you decide to move forward."
     },
     {
       question: "What timezone options do you offer?",
-      answer: "We operate 24/7 and can accommodate your preferred schedule: (1) Overnight work for US teams - tasks completed while you sleep, (2) Partial overlap - available during your afternoon hours, (3) Full US business hours overlap - real-time collaboration during your 9-5. You choose what works best for your workflow."
+      answer: "We operate 24 hours a day and can accommodate your preferred schedule: overnight async (tasks completed while you sleep), partial overlap (available during your afternoon), or full business hours overlap (real-time collaboration). You choose what works best for your workflow."
     },
     {
       question: "How do you enable team members with AI tools?",
@@ -38,15 +38,15 @@ export default function FAQ() {
     },
     {
       question: "Who is your typical customer?",
-      answer: "Tech startup founders ready to graduate from Upwork/freelancer churn. Companies scaling their first remote team. NOT enterprise buyers. NOT companies looking for fully managed services."
+      answer: "Tech startup founders ready to graduate from Upwork/freelancer churn. Companies scaling their first remote team. Founders looking for dedicated talent with real infrastructure behind them."
     },
     {
       question: "How much does it cost?",
-      answer: "Custom quotes based on role, timezone, and experience level. Dramatically cheaper than US hiring, with zero headaches of going direct. Get in touch with Davis for specifics."
+      answer: "Custom quotes based on role, timezone, and experience level. Dramatically cheaper than US hiring, with none of the headaches of going direct. Get in touch with Davis for specifics."
     },
     {
       question: "Can I visit the office?",
-      answer: "Yes, though most clients don't need to. We handle the physical infrastructure (workspace, IT, HR, daily oversight). You manage the work remotely like any other distributed team."
+      answer: "Yes, though most clients don't need to. We handle the physical infrastructure - workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
     }
   ]
 
@@ -122,7 +122,7 @@ export default function FAQ() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with on-site management.</span>
+            <span className="text-gray-500 text-sm">Full-time embedded talent with professional oversight.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>
