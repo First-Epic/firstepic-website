@@ -1,4 +1,33 @@
+'use client'
+
+import { useState } from 'react'
+
 export default function Home() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus('loading')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <main className="min-h-screen bg-[#050505] text-gray-200 antialiased">
       {/* Header */}
@@ -251,36 +280,59 @@ export default function Home() {
           </p>
           
           <div className="bg-white/5 border border-white/10 p-10 rounded-sm max-w-lg mx-auto backdrop-blur-sm">
-            <form className="space-y-6">
-              <div>
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition"
-                />
+            {status === 'success' ? (
+              <div className="text-center py-8">
+                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-green-500 text-3xl">✓</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                <p className="text-gray-400">Davis will get back to you shortly.</p>
               </div>
-              <div>
-                <input 
-                  type="email" 
-                  placeholder="Work Email" 
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition"
-                />
-              </div>
-              <div>
-                <textarea 
-                  placeholder="What are you building?" 
-                  rows={3}
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition resize-none"
-                />
-              </div>
-              <button 
-                type="submit" 
-                className="w-full bg-white text-black font-bold py-4 hover:bg-gray-200 transition duration-300 uppercase tracking-wider"
-              >
-                Send to Davis →
-              </button>
-            </form>
-            <p className="text-gray-500 text-sm mt-6">
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <input 
+                    type="text" 
+                    placeholder="Your Name" 
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                    className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition"
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="email" 
+                    placeholder="Work Email" 
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                    className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition"
+                  />
+                </div>
+                <div>
+                  <textarea 
+                    placeholder="What are you building?" 
+                    rows={3}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                    className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition resize-none"
+                  />
+                </div>
+                <button 
+                  type="submit" 
+                  disabled={status === 'loading'}
+                  className="w-full bg-white text-black font-bold py-4 hover:bg-gray-200 transition duration-300 uppercase tracking-wider disabled:opacity-50"
+                >
+                  {status === 'loading' ? 'Sending...' : 'Send to Davis →'}
+                </button>
+                {status === 'error' && (
+                  <p className="text-red-400 text-sm text-center">Something went wrong. Please try again.</p>
+                )}
+              </form>
+            )}
+            <p className="text-gray-500 text-sm mt-6 text-center">
               Or connect on{' '}
               <a href="https://linkedin.com/in/davisbrimer" className="text-blue-400 hover:text-blue-300 underline transition">
                 LinkedIn
