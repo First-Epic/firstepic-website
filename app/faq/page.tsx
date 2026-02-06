@@ -59,16 +59,16 @@ export default function FAQ() {
             <div className="font-mono text-cyan-400 font-bold text-xl tracking-wider">FE</div>
             <div className="hidden md:flex items-center gap-2 text-sm">
               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-              <span className="font-mono text-slate-400">System Online</span>
+              <span className="font-mono text-slate-400">Online</span>
               <span className="text-slate-600">•</span>
-              <span className="font-mono text-slate-400">Accepting Clients</span>
+              <span className="font-mono text-slate-400">Taking New Clients</span>
             </div>
           </div>
           <nav className="flex items-center gap-8">
             <a href="/" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium">Home</a>
             <a href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium">About</a>
             <a href="/#contact" className="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-2 rounded text-sm font-semibold transition-colors">
-              INITIATE CONTACT
+              Contact
             </a>
           </nav>
         </div>
@@ -78,7 +78,7 @@ export default function FAQ() {
       <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border-b border-slate-800 pt-24 pb-16">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10"></div>
         <div className="relative max-w-6xl mx-auto px-6 py-20">
-          <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Knowledge Base</div>
+          <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// FAQ</div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">Frequently Asked Questions</h1>
           <p className="text-xl md:text-2xl text-slate-400 max-w-3xl leading-relaxed">
             Everything you need to know about working with First Epic.
@@ -106,7 +106,7 @@ export default function FAQ() {
 
         {/* CTA */}
         <div className="mt-20 bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-cyan-500/30 rounded-2xl p-12 text-center">
-          <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Still Have Questions?</div>
+          <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Still have questions?</div>
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">Talk to Davis</h3>
           <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Book 30 minutes. Founder-to-founder. No sales pitch - just real talk about what you need and whether we're the right fit.
@@ -115,14 +115,14 @@ export default function FAQ() {
             href="/#contact" 
             className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-10 py-4 rounded-lg text-lg transition-all hover:scale-105 shadow-lg shadow-cyan-500/20 font-mono tracking-wide"
           >
-            INITIATE CONTACT
+            Contact
           </a>
         </div>
 
         {/* Back to Home */}
         <div className="mt-12 text-center">
           <a href="/" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg inline-flex items-center gap-2 transition-colors font-mono">
-            <span>←</span> RETURN TO HOME
+            <span>←</span> ← Back to Home
           </a>
         </div>
       </div>

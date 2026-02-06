@@ -8,16 +8,16 @@ export default function About() {
             <div className="font-mono text-cyan-400 font-bold text-xl tracking-wider">FE</div>
             <div className="hidden md:flex items-center gap-2 text-sm">
               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-              <span className="font-mono text-slate-400">System Online</span>
+              <span className="font-mono text-slate-400">Online</span>
               <span className="text-slate-600">•</span>
-              <span className="font-mono text-slate-400">Accepting Clients</span>
+              <span className="font-mono text-slate-400">Taking New Clients</span>
             </div>
           </div>
           <nav className="flex items-center gap-8">
             <a href="/" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium">Home</a>
             <a href="/faq" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium">FAQ</a>
             <a href="/#contact" className="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-2 rounded text-sm font-semibold transition-colors">
-              INITIATE CONTACT
+              Contact
             </a>
           </nav>
         </div>
@@ -27,7 +27,7 @@ export default function About() {
       <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border-b border-slate-800 pt-24 pb-16">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10"></div>
         <div className="relative max-w-6xl mx-auto px-6 py-20">
-          <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Company Background</div>
+          <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// About</div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">About First Epic</h1>
           <p className="text-xl md:text-2xl text-slate-400 max-w-3xl leading-relaxed">
             Built by a founder who learned the hard way, for founders ready to do it the right way.
@@ -41,7 +41,7 @@ export default function About() {
         {/* Davis's Story */}
         <section className="mb-24">
           <div className="mb-12">
-            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Founder Profile</div>
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// About the Founder</div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Davis's Story</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
           </div>
@@ -94,7 +94,7 @@ export default function About() {
         {/* Why First Epic Exists */}
         <section className="mb-24">
           <div className="mb-12">
-            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Mission Statement</div>
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Our Mission</div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Why First Epic Exists</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
           </div>
@@ -122,7 +122,7 @@ export default function About() {
         {/* The Mission */}
         <section className="mb-20">
           <div className="mb-12">
-            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Primary Objective</div>
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// The Mission</div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">The Mission</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
           </div>
@@ -136,7 +136,7 @@ export default function About() {
 
         {/* CTA */}
         <div className="bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-cyan-500/30 rounded-2xl p-12 text-center">
-          <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Contact Protocol</div>
+          <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Get in Touch</div>
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">Want to talk?</h3>
           <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Book 30 minutes with me. Founder-to-founder.
@@ -145,14 +145,14 @@ export default function About() {
             href="/#contact" 
             className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-10 py-4 rounded-lg text-lg transition-all hover:scale-105 shadow-lg shadow-cyan-500/20 font-mono tracking-wide"
           >
-            INITIATE CONTACT
+            Contact
           </a>
         </div>
 
         {/* Back to Home */}
         <div className="mt-12 text-center">
           <a href="/" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg inline-flex items-center gap-2 transition-colors font-mono">
-            <span>←</span> RETURN TO HOME
+            <span>←</span> ← Back to Home
           </a>
         </div>
       </div>

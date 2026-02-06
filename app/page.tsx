@@ -8,16 +8,16 @@ export default function Home() {
             <div className="font-mono text-cyan-400 font-bold text-xl tracking-wider">FE</div>
             <div className="hidden md:flex items-center gap-2 text-sm">
               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-              <span className="font-mono text-slate-400">System Online</span>
+              <span className="font-mono text-slate-400">Online</span>
               <span className="text-slate-600">•</span>
-              <span className="font-mono text-slate-400">Accepting Clients</span>
+              <span className="font-mono text-slate-400">Taking New Clients</span>
             </div>
           </div>
           <nav className="flex items-center gap-8">
             <a href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium">About</a>
             <a href="/faq" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium">FAQ</a>
             <a href="#contact" className="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-2 rounded text-sm font-semibold transition-colors">
-              INITIATE CONTACT
+              Contact
             </a>
           </nav>
         </div>
@@ -53,7 +53,7 @@ export default function Home() {
               href="#contact" 
               className="bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-10 py-5 rounded-lg text-lg transition-all hover:scale-105 shadow-lg shadow-cyan-500/20 font-mono tracking-wide"
             >
-              INITIATE DEPLOYMENT
+              Get Started
             </a>
             <a 
               href="#origin" 
@@ -141,7 +141,7 @@ export default function Home() {
       <section className="relative py-32 border-t border-slate-800 bg-gradient-to-b from-transparent via-slate-900/30 to-transparent">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16 text-center">
-            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// The Gap We Fill</div>
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// The Problem</div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">The Problem</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6"></div>
             <p className="text-2xl text-slate-400 font-semibold max-w-3xl mx-auto">The Freelancer Fatigue is Real</p>
@@ -187,7 +187,7 @@ export default function Home() {
       <section className="relative py-32 border-t border-slate-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16 text-center">
-            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// The Acceleration Layer</div>
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// The Solution</div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">The Solution</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6"></div>
             <p className="text-2xl text-slate-400 font-semibold max-w-3xl mx-auto">The First Epic Difference</p>
@@ -244,7 +244,7 @@ export default function Home() {
       <section className="relative py-32 border-t border-slate-800 bg-gradient-to-b from-transparent via-slate-900/30 to-transparent">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16 text-center">
-            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Deployment Protocol</div>
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// How It Works</div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">How It Works</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
           </div>
@@ -283,14 +283,14 @@ export default function Home() {
       <section className="relative py-32 border-t border-slate-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16 text-center">
-            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Target Operators</div>
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Is This Right For You?</div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">Is This Right For You?</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-green-500/10 to-green-500/5 border-2 border-green-500/30 rounded-2xl p-10">
-              <h3 className="text-2xl font-bold mb-6 text-green-400 font-mono">COMPATIBLE</h3>
+              <h3 className="text-2xl font-bold mb-6 text-green-400 font-mono">Great Fit</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-green-400 font-bold flex-shrink-0 text-xl font-mono">+</span>
@@ -312,7 +312,7 @@ export default function Home() {
             </div>
 
             <div className="bg-gradient-to-br from-red-500/10 to-red-500/5 border-2 border-red-500/30 rounded-2xl p-10">
-              <h3 className="text-2xl font-bold mb-6 text-red-400 font-mono">INCOMPATIBLE</h3>
+              <h3 className="text-2xl font-bold mb-6 text-red-400 font-mono">INGreat Fit</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-red-400 font-bold flex-shrink-0 text-xl font-mono">-</span>
@@ -340,7 +340,7 @@ export default function Home() {
       <section id="contact" className="relative py-32 border-t border-slate-800 bg-gradient-to-b from-transparent to-slate-900">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Initialize Contact Protocol</div>
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Ready to Talk?</div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">Ready to Build Your Team?</h2>
             <p className="text-xl md:text-2xl text-slate-400 leading-relaxed">
               Book 30 minutes with Davis. Founder-to-founder.
