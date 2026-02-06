@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 15, 23, 42;
-  --background-rgb: 255, 255, 255;
+  --background-rgb: 5, 5, 5;
 }
 
 body {
@@ -19,28 +19,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - dark theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(241, 245, 249);
+  background: rgb(15, 23, 42);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(148, 163, 184);
+  background: rgb(51, 65, 85);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(100, 116, 139);
+  background: rgb(71, 85, 105);
 }
 
 /* Focus styles for accessibility */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid rgb(37, 99, 235);
+  outline: 2px solid rgb(59, 130, 246);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -50,10 +50,77 @@ a, button {
   transition: all 0.2s ease-in-out;
 }
 
-/* Grid background pattern for hero (optional) */
-.bg-grid-pattern {
+/* ========================================
+   VISUAL ENHANCEMENTS - No copy changes
+   ======================================== */
+
+/* 1. Animated Grid Background */
+.grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 2. Scroll Fade-In Animations */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 3. Card Hover Effects */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Subtle glow effect on hover */
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+}
+
+/* Hero gradient text enhancement */
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pulsing indicator */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
 }

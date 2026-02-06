@@ -1,10 +1,27 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+  // Scroll animation effect
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+    document.querySelectorAll('.fade-in-section').forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -29,7 +46,9 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-[#050505] text-gray-200 antialiased">
+    <main className="min-h-screen bg-[#050505] text-gray-200 antialiased relative">
+      {/* Animated Grid Background */}
+      <div className="grid-bg" />
       {/* Header */}
       <header className="fixed top-0 w-full z-40 p-4 md:p-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5">
         <a href="#" className="flex items-center gap-3 group">
@@ -72,11 +91,11 @@ export default function Home() {
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 text-center">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover-card hover-glow text-center">
               <div className="text-4xl font-bold text-white mb-2 font-mono">20+</div>
               <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Years Building Tech</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 text-center">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover-card hover-glow text-center">
               <div className="text-4xl font-bold text-white mb-2 font-mono">100%</div>
               <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Client Retention</div>
             </div>
@@ -279,7 +298,7 @@ export default function Home() {
             Book 30 minutes with Davis. Founder-to-founder.
           </p>
           
-          <div className="bg-white/5 border border-white/10 p-10 rounded-sm max-w-lg mx-auto backdrop-blur-sm">
+          <div className="bg-white/5 border border-white/10 p-10 rounded-sm hover-card max-w-lg mx-auto backdrop-blur-sm">
             {status === 'success' ? (
               <div className="text-center py-8">
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
