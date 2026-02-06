@@ -1,267 +1,335 @@
-'use client'
-
-import { useState } from 'react'
-
 export default function Home() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('loading')
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        setStatus('success')
-        setFormData({ name: '', email: '', message: '' })
-      } else {
-        setStatus('error')
-      }
-    } catch {
-      setStatus('error')
-    }
-  }
-
   return (
-    <main className="min-h-screen bg-[#050505] text-gray-200 antialiased">
-      {/* Header */}
-      <header className="fixed top-0 w-full z-40 p-4 md:p-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5">
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-white text-black flex items-center justify-center font-bold font-mono text-sm rounded-sm group-hover:scale-105 transition shadow-[0_0_15px_rgba(255,255,255,0.3)]">FE</div>
-          <div className="hidden md:block">
-            <div className="font-bold tracking-tight text-sm leading-none text-white">FIRST EPIC</div>
-            <div className="text-[10px] font-mono text-gray-400 tracking-widest uppercase mt-1">GLOBAL STUDIO</div>
+    <main className="min-h-screen bg-slate-950 text-slate-100">
+      {/* System Status Bar */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <div className="font-mono text-cyan-400 font-bold text-xl tracking-wider">FE</div>
+            <div className="hidden md:flex items-center gap-2 text-sm">
+              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+              <span className="font-mono text-slate-400">System Online</span>
+              <span className="text-slate-600">•</span>
+              <span className="font-mono text-slate-400">Accepting Clients</span>
+            </div>
           </div>
-        </a>
-        <a href="#contact" className="flex items-center gap-3 group bg-white/10 border border-white/10 px-5 py-3 rounded-sm hover:bg-white hover:text-black transition duration-300">
-          <span className="font-mono text-xs font-bold tracking-wide">TALK TO DAVIS</span>
-          <span className="text-xs group-hover:translate-x-1 transition-transform">→</span>
-        </a>
-      </header>
+          <nav className="flex items-center gap-8">
+            <a href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium">About</a>
+            <a href="/faq" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium">FAQ</a>
+            <a href="#contact" className="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-2 rounded text-sm font-semibold transition-colors">
+              INITIATE CONTACT
+            </a>
+          </nav>
+        </div>
+      </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#050505] to-blue-900/30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]"></div>
-        </div>
-
-        <div className="relative z-10 max-w-5xl text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-10 backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">Accepting Clients • Founder-to-Founder</span>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"></div>
+        
+        <div className="relative max-w-5xl mx-auto px-6 text-center">
+          <div className="mb-6 inline-block">
+            <div className="font-mono text-sm text-cyan-400 tracking-widest uppercase border border-cyan-500/30 px-4 py-2 rounded bg-cyan-500/5">
+              For founders tired of the freelancer treadmill
+            </div>
           </div>
-
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-            <div>READY TO GRADUATE</div>
-            <div className="text-gray-500">FROM UPWORK?</div>
+          
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight">
+            <span className="text-white">Ready to Graduate</span>
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+              from Upwork?
+            </span>
           </h1>
-
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
+          
+          <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
             Stop churning through freelancers. Build your remote team with embedded talent that actually sticks around.
           </p>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 text-center">
-              <div className="text-4xl font-bold text-white mb-2 font-mono">20+</div>
-              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Years Building Tech</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 text-center">
-              <div className="text-4xl font-bold text-white mb-2 font-mono">100%</div>
-              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Client Retention</div>
-            </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#contact" 
+              className="bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-10 py-5 rounded-lg text-lg transition-all hover:scale-105 shadow-lg shadow-cyan-500/20 font-mono tracking-wide"
+            >
+              INITIATE DEPLOYMENT
+            </a>
+            <a 
+              href="#origin" 
+              className="border border-slate-700 hover:border-cyan-500/50 text-slate-300 hover:text-white font-semibold px-10 py-5 rounded-lg text-lg transition-all"
+            >
+              Read the Origin Story
+            </a>
           </div>
 
-          <div>
-            <a href="#origin" className="inline-block border-b border-white pb-1 text-lg hover:text-blue-400 hover:border-blue-400 transition">
-              The Origin Story ↓
-            </a>
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20 max-w-3xl mx-auto">
+            <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/30 rounded-lg p-8 transition-all">
+              <div className="text-5xl font-bold text-cyan-400 mb-3 font-mono">20+</div>
+              <div className="text-slate-400 font-medium">Years Building Tech Companies</div>
+            </div>
+            <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/30 rounded-lg p-8 transition-all">
+              <div className="text-5xl font-bold text-cyan-400 mb-3 font-mono">100%</div>
+              <div className="text-slate-400 font-medium">Client Retention Rate</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-slate-700 rounded-full flex items-start justify-center p-2">
+            <div className="w-1.5 h-3 bg-cyan-400 rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* Origin Story */}
-      <section id="origin" className="scroll-mt-32 min-h-screen flex items-center py-24 relative border-t border-white/5 bg-[#080808]">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <div className="relative z-10">
-            <div className="font-mono text-xs text-blue-500 mb-6 tracking-widest uppercase">/// Built by a Builder</div>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
-              I Built This to Solve<br />
-              <span className="text-gray-600">My Own Problem.</span>
-            </h2>
-            <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-              <p>For over 20 years as a tech entrepreneur, I&apos;ve hired <strong className="text-white">hundreds of freelancers</strong> across every platform you can name. Upwork, Toptal, Fiverr, direct contractors  -  you name it, I&apos;ve tried it.</p>
-              <p className="text-white">The lessons cost me <strong className="text-blue-400">hundreds of thousands of dollars</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
-              <p>First Epic is what I wish existed when I started. Not another marketplace. Not another agency. A better way to build a remote team that actually works.</p>
+      <section id="origin" className="relative py-32 border-t border-slate-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-16">
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Built by Builders</div>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">The Origin Story</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-10">
+              <h3 className="text-3xl font-bold mb-6 text-white">I Built This to Solve My Own Problem</h3>
+              <div className="space-y-5 text-slate-300 leading-relaxed">
+                <p>
+                  For over 20 years as a tech entrepreneur, I've hired <strong className="text-cyan-400">hundreds of freelancers</strong> across every platform you can name. Upwork, Toptal, Fiverr, direct contractors - you name it, I've tried it.
+                </p>
+                <p>
+                  The lessons cost me <strong className="text-cyan-400">hundreds of thousands of dollars</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.
+                </p>
+                <p>
+                  First Epic is what I wish existed when I started. Not another marketplace. Not another agency. A better way to build a remote team that actually works.
+                </p>
+              </div>
             </div>
-            <div className="mt-12 flex items-center gap-4">
-              <img src="/davis-headshot.jpg" alt="Davis Brimer" className="w-16 h-16 rounded-full border border-white/20 object-cover" />
-              <div>
-                <div className="text-white font-bold text-base">Davis Brimer</div>
-                <div className="text-gray-500 text-xs font-mono uppercase">Founder & CEO • 20+ Years in Tech</div>
+
+            <div className="space-y-6">
+              <div className="flex items-start gap-6 bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-xl p-8">
+                <img 
+                  src="/davis-headshot.jpg" 
+                  alt="Davis Brimer"
+                  className="w-24 h-24 rounded-full object-cover border-4 border-cyan-500/30 shadow-lg shadow-cyan-500/10"
+                />
+                <div>
+                  <div className="font-bold text-2xl text-white mb-1">Davis Brimer</div>
+                  <div className="text-cyan-400 font-semibold mb-2">Founder & CEO</div>
+                  <div className="text-slate-400 text-sm leading-relaxed">
+                    Serial entrepreneur • 20+ years in tech<br />
+                    BS Computer Engineering, UC Santa Barbara
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+                <div className="font-mono text-cyan-400 text-sm mb-4">THE STANDARD</div>
+                <p className="text-slate-300 leading-relaxed">
+                  If we wouldn't hire them for our own stack, we won't send them to yours.
+                </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* The Problem */}
+      <section className="relative py-32 border-t border-slate-800 bg-gradient-to-b from-transparent via-slate-900/30 to-transparent">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-16 text-center">
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// The Gap We Fill</div>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">The Problem</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6"></div>
+            <p className="text-2xl text-slate-400 font-semibold max-w-3xl mx-auto">The Freelancer Fatigue is Real</p>
+          </div>
           
-          <div>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg opacity-20 blur-lg"></div>
-              <div className="relative bg-[#050505] border border-white/10 p-8 rounded-sm shadow-2xl">
-                <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-4">The Freelancer Fatigue</div>
-                <ul className="space-y-6">
-                  <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">✗</div>
-                    <div>
-                      <div className="text-white font-bold text-sm">Constant Churn</div>
-                      <div className="text-gray-500 text-sm">Every project starts from zero. New freelancer, new onboarding, new trust-building.</div>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0 text-yellow-500">!</div>
-                    <div>
-                      <div className="text-white font-bold text-sm">No Ownership</div>
-                      <div className="text-gray-500 text-sm">They&apos;re juggling 5 other clients. Your project is just another ticket.</div>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0 text-orange-500">?</div>
-                    <div>
-                      <div className="text-white font-bold text-sm">Quality Lottery</div>
-                      <div className="text-gray-500 text-sm">Great portfolio, mediocre delivery. The profile never matches the work.</div>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
-                    <div>
-                      <div className="text-white font-bold text-sm">First Epic</div>
-                      <div className="text-gray-500 text-sm">Dedicated talent. Physical workspace. Adult supervision.</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="group bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all hover:shadow-xl hover:shadow-cyan-500/5">
+              <div className="w-12 h-1 bg-cyan-500 mb-6"></div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Constant Churn</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Every project starts from zero. New freelancer, new onboarding, new trust-building. Again and again.
+              </p>
+            </div>
+
+            <div className="group bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all hover:shadow-xl hover:shadow-cyan-500/5">
+              <div className="w-12 h-1 bg-cyan-500 mb-6"></div>
+              <h3 className="text-2xl font-bold mb-4 text-white">No Ownership</h3>
+              <p className="text-slate-400 leading-relaxed">
+                They're juggling 5 other clients. Your project is just another ticket in their queue.
+              </p>
+            </div>
+
+            <div className="group bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all hover:shadow-xl hover:shadow-cyan-500/5">
+              <div className="w-12 h-1 bg-cyan-500 mb-6"></div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Communication Chaos</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Timezone roulette, language barriers, disappearing acts, and "I'll get to it tomorrow" that lasts a week.
+              </p>
+            </div>
+
+            <div className="group bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all hover:shadow-xl hover:shadow-cyan-500/5">
+              <div className="w-12 h-1 bg-cyan-500 mb-6"></div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Quality Lottery</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Great portfolio, mediocre delivery. The profile never matches the actual work.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* The Solution */}
-      <section id="solution" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
-            <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
-            <p className="text-gray-400 text-lg">Build your own dedicated team - we handle the infrastructure and professional oversight.</p>
+      <section className="relative py-32 border-t border-slate-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-16 text-center">
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// The Acceleration Layer</div>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">The Solution</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6"></div>
+            <p className="text-2xl text-slate-400 font-semibold max-w-3xl mx-auto">The First Epic Difference</p>
+            <p className="text-lg text-slate-500 mt-3">Not a marketplace. Not an agency. Build your own dedicated team - we handle the infrastructure and professional oversight.</p>
           </div>
+          
+          <div className="space-y-6 max-w-5xl mx-auto">
+            <div className="group border-l-4 border-cyan-500 bg-gradient-to-r from-slate-900/80 to-slate-900/40 rounded-r-xl p-8 hover:from-slate-900 hover:to-slate-800 transition-all">
+              <h3 className="text-2xl font-bold mb-3 text-white">Physical Workspace with Professional Oversight</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Your team works from a real office with HR, IT support, and on-site operational management. Not a bedroom with spotty WiFi.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Physical Workspace</div>
-              <h4 className="text-xl font-bold text-white mb-3">Real Office, Real Oversight</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professional workspace with HR, IT support, and daily management.</p>
+            <div className="group border-l-4 border-cyan-500 bg-gradient-to-r from-slate-900/80 to-slate-900/40 rounded-r-xl p-8 hover:from-slate-900 hover:to-slate-800 transition-all">
+              <h3 className="text-2xl font-bold mb-3 text-white">Dedicated to You</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Full-time, embedded in your workflow. Not splitting attention across five other clients.
+              </p>
             </div>
-            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Dedicated to You</div>
-              <h4 className="text-xl font-bold text-white mb-3">Full-Time, Embedded</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team members work exclusively for you. Not splitting attention across other clients.</p>
+
+            <div className="group border-l-4 border-cyan-500 bg-gradient-to-r from-slate-900/80 to-slate-900/40 rounded-r-xl p-8 hover:from-slate-900 hover:to-slate-800 transition-all">
+              <h3 className="text-2xl font-bold mb-3 text-white">AI-Enabled Team Members</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Your team gets access to cutting-edge AI tools to supercharge their productivity. Modern workflows, not legacy processes.
+              </p>
             </div>
-            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">AI-Enabled</div>
-              <h4 className="text-xl font-bold text-white mb-3">Modern Tools</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team gets access to cutting-edge AI tools to supercharge their productivity.</p>
+
+            <div className="group border-l-4 border-cyan-500 bg-gradient-to-r from-slate-900/80 to-slate-900/40 rounded-r-xl p-8 hover:from-slate-900 hover:to-slate-800 transition-all">
+              <h3 className="text-2xl font-bold mb-3 text-white">Timezone Flexibility</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Full US business hours overlap available, or async overnight work. Your choice.
+              </p>
             </div>
-            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Timezone Flexibility</div>
-              <h4 className="text-xl font-bold text-white mb-3">Your Schedule</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Full US business hours overlap available, or async overnight work. You decide.</p>
+
+            <div className="group border-l-4 border-cyan-500 bg-gradient-to-r from-slate-900/80 to-slate-900/40 rounded-r-xl p-8 hover:from-slate-900 hover:to-slate-800 transition-all">
+              <h3 className="text-2xl font-bold mb-3 text-white">No Per-Hire Fees</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Unlike Arc or Toptal, you don't pay thousands just to start. Recruiting is included in your monthly rate.
+              </p>
             </div>
-            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">No Per-Hire Fees</div>
-              <h4 className="text-xl font-bold text-white mb-3">Recruiting Included</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Unlike Arc or Toptal, you don&apos;t pay thousands just to start.</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Free Replacements</div>
-              <h4 className="text-xl font-bold text-white mb-3">Risk-Free Hiring</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">If someone isn&apos;t working out, we replace them. No questions, no fees.</p>
+
+            <div className="group border-l-4 border-cyan-500 bg-gradient-to-r from-slate-900/80 to-slate-900/40 rounded-r-xl p-8 hover:from-slate-900 hover:to-slate-800 transition-all">
+              <h3 className="text-2xl font-bold mb-3 text-white">Free Replacements</h3>
+              <p className="text-slate-400 leading-relaxed">
+                If someone isn't working out, we replace them. No questions, no fees. That's on us.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section id="process" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#080808]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Process</h2>
-            <h3 className="text-3xl md:text-5xl font-bold mb-6">How It Works</h3>
+      <section className="relative py-32 border-t border-slate-800 bg-gradient-to-b from-transparent via-slate-900/30 to-transparent">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-16 text-center">
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Deployment Protocol</div>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">How It Works</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
           </div>
-
-          <div className="grid md:grid-cols-5 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-mono font-bold text-white/10 mb-4">01</div>
-              <h4 className="text-lg font-bold text-white mb-2">We Source & Screen</h4>
-              <p className="text-gray-500 text-sm">Tell us what you need. We find, vet, and shortlist candidates.</p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all group">
+              <div className="font-mono text-cyan-400 text-3xl font-bold mb-4">01</div>
+              <h3 className="text-xl font-bold mb-3 text-white">We Source & Screen</h3>
+              <p className="text-slate-400 leading-relaxed">Tell us what you need. We find, vet, and shortlist candidates. No per-hire fees.</p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-mono font-bold text-white/10 mb-4">02</div>
-              <h4 className="text-lg font-bold text-white mb-2">You Interview</h4>
-              <p className="text-gray-500 text-sm">You make the final call. Interview candidates, pick your team.</p>
+            <div className="bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all group">
+              <div className="font-mono text-cyan-400 text-3xl font-bold mb-4">02</div>
+              <h3 className="text-xl font-bold mb-3 text-white">You Interview & Approve</h3>
+              <p className="text-slate-400 leading-relaxed">You make the final call. Interview your candidates, pick your team.</p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-mono font-bold text-white/10 mb-4">03</div>
-              <h4 className="text-lg font-bold text-white mb-2">We Hire & Onboard</h4>
-              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, equipment.</p>
+            <div className="bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all group">
+              <div className="font-mono text-cyan-400 text-3xl font-bold mb-4">03</div>
+              <h3 className="text-xl font-bold mb-3 text-white">We Hire & Onboard</h3>
+              <p className="text-slate-400 leading-relaxed">We handle employment, payroll, workspace, equipment - all the overhead.</p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-mono font-bold text-white/10 mb-4">04</div>
-              <h4 className="text-lg font-bold text-white mb-2">You Manage</h4>
-              <p className="text-gray-500 text-sm">They&apos;re your team. You assign work, run standups.</p>
+            <div className="bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all group">
+              <div className="font-mono text-cyan-400 text-3xl font-bold mb-4">04</div>
+              <h3 className="text-xl font-bold mb-3 text-white">You Manage Day-to-Day</h3>
+              <p className="text-slate-400 leading-relaxed">They're your team. You assign work, run standups, set priorities.</p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-mono font-bold text-white/10 mb-4">05</div>
-              <h4 className="text-lg font-bold text-white mb-2">We Handle the Rest</h4>
-              <p className="text-gray-500 text-sm">HR, compliance, performance support, replacements.</p>
+            <div className="bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 rounded-xl p-10 transition-all group">
+              <div className="font-mono text-cyan-400 text-3xl font-bold mb-4">05</div>
+              <h3 className="text-xl font-bold mb-3 text-white">We Handle the Rest</h3>
+              <p className="text-slate-400 leading-relaxed">HR, compliance, performance support, replacements if needed. You focus on building.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Fit Check */}
-      <section id="fit" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// Fit Check</h2>
-            <h3 className="text-3xl md:text-5xl font-bold mb-6">Is This Right For You?</h3>
+      {/* Who This Is For */}
+      <section className="relative py-32 border-t border-slate-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-16 text-center">
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Target Operators</div>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">Is This Right For You?</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-green-500/5 border border-green-500/20 p-10 rounded-sm">
-              <h4 className="text-2xl font-bold text-green-400 mb-6">Great Fit</h4>
+          
+          <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-green-500/10 to-green-500/5 border-2 border-green-500/30 rounded-2xl p-10">
+              <h3 className="text-2xl font-bold mb-6 text-green-400 font-mono">COMPATIBLE</h3>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Startups ready to move beyond freelancers</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders scaling their first remote team</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies with hard-to-fill technical positions</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams that want ownership, not outsourcing</span></li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0 text-xl font-mono">+</span>
+                  <span className="text-slate-300">Startups ready to move beyond freelancers</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0 text-xl font-mono">+</span>
+                  <span className="text-slate-300">Founders scaling their first remote team</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0 text-xl font-mono">+</span>
+                  <span className="text-slate-300">Companies with hard-to-fill or hybrid positions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0 text-xl font-mono">+</span>
+                  <span className="text-slate-300">Teams that want ownership, not outsourcing</span>
+                </li>
               </ul>
             </div>
 
-            <div className="bg-red-500/5 border border-red-500/20 p-10 rounded-sm">
-              <h4 className="text-2xl font-bold text-red-400 mb-6">Not For</h4>
+            <div className="bg-gradient-to-br from-red-500/10 to-red-500/5 border-2 border-red-500/30 rounded-2xl p-10">
+              <h3 className="text-2xl font-bold mb-6 text-red-400 font-mono">INCOMPATIBLE</h3>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Enterprise procurement processes</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>One-off project work</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Managed services buyers</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Lowest-cost-only shoppers</span></li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 font-bold flex-shrink-0 text-xl font-mono">-</span>
+                  <span className="text-slate-300">Enterprise procurement processes</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 font-bold flex-shrink-0 text-xl font-mono">-</span>
+                  <span className="text-slate-300">One-off project work</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 font-bold flex-shrink-0 text-xl font-mono">-</span>
+                  <span className="text-slate-300">Managed services buyers</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 font-bold flex-shrink-0 text-xl font-mono">-</span>
+                  <span className="text-slate-300">Lowest-cost-only shoppers</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -269,72 +337,62 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section id="contact" className="scroll-mt-32 min-h-[80vh] flex flex-col justify-center items-center py-24 px-6 relative border-t border-white/5 bg-[#030303]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter leading-none">
-            Ready to Build<br />
-            <span className="text-gray-700">Your Team?</span>
-          </h2>
-          <p className="text-xl text-gray-400 mb-12 max-w-xl mx-auto">
-            Book 30 minutes with Davis. Founder-to-founder.
-          </p>
+      <section id="contact" className="relative py-32 border-t border-slate-800 bg-gradient-to-b from-transparent to-slate-900">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="font-mono text-sm text-cyan-400 mb-4 tracking-widest uppercase">/// Initialize Contact Protocol</div>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">Ready to Build Your Team?</h2>
+            <p className="text-xl md:text-2xl text-slate-400 leading-relaxed">
+              Book 30 minutes with Davis. Founder-to-founder.
+            </p>
+          </div>
           
-          <div className="bg-white/5 border border-white/10 p-10 rounded-sm max-w-lg mx-auto backdrop-blur-sm">
-            {status === 'success' ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-500 text-3xl">✓</span>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-400">Davis will get back to you shortly.</p>
+          <div className="bg-slate-900/50 backdrop-blur-md border border-slate-800 rounded-2xl p-10 max-w-2xl mx-auto">
+            <form id="contact-form" className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-mono text-cyan-400 mb-2 uppercase tracking-wider">Your Name</label>
+                <input 
+                  type="text" 
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800 text-white border-2 border-slate-700 focus:border-cyan-500 focus:outline-none transition-colors"
+                  placeholder="John Doe"
+                />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <input 
-                    type="text" 
-                    placeholder="Your Name" 
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition"
-                  />
-                </div>
-                <div>
-                  <input 
-                    type="email" 
-                    placeholder="Work Email" 
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition"
-                  />
-                </div>
-                <div>
-                  <textarea 
-                    placeholder="What are you building?" 
-                    rows={3}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition resize-none"
-                  />
-                </div>
-                <button 
-                  type="submit" 
-                  disabled={status === 'loading'}
-                  className="w-full bg-white text-black font-bold py-4 hover:bg-gray-200 transition duration-300 uppercase tracking-wider disabled:opacity-50"
-                >
-                  {status === 'loading' ? 'Sending...' : 'Send to Davis →'}
-                </button>
-                {status === 'error' && (
-                  <p className="text-red-400 text-sm text-center">Something went wrong. Please try again.</p>
-                )}
-              </form>
-            )}
-            <p className="text-gray-500 text-sm mt-6 text-center">
+              <div>
+                <label htmlFor="email" className="block text-sm font-mono text-cyan-400 mb-2 uppercase tracking-wider">Email</label>
+                <input 
+                  type="email" 
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800 text-white border-2 border-slate-700 focus:border-cyan-500 focus:outline-none transition-colors"
+                  placeholder="you@company.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-mono text-cyan-400 mb-2 uppercase tracking-wider">Hiring Needs</label>
+                <textarea 
+                  id="message"
+                  name="message"
+                  required
+                  rows={4} 
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800 text-white border-2 border-slate-700 focus:border-cyan-500 focus:outline-none resize-none transition-colors"
+                  placeholder="What roles are you looking to fill?"
+                ></textarea>
+              </div>
+              <div id="form-status" className="text-center"></div>
+              <button 
+                type="submit" 
+                className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 shadow-lg shadow-cyan-500/20 font-mono tracking-wider"
+              >
+                SEND TO DAVIS →
+              </button>
+            </form>
+            <p className="text-slate-500 text-sm text-center mt-6 font-mono">
               Or connect on{' '}
-              <a href="https://linkedin.com/in/davisbrimer" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline transition">
+              <a href="https://linkedin.com/in/davisbrimer" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline transition-colors">
                 LinkedIn
               </a>
             </p>
@@ -343,20 +401,65 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-white/5 bg-[#030303]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with on-site management.</span>
+      <footer className="border-t border-slate-800 bg-slate-950">
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+            <div className="text-center md:text-left">
+              <p className="font-mono font-bold text-2xl text-cyan-400 mb-2">FIRST EPIC</p>
+              <p className="text-sm text-slate-500 max-w-md">Full-time embedded talent with professional oversight.</p>
+            </div>
+            <div className="flex gap-8">
+              <a href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors font-medium">About</a>
+              <a href="/faq" className="text-slate-400 hover:text-cyan-400 transition-colors font-medium">FAQ</a>
+              <a href="#contact" className="text-slate-400 hover:text-cyan-400 transition-colors font-medium">Contact</a>
+            </div>
           </div>
-          <div className="flex gap-8 text-sm">
-            <a href="/about" className="text-gray-400 hover:text-white transition">About</a>
-            <a href="/faq" className="text-gray-400 hover:text-white transition">FAQ</a>
-            <a href="#contact" className="text-gray-400 hover:text-white transition">Contact</a>
+          <div className="pt-8 border-t border-slate-800 text-center">
+            <p className="text-slate-600 text-sm font-mono">© 2026 First Epic. All rights reserved.</p>
           </div>
-          <div className="text-gray-600 text-xs font-mono">© 2026 First Epic</div>
         </div>
       </footer>
+
+      <script dangerouslySetInnerHTML={{__html: `
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const form = e.target;
+          const status = document.getElementById('form-status');
+          const button = form.querySelector('button[type="submit"]');
+          const originalText = button.textContent;
+          
+          button.disabled = true;
+          button.textContent = 'TRANSMITTING...';
+          status.textContent = '';
+          status.className = 'text-center';
+          
+          try {
+            const response = await fetch('/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+              })
+            });
+            
+            if (response.ok) {
+              status.textContent = '✓ Message received. Davis will be in touch.';
+              status.className = 'text-center text-green-400';
+              form.reset();
+            } else {
+              throw new Error('Failed to send');
+            }
+          } catch (error) {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.className = 'text-center text-red-400';
+          } finally {
+            button.disabled = false;
+            button.textContent = originalText;
+          }
+        });
+      `}} />
     </main>
   )
 }
