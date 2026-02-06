@@ -1,30 +1,6 @@
-'use client'
-
-import { useEffect } from 'react'
-
 export default function Home() {
-  useEffect(() => {
-    // Scroll reveal observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active')
-        }
-      })
-    }, { threshold: 0.1 })
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <main className="min-h-screen bg-[#050505] text-gray-200 antialiased selection:bg-white selection:text-black">
-      {/* Noise Overlay */}
-      <div className="fixed inset-0 z-50 pointer-events-none opacity-[0.03]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-      }} />
-
+    <main className="min-h-screen bg-[#050505] text-gray-200 antialiased">
       {/* Header */}
       <header className="fixed top-0 w-full z-40 p-4 md:p-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5">
         <a href="#" className="flex items-center gap-3 group">
@@ -48,7 +24,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-5xl text-center">
-          <div className="reveal inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-10 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-10 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -57,16 +33,16 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-            <div className="reveal">READY TO GRADUATE</div>
-            <div className="reveal delay-100 text-gray-500">FROM UPWORK?</div>
+            <div>READY TO GRADUATE</div>
+            <div className="text-gray-500">FROM UPWORK?</div>
           </h1>
 
-          <p className="reveal delay-200 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
             Stop churning through freelancers. Build your remote team with embedded talent that actually sticks around.
           </p>
 
           {/* Stats */}
-          <div className="reveal delay-300 grid grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
+          <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 text-center">
               <div className="text-4xl font-bold text-white mb-2 font-mono">20+</div>
               <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Years Building Tech</div>
@@ -77,7 +53,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="reveal delay-300">
+          <div>
             <a href="#origin" className="inline-block border-b border-white pb-1 text-lg hover:text-blue-400 hover:border-blue-400 transition">
               The Origin Story ↓
             </a>
@@ -88,7 +64,7 @@ export default function Home() {
       {/* Origin Story */}
       <section id="origin" className="scroll-mt-32 min-h-screen flex items-center py-24 relative border-t border-white/5 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <div className="reveal relative z-10">
+          <div className="relative z-10">
             <div className="font-mono text-xs text-blue-500 mb-6 tracking-widest uppercase">/// Built by a Builder</div>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
               I Built This to Solve<br />
@@ -100,7 +76,7 @@ export default function Home() {
               <p>First Epic is what I wish existed when I started. Not another marketplace. Not another agency. A better way to build a remote team that actually works.</p>
             </div>
             <div className="mt-12 flex items-center gap-4">
-              <img src="/davis-headshot.jpg" alt="Davis Brimer" className="w-16 h-16 rounded-full border border-white/20 object-cover grayscale hover:grayscale-0 transition duration-500" />
+              <img src="/davis-headshot.jpg" alt="Davis Brimer" className="w-16 h-16 rounded-full border border-white/20 object-cover" />
               <div>
                 <div className="text-white font-bold text-base">Davis Brimer</div>
                 <div className="text-gray-500 text-xs font-mono uppercase">Founder & CEO • 20+ Years in Tech</div>
@@ -108,43 +84,35 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="reveal delay-100">
+          <div>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg opacity-20 blur-lg"></div>
               <div className="relative bg-[#050505] border border-white/10 p-8 rounded-sm shadow-2xl">
                 <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-4">The Freelancer Fatigue</div>
-                <ul className="space-y-6 font-sans">
+                <ul className="space-y-6">
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
-                    </div>
+                    <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">✗</div>
                     <div>
                       <div className="text-white font-bold text-sm">Constant Churn</div>
                       <div className="text-gray-500 text-sm">Every project starts from zero. New freelancer, new onboarding, new trust-building.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                    </div>
+                    <div className="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0 text-yellow-500">!</div>
                     <div>
                       <div className="text-white font-bold text-sm">No Ownership</div>
                       <div className="text-gray-500 text-sm">They&apos;re juggling 5 other clients. Your project is just another ticket.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
+                    <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0 text-orange-500">?</div>
                     <div>
                       <div className="text-white font-bold text-sm">Quality Lottery</div>
                       <div className="text-gray-500 text-sm">Great portfolio, mediocre delivery. The profile never matches the work.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/></svg>
-                    </div>
+                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
                     <div>
                       <div className="text-white font-bold text-sm">First Epic</div>
                       <div className="text-gray-500 text-sm">Dedicated talent. Physical workspace. Adult supervision.</div>
@@ -160,42 +128,42 @@ export default function Home() {
       {/* The Solution */}
       <section id="solution" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
             <p className="text-gray-400 text-lg">Your dedicated remote team with real infrastructure and adult supervision.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 reveal delay-100">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Physical Workspace</div>
               <h4 className="text-xl font-bold text-white mb-3">Real Office, Real Oversight</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professional workspace with HR, IT support, and daily management. Not a bedroom with spotty WiFi.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professional workspace with HR, IT support, and daily management.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Dedicated to You</div>
               <h4 className="text-xl font-bold text-white mb-3">Full-Time, Embedded</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team members work exclusively for you. Not splitting attention across five other clients.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Your team members work exclusively for you. Not splitting attention across other clients.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">AI-Enabled</div>
-              <h4 className="text-xl font-bold text-white mb-3">Modern Tools, Modern Workflows</h4>
+              <h4 className="text-xl font-bold text-white mb-3">Modern Tools</h4>
               <p className="text-gray-400 text-sm leading-relaxed">Your team gets access to cutting-edge AI tools to supercharge their productivity.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Timezone Flexibility</div>
-              <h4 className="text-xl font-bold text-white mb-3">Your Schedule, Your Choice</h4>
+              <h4 className="text-xl font-bold text-white mb-3">Your Schedule</h4>
               <p className="text-gray-400 text-sm leading-relaxed">Full US business hours overlap available, or async overnight work. You decide.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">No Per-Hire Fees</div>
               <h4 className="text-xl font-bold text-white mb-3">Recruiting Included</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Unlike Arc or Toptal, you don&apos;t pay thousands just to start. Recruiting is included in your rate.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Unlike Arc or Toptal, you don&apos;t pay thousands just to start.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Free Replacements</div>
               <h4 className="text-xl font-bold text-white mb-3">Risk-Free Hiring</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">If someone isn&apos;t working out, we replace them. No questions, no fees. That&apos;s on us.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">If someone isn&apos;t working out, we replace them. No questions, no fees.</p>
             </div>
           </div>
         </div>
@@ -204,25 +172,37 @@ export default function Home() {
       {/* How It Works */}
       <section id="process" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Process</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">How It Works</h3>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-8 reveal delay-100">
-            {[
-              { step: '01', title: 'We Source & Screen', desc: 'Tell us what you need. We find, vet, and shortlist candidates.' },
-              { step: '02', title: 'You Interview', desc: 'You make the final call. Interview candidates, pick your team.' },
-              { step: '03', title: 'We Hire & Onboard', desc: 'We handle employment, payroll, workspace, equipment.' },
-              { step: '04', title: 'You Manage', desc: 'They&apos;re your team. You assign work, run standups, set priorities.' },
-              { step: '05', title: 'We Handle the Rest', desc: 'HR, compliance, performance support, replacements if needed.' },
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <div className="text-5xl font-mono font-bold text-white/10 mb-4">{item.step}</div>
-                <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-                <p className="text-gray-500 text-sm">{item.desc}</p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-5 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-mono font-bold text-white/10 mb-4">01</div>
+              <h4 className="text-lg font-bold text-white mb-2">We Source & Screen</h4>
+              <p className="text-gray-500 text-sm">Tell us what you need. We find, vet, and shortlist candidates.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-mono font-bold text-white/10 mb-4">02</div>
+              <h4 className="text-lg font-bold text-white mb-2">You Interview</h4>
+              <p className="text-gray-500 text-sm">You make the final call. Interview candidates, pick your team.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-mono font-bold text-white/10 mb-4">03</div>
+              <h4 className="text-lg font-bold text-white mb-2">We Hire & Onboard</h4>
+              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, equipment.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-mono font-bold text-white/10 mb-4">04</div>
+              <h4 className="text-lg font-bold text-white mb-2">You Manage</h4>
+              <p className="text-gray-500 text-sm">They&apos;re your team. You assign work, run standups.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-mono font-bold text-white/10 mb-4">05</div>
+              <h4 className="text-lg font-bold text-white mb-2">We Handle the Rest</h4>
+              <p className="text-gray-500 text-sm">HR, compliance, performance support, replacements.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -230,43 +210,29 @@ export default function Home() {
       {/* Fit Check */}
       <section id="fit" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// Fit Check</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Is This Right For You?</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto reveal delay-100">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-green-500/5 border border-green-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-green-400 mb-6">Great Fit</h4>
               <ul className="space-y-4">
-                {[
-                  'Startups ready to move beyond freelancers',
-                  'Founders scaling their first remote team',
-                  'Companies with hard-to-fill creative + AI roles',
-                  'Teams that want ownership, not outsourcing',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-300">
-                    <span className="text-green-500 font-bold">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Startups ready to move beyond freelancers</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders scaling their first remote team</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies with hard-to-fill creative + AI roles</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams that want ownership, not outsourcing</span></li>
               </ul>
             </div>
 
             <div className="bg-red-500/5 border border-red-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-red-400 mb-6">Not For</h4>
               <ul className="space-y-4">
-                {[
-                  'Enterprise procurement processes',
-                  'One-off project work',
-                  'Managed services buyers',
-                  'Lowest-cost-only shoppers',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-300">
-                    <span className="text-red-500 font-bold">✗</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Enterprise procurement processes</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>One-off project work</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Managed services buyers</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Lowest-cost-only shoppers</span></li>
               </ul>
             </div>
           </div>
@@ -275,7 +241,7 @@ export default function Home() {
 
       {/* Contact CTA */}
       <section id="contact" className="scroll-mt-32 min-h-[80vh] flex flex-col justify-center items-center py-24 px-6 relative border-t border-white/5 bg-[#030303]">
-        <div className="max-w-4xl mx-auto text-center reveal">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter leading-none">
             Ready to Build<br />
             <span className="text-gray-700">Your Team?</span>
@@ -339,33 +305,6 @@ export default function Home() {
           <div className="text-gray-600 text-xs font-mono">© 2026 First Epic</div>
         </div>
       </footer>
-
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
-        
-        body {
-          font-family: 'Inter', sans-serif;
-        }
-        
-        .font-mono {
-          font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .reveal {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: all 0.8s ease;
-        }
-        
-        .reveal.active {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-      `}</style>
     </main>
   )
 }
