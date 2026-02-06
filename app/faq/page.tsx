@@ -2,11 +2,11 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How is this different from Upwork/Toptal/Arc/Turing?",
-      answer: "Upwork is freelancers juggling multiple clients. Toptal/Arc/Turing are marketplaces connecting you to individual contractors. First Epic is your Pakistan office—we provide a physical workspace with HR, IT, performance management, and daily oversight. Your talent is dedicated to you full-time, not splitting attention across projects."
+      answer: "Upwork is freelancers juggling multiple clients. Toptal/Arc/Turing are marketplaces connecting you to individual contractors. First Epic provides a physical workspace with HR, IT, performance management, and daily oversight. Your talent is dedicated to you full-time, not splitting attention across projects."
     },
     {
       question: "Where is the talent located?",
-      answer: "Pakistan. We run a physical studio in Karachi with workspace, internet, IT support, HR, and daily supervision. We reframe this as 'emerging markets with infrastructure advantage'—not just cheap labor, but professional workspace with adult oversight."
+      answer: "We operate a physical studio in Islamabad/Rawalpindi with workspace, internet, IT support, HR, and daily supervision in a secure location. This gives you professional infrastructure with adult oversight—not random contractors working from coffee shops."
     },
     {
       question: "Do you offer managed services?",
@@ -18,11 +18,11 @@ export default function FAQ() {
     },
     {
       question: "How long does hiring take?",
-      answer: "Typically about 1 month for a new client. We source, screen, you interview, we hire and onboard. Timeline depends on role specificity and your availability for interviews."
+      answer: "Typically 2-4 weeks for a new client. We source, screen, you interview, we hire and onboard. Timeline depends on role specificity and your availability for interviews."
     },
     {
       question: "What roles can you fill?",
-      answer: "Engineers (full-stack, frontend, backend, mobile), designers (UI/UX, product), AI specialists, and creative+AI hybrid roles. If it's a hard-to-fill remote tech role, we can probably help."
+      answer: "We specialize in technical and creative roles: software engineers (full-stack, frontend, backend, mobile), designers (UI/UX, product), AI specialists, and hybrid creative+technical roles. If you're looking for dedicated remote talent in these areas, we can help."
     },
     {
       question: "Do you charge per-hire fees?",
@@ -30,11 +30,11 @@ export default function FAQ() {
     },
     {
       question: "What timezone options do you offer?",
-      answer: "We operate 24/7. Options: (1) Daytime Pakistan (async/overnight work for US), (2) Partial overlap (~2pm-midnight Pakistan time), (3) Night shift (~6pm-3am Pakistan time for US afternoon overlap), or (4) Graveyard (~9pm-6am Pakistan time for full US overlap)."
+      answer: "We operate 24/7 and can accommodate your preferred schedule: (1) Overnight work for US teams—tasks completed while you sleep, (2) Partial overlap—available during your afternoon hours, (3) Full US business hours overlap—real-time collaboration during your 9-5. You choose what works best for your workflow."
     },
     {
-      question: "How do you train people on AI tools?",
-      answer: "We train team members on Cursor, GitHub Copilot, and Claude Code. The goal: AI-enabled talent who work more efficiently. Monthly fee (vs hourly) incentivizes speed, not slow billing."
+      question: "How do you enable team members with AI tools?",
+      answer: "Your team gets access to cutting-edge AI development and productivity tools based on their role and your requirements. We equip them with what they need to work efficiently in modern workflows."
     },
     {
       question: "Who is your typical customer?",
@@ -42,10 +42,10 @@ export default function FAQ() {
     },
     {
       question: "How much does it cost?",
-      answer: "Custom quotes based on role, timezone, and experience level. Dramatically cheaper than US hiring, with zero headaches of going direct. Book a call with Davis for specifics."
+      answer: "Custom quotes based on role, timezone, and experience level. Dramatically cheaper than US hiring, with zero headaches of going direct. Get in touch with Davis for specifics."
     },
     {
-      question: "Can I visit the Pakistan office?",
+      question: "Can I visit the office?",
       answer: "Yes, though most clients don't need to. We handle the physical infrastructure (workspace, IT, HR, daily oversight). You manage the work remotely like any other distributed team."
     }
   ]
@@ -54,9 +54,9 @@ export default function FAQ() {
     <main className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">Frequently Asked Questions</h1>
-          <p className="text-xl md:text-2xl text-slate-300 max-w-3xl">
+        <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">Frequently Asked Questions</h1>
+          <p className="text-xl md:text-2xl text-slate-300 max-w-3xl leading-relaxed">
             Everything you need to know about working with First Epic.
           </p>
         </div>
@@ -64,14 +64,14 @@ export default function FAQ() {
 
       {/* FAQs */}
       <div className="max-w-4xl mx-auto px-6 py-20 md:py-32">
-        <div className="space-y-8">
+        <div className="space-y-10">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-slate-200 pb-8 last:border-b-0">
-              <h3 className="text-2xl font-bold mb-4 text-slate-900 flex items-start gap-3">
-                <span className="text-blue-600 flex-shrink-0">Q{index + 1}.</span>
+            <div key={index} className="border-b-2 border-slate-200 pb-10 last:border-b-0">
+              <h3 className="text-2xl font-bold mb-5 text-slate-900 flex items-start gap-4">
+                <span className="text-blue-600 flex-shrink-0 bg-blue-50 px-4 py-2 rounded-lg font-mono">Q{index + 1}</span>
                 <span>{faq.question}</span>
               </h3>
-              <div className="pl-10">
+              <div className="pl-20">
                 <p className="text-lg text-slate-700 leading-relaxed">{faq.answer}</p>
               </div>
             </div>
@@ -79,16 +79,16 @@ export default function FAQ() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 border border-slate-200 rounded-2xl p-10 md:p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">Still have questions?</h3>
-          <p className="text-lg text-slate-700 mb-8 max-w-2xl mx-auto">
+        <div className="mt-20 bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-12 text-center shadow-md">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-slate-900">Still have questions?</h3>
+          <p className="text-lg text-slate-700 mb-10 max-w-2xl mx-auto leading-relaxed">
             Book 30 minutes with Davis. Founder-to-founder.
           </p>
           <a 
-            href="mailto:davis@firstepic.studio" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 shadow-lg"
+            href="/#contact" 
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-10 py-4 rounded-xl text-lg transition-all hover:scale-105 shadow-lg"
           >
-            Email Davis
+            Get in Touch
           </a>
         </div>
 
