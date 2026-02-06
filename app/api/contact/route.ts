@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'First Epic <contact@firstepic.studio>',
+        from: 'First Epic <onboarding@resend.dev>',
         to: ['davis@firstepic.studio'],
         subject: `New Contact: ${name}`,
         html: `
