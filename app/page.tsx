@@ -78,7 +78,7 @@ export default function Home() {
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 text-center">
               <div className="text-4xl font-bold text-white mb-2 font-mono">100%</div>
-              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Referral Growth</div>
+              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Client Retention</div>
             </div>
           </div>
 
@@ -100,7 +100,7 @@ export default function Home() {
               <span className="text-gray-600">My Own Problem.</span>
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-              <p>Over 20 years as a tech entrepreneur, I&apos;ve hired <strong className="text-white">hundreds of freelancers</strong> across every platform you can name. Upwork, Toptal, Fiverr, direct contractors — you name it, I&apos;ve tried it.</p>
+              <p>For over 20 years as a tech entrepreneur, I&apos;ve hired <strong className="text-white">hundreds of freelancers</strong> across every platform you can name. Upwork, Toptal, Fiverr, direct contractors  -  you name it, I&apos;ve tried it.</p>
               <p className="text-white">The lessons cost me <strong className="text-blue-400">hundreds of thousands of dollars</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
               <p>First Epic is what I wish existed when I started. Not another marketplace. Not another agency. A better way to build a remote team that actually works.</p>
             </div>
@@ -160,7 +160,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
-            <p className="text-gray-400 text-lg">Your dedicated remote team with real infrastructure and adult supervision.</p>
+            <p className="text-gray-400 text-lg">Build your own dedicated team - we handle the infrastructure and professional oversight.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -250,7 +250,7 @@ export default function Home() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Startups ready to move beyond freelancers</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders scaling their first remote team</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies with hard-to-fill creative + AI roles</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies with hard-to-fill technical positions</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams that want ownership, not outsourcing</span></li>
               </ul>
             </div>
@@ -347,7 +347,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with adult supervision.</span>
+            <span className="text-gray-500 text-sm">Full-time embedded talent with on-site management.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>

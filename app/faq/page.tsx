@@ -6,7 +6,7 @@ export default function FAQ() {
     },
     {
       question: "Where is the talent located?",
-      answer: "We operate a physical studio in Islamabad/Rawalpindi with workspace, internet, IT support, HR, and daily supervision in a secure location. This gives you professional infrastructure with adult oversight—not random contractors working from coffee shops."
+      answer: "We operate a physical studio in Islamabad/Rawalpindi with workspace, internet, IT support, HR, and daily supervision in a secure location. This gives you professional infrastructure with adult oversight - not random contractors working from coffee shops."
     },
     {
       question: "Do you offer managed services?",
@@ -30,7 +30,7 @@ export default function FAQ() {
     },
     {
       question: "What timezone options do you offer?",
-      answer: "We operate 24/7 and can accommodate your preferred schedule: (1) Overnight work for US teams—tasks completed while you sleep, (2) Partial overlap—available during your afternoon hours, (3) Full US business hours overlap—real-time collaboration during your 9-5. You choose what works best for your workflow."
+      answer: "We operate 24/7 and can accommodate your preferred schedule: (1) Overnight work for US teams - tasks completed while you sleep, (2) Partial overlap - available during your afternoon hours, (3) Full US business hours overlap - real-time collaboration during your 9-5. You choose what works best for your workflow."
     },
     {
       question: "How do you enable team members with AI tools?",
@@ -122,7 +122,7 @@ export default function FAQ() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with adult supervision.</span>
+            <span className="text-gray-500 text-sm">Full-time embedded talent with on-site management.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>

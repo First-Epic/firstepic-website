@@ -36,7 +36,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">Davis&apos;s Story</h2>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
             <p>
-              I&apos;ve been building tech companies for over 20 years. Started my first company in college (UC Santa Barbara, Computer Engineering). Since then: medical diagnostics, life science instruments, veterinary tech, mobile gaming, marketplace apps, and more.
+              I&apos;ve been building tech companies for over 20 years. Started my first company in college (UC Santa Barbara, Computer Engineering). Since then: SaaS, Web3, consumer apps, mobile gaming, and more.
             </p>
             <p>
               Along the way, I contracted with <strong className="text-white">hundreds of freelancers</strong>. Some were great. Most weren&apos;t. I learned <strong className="text-white">hundreds of thousands of dollars</strong> worth of lessons about what doesn&apos;t work:
@@ -46,25 +46,25 @@ export default function About() {
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Contractors juggling five other clients—you&apos;re never their priority</span>
+                  <span>Contractors juggling five other clients - you&apos;re never their priority</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Constant churn—every project starts from zero, tribal knowledge lost</span>
+                  <span>Constant churn - every project starts from zero, tribal knowledge lost</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Communication breakdowns—timezone chaos, disappearing acts, endless follow-ups</span>
+                  <span>Communication breakdowns - timezone chaos, language barriers, disappearing acts</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Quality lottery—great profile, mediocre work</span>
+                  <span>Quality lottery - great profile, mediocre work</span>
                 </li>
               </ul>
             </div>
             
             <p>
-              I got tired of starting every project from scratch. So I built First Epic to solve my own problem: full-time embedded talent with actual adult supervision. Physical workspace. HR. IT. Performance management.
+              I got tired of starting every project from scratch. So I built First Epic to solve my own problem: full-time embedded talent with on-site studio management. Physical workspace. HR. IT. Talent development.
             </p>
             
             <div className="bg-blue-500/10 border-l-4 border-blue-500 p-8 rounded-r-lg my-8">
@@ -74,7 +74,7 @@ export default function About() {
               </p>
             </div>
             
-            <p>Then my colleagues wanted it. Now I&apos;m building this into a company.</p>
+            <p>Then my colleagues wanted it. Now I&apos;ve built this into a company.</p>
           </div>
         </section>
 
@@ -89,7 +89,7 @@ export default function About() {
               That&apos;s noise. Everyone says that.
             </p>
             <p>
-              What makes First Epic different is <strong className="text-blue-400">physical infrastructure with professional oversight</strong>. We&apos;re not a marketplace connecting you to random contractors. We run an actual workspace with HR, IT, performance management, and daily supervision.
+              What makes First Epic different is <strong className="text-blue-400">physical infrastructure with professional oversight</strong>. We&apos;re not a marketplace connecting you to random contractors. We run an actual workspace with HR, IT, talent development, and daily supervision.
             </p>
             
             <div className="bg-gradient-to-r from-slate-800 to-blue-900/50 p-10 rounded-xl my-8 border border-white/10">
@@ -138,7 +138,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with adult supervision.</span>
+            <span className="text-gray-500 text-sm">Full-time embedded talent with on-site management.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-white font-medium">About</a>
