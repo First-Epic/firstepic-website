@@ -2,7 +2,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How is this different from Upwork/Toptal/Arc/Turing?",
-      answer: "Upwork is freelancers juggling multiple clients. Toptal/Arc/Turing are marketplaces connecting you to individual contractors. First Epic provides a physical workspace with HR, IT, career development, and professional oversight. Your talent is dedicated to you full-time, not splitting attention across projects."
+      answer: "Upwork is freelancers juggling multiple clients. Toptal/Arc/Turing are marketplaces connecting you to individual contractors. First Epic provides a physical workspace with HR, IT, and career development. Your talent works from our studio full-time, dedicated to you — not splitting attention across projects."
     },
     {
       question: "Where is the talent located?",
@@ -122,7 +122,7 @@ export default function FAQ() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with professional oversight.</span>
+            <span className="text-gray-500 text-sm">Full-time embedded talent with professional infrastructure.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>

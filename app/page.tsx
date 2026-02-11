@@ -121,7 +121,7 @@ export default function Home() {
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
               <p>For over 20 years as a tech entrepreneur, I&apos;ve hired <strong className="text-white">hundreds of freelancers</strong> across every platform you can name. Upwork, Toptal, Fiverr, direct contractors  -  you name it, I&apos;ve tried it.</p>
               <p className="text-white">The lessons cost me <strong className="text-blue-400">hundreds of thousands of dollars</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
-              <p>First Epic is what I wish existed when I started. Not another marketplace. Not another agency. A better way to build a remote team that actually works.</p>
+              <p>First Epic is what I wish existed when I started. Not another marketplace. Not another agency. The next step after you&apos;ve outgrown freelancers — embedded talent with real infrastructure behind them.</p>
             </div>
             <div className="mt-12 flex items-center gap-4">
               <img src="/davis-headshot.jpg" alt="Davis Brimer" className="w-16 h-16 rounded-full border border-white/20 object-cover" />
@@ -163,7 +163,7 @@ export default function Home() {
                     <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
                     <div>
                       <div className="text-white font-bold text-sm">First Epic</div>
-                      <div className="text-gray-500 text-sm">Dedicated talent. Physical workspace. Adult supervision.</div>
+                      <div className="text-gray-500 text-sm">Dedicated talent. Physical workspace. Professional infrastructure.</div>
                     </div>
                   </li>
                 </ul>
@@ -179,14 +179,14 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
-            <p className="text-gray-400 text-lg">Build your own dedicated team - we handle the infrastructure and professional oversight.</p>
+            <p className="text-gray-400 text-lg">Build your own dedicated team - we handle the infrastructure and professional support.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Physical Workspace</div>
               <h4 className="text-xl font-bold text-white mb-3">Real Office, Real Oversight</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professional workspace with HR, IT support, and daily management.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professional workspace with HR, IT support, and operational management.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Dedicated to You</div>
@@ -249,7 +249,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">05</div>
               <h4 className="text-lg font-bold text-white mb-2">We Handle the Rest</h4>
-              <p className="text-gray-500 text-sm">HR, compliance, performance support, replacements.</p>
+              <p className="text-gray-500 text-sm">HR, compliance, training, replacements.</p>
             </div>
           </div>
         </div>
@@ -366,7 +366,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with on-site management.</span>
+            <span className="text-gray-500 text-sm">Full-time embedded talent with professional infrastructure.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>
