@@ -3,8 +3,8 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'First Epic | Graduate from Upwork',
-  description: 'Stop churning through freelancers. Build your remote team with embedded talent that actually sticks around.',
+  title: 'First Epic | Build Your Remote Team',
+  description: 'Full-time embedded talent with real infrastructure. Developers, designers, and PMs who work exclusively for you - backed by our physical studio, HR, IT, and professional support.',
   icons: {
     icon: [
       {

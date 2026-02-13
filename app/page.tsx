@@ -77,16 +77,16 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">Accepting Clients • Founder-to-Founder</span>
+            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Tech Founders & Studio Heads • Accepting Clients</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-            <div>BUILD YOUR</div>
-            <div className="text-gray-500">REMOTE TEAM.</div>
+            <div>STRETCH YOUR RUNWAY.</div>
+            <div className="text-gray-500">NOT YOUR STANDARDS.</div>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            Small teams. Deep context. AI-enabled. Full-time embedded talent with real infrastructure behind them — so you can build faster without burning through contractors.
+            Your dedicated team, working full-time from our professionally managed studio. We handle recruiting, HR, payroll, AI tools, and operational support. You manage the work. We handle everything else.
           </p>
 
           {/* Stats */}
@@ -119,15 +119,15 @@ export default function Home() {
               <span className="text-gray-600">Our Infrastructure.</span>
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-              <p>Most companies try to build remote teams one of two ways: hire freelancers and manage the chaos, or pay premium local rates and hope the budget holds.</p>
-              <p className="text-white">There&apos;s a third way. <strong className="text-blue-400">Dedicated, full-time team members</strong> who work exclusively for you — from a professional studio with real HR, IT, and operational support.</p>
+              <p>Most companies try to hire talent one of two ways: freelancers and manage the chaos, or full-time locally at $150K+ salaries and hope the budget holds.</p>
+              <p className="text-white">There&apos;s a third way. <strong className="text-blue-400">Dedicated, full-time team members</strong> who work exclusively for you - from a professionally managed studio with real HR, IT, and operational support.</p>
               <p>No split attention. No contractor churn. No starting from zero every few months. Just committed people with deep context on your product, backed by infrastructure that keeps them performing.</p>
             </div>
             <div className="mt-12 flex items-center gap-4">
               <img src="/davis-headshot.jpg" alt="Davis Brimer" className="w-16 h-16 rounded-full border border-white/20 object-cover" />
               <div>
                 <div className="text-white font-bold text-base">Davis Brimer</div>
-                <div className="text-gray-500 text-xs font-mono uppercase">Founder & CEO • 20+ Years in Tech</div>
+                <div className="text-gray-500 text-xs font-mono uppercase">Founder & CEO - 20+ Years in Tech</div>
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function Home() {
                     <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
                     <div>
                       <div className="text-white font-bold text-sm">First Epic</div>
-                      <div className="text-gray-500 text-sm">Dedicated talent. Deep context. Physical studio. Real infrastructure.</div>
+                      <div className="text-gray-500 text-sm">Dedicated talent. Deep context. Professionally managed studio. Real infrastructure.</div>
                     </div>
                   </li>
                 </ul>
@@ -179,14 +179,14 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
-            <p className="text-gray-400 text-lg">Your dedicated remote team — we handle the infrastructure and professional support.</p>
+            <p className="text-gray-400 text-lg">Your dedicated team - we handle the infrastructure and professional support.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Physical Workspace</div>
               <h4 className="text-xl font-bold text-white mb-3">Real Office, Real Oversight</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professional studio with HR, IT support, and operational management.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professionally managed studio with HR, IT support, and operational management.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Dedicated to You</div>
@@ -255,15 +255,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Origin Story — moved below process */}
+      {/* Origin Story */}
       <section id="origin" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Origin Story</div>
           <h3 className="text-3xl md:text-4xl font-bold mb-10">Why I Built This</h3>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-            <p>For over 20 years as a tech entrepreneur, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform — Upwork, Toptal, Fiverr, direct contractors. The lessons cost me <strong className="text-blue-400">over $100K</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
-            <p>The problem was never the talent. It was the model. Freelance platforms incentivize short-term behavior — split attention, constant churn, no ownership. I needed people who went deep on one product, not shallow on six.</p>
-            <p className="text-white">So I built First Epic: the infrastructure I wish existed when I started. Not another marketplace. A dedicated team office with real support behind it.</p>
+            <p>For over 20 years as a tech entrepreneur, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform - Upwork, Toptal, Fiverr, direct contractors. The lessons cost me <strong className="text-blue-400">over $100K</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
+            <p>The problem was never the talent. It was the model. Freelance platforms incentivize short-term behavior - split attention, constant churn, no ownership. I needed people who went deep on one product, not shallow on six.</p>
+            <p className="text-white">So I built First Epic: the infrastructure I wish existed when I started. Not another marketplace. A professionally managed studio with dedicated talent inside it.</p>
           </div>
         </div>
       </section>
@@ -280,7 +280,7 @@ export default function Home() {
             <div className="bg-green-500/5 border border-green-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-green-400 mb-6">Great Fit</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Tech founders and studio heads building remote teams</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Tech founders and studio heads building dedicated teams</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies tired of contractor churn who want committed team members</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams with hard-to-fill technical or creative roles</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders who want ownership and deep context, not outsourcing</span></li>
