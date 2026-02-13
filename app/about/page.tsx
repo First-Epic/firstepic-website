@@ -23,7 +23,7 @@ export default function About() {
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// About</div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">About First Epic</h1>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-            Built by a founder who learned the hard way, for founders ready to do it the right way.
+            Talent infrastructure for tech founders and studio heads who want to build great remote teams — without the overhead.
           </p>
         </div>
       </div>
@@ -31,6 +31,30 @@ export default function About() {
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 py-20 md:py-32">
         
+        {/* What We Do */}
+        <section className="mb-24">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">What We Do</h2>
+          <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
+            <p>
+              First Epic provides <strong className="text-white">full-time, embedded team members</strong> — developers, designers, PMs — who work exclusively for you, from our professional studio.
+            </p>
+            <p>
+              We handle recruiting, hiring, payroll, HR, workspace, IT, and replacements. You manage the day-to-day work, just like any remote team member.
+            </p>
+
+            <div className="bg-gradient-to-r from-slate-800 to-blue-900/50 p-10 rounded-xl my-8 border border-white/10">
+              <p className="text-2xl font-semibold text-white mb-4">Your dedicated remote team office.</p>
+              <p className="text-gray-300">
+                Not a marketplace. Not an agency. Full-time people, real infrastructure, one monthly fee.
+              </p>
+            </div>
+
+            <p>
+              Our team members train on modern AI tools — Cursor, Copilot, Claude, and more — because AI multiplies the output of people with deep product context. A small, committed team with the right tools outperforms a large team with shallow knowledge every time.
+            </p>
+          </div>
+        </section>
+
         {/* Davis's Story */}
         <section className="mb-24">
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">Davis&apos;s Story</h2>
@@ -39,65 +63,61 @@ export default function About() {
               I&apos;ve been building tech companies for over 20 years. Started my first company in college (UC Santa Barbara, Computer Engineering). Since then: SaaS, Web3, consumer apps, mobile gaming, and more.
             </p>
             <p>
-              Along the way, I contracted with <strong className="text-white">hundreds of freelancers</strong>. Some were great. Most weren&apos;t. I learned <strong className="text-white">hundreds of thousands of dollars</strong> worth of lessons about what doesn&apos;t work:
+              Along the way, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform. Some were great. Most relationships didn&apos;t last. I spent <strong className="text-white">over $100K</strong> learning what doesn&apos;t work:
             </p>
             
             <div className="bg-red-500/10 border-l-4 border-red-500 p-8 rounded-r-lg my-8">
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Contractors juggling five other clients - you&apos;re never their priority</span>
+                  <span>Contractors splitting attention across five clients — you&apos;re never the priority</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Constant churn - every project starts from zero, tribal knowledge lost</span>
+                  <span>Constant churn — every few months, new person, new onboarding, context lost</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Communication breakdowns - timezone chaos, language barriers, disappearing acts</span>
+                  <span>Management overhead — hours per week supervising, re-explaining, reviewing</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Quality lottery - great profile, mediocre work</span>
+                  <span>No ownership — work treated as a transaction, not a mission</span>
                 </li>
               </ul>
             </div>
             
             <p>
-              I got tired of starting every project from scratch. So I built First Epic to solve my own problem: full-time embedded talent with on-site studio management. Physical workspace. HR. IT. Talent development.
+              The problem was never the talent — it was the model. Freelance platforms incentivize short-term behavior. I needed people who went deep on one product, with infrastructure supporting them.
             </p>
             
             <div className="bg-blue-500/10 border-l-4 border-blue-500 p-8 rounded-r-lg my-8">
-              <p className="text-white font-semibold mb-3">Not a marketplace. A dedicated team with real infrastructure.</p>
+              <p className="text-white font-semibold mb-3">So I built it.</p>
               <p className="text-gray-400">
-                Real workspace with real oversight. Not random contractors working from coffee shops.
+                A physical studio with HR, IT, and professional oversight. Dedicated team members who work full-time for one client. The infrastructure I wish existed when I started.
               </p>
             </div>
             
-            <p>Then my colleagues wanted it. Now I&apos;ve built this into a company.</p>
+            <p>Then my colleagues wanted it. Now it&apos;s a company.</p>
           </div>
         </section>
 
         {/* Why First Epic Exists */}
         <section className="mb-24">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">Why First Epic Exists</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">Why First Epic Is Different</h2>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
             <p>
-              There are hundreds of outsourcing companies. Most of them position the same way: &quot;Top 1-3% talent,&quot; &quot;vetted developers,&quot; &quot;cost savings.&quot;
+              There are hundreds of outsourcing companies. Most position the same way: &quot;Top 1-3% talent,&quot; &quot;vetted developers,&quot; &quot;cost savings.&quot;
             </p>
             <p className="text-white font-semibold">
               That&apos;s noise. Everyone says that.
             </p>
             <p>
-              What makes First Epic different is <strong className="text-blue-400">physical infrastructure with professional support</strong>. We&apos;re not a marketplace connecting you to random contractors. We run an actual workspace with HR, IT, and talent development.
+              What makes First Epic different is <strong className="text-blue-400">we own the infrastructure</strong>. We&apos;re not a marketplace connecting you to contractors. We run the studio, employ the people, provide the tools, and handle everything that isn&apos;t your day-to-day work management.
             </p>
-            
-            <div className="bg-gradient-to-r from-slate-800 to-blue-900/50 p-10 rounded-xl my-8 border border-white/10">
-              <p className="text-2xl font-semibold text-white mb-4">Your dedicated remote team office.</p>
-              <p className="text-gray-300">
-                You manage the work (like any remote employee). We handle everything else.
-              </p>
-            </div>
+            <p>
+              The result: team members who stick around, build deep context on your product, and perform like in-house hires — at a fraction of the cost of local hiring.
+            </p>
           </div>
         </section>
 
@@ -106,7 +126,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">The Mission</h2>
           <div className="text-lg text-gray-400 leading-relaxed">
             <p>
-              Help tech founders graduate from Upwork. Stop churning through freelancers. Build your first embedded remote team without the headaches of going direct.
+              Help tech founders and studio heads build world-class remote teams with real infrastructure behind them. Small teams, deep context, AI-enabled — the future of how great companies get built.
             </p>
           </div>
         </section>
@@ -115,7 +135,7 @@ export default function About() {
         <div className="bg-white/5 border border-white/10 rounded-xl p-12 text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">Want to talk?</h3>
           <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Book 30 minutes with me. Founder-to-founder.
+            Book 30 minutes with Davis. Founder-to-founder.
           </p>
           <a 
             href="/#contact" 

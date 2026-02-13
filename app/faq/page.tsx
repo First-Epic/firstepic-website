@@ -2,19 +2,19 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How is this different from Upwork/Toptal/Arc/Turing?",
-      answer: "Upwork is freelancers juggling multiple clients. Toptal/Arc/Turing are marketplaces connecting you to individual contractors. First Epic provides a physical workspace with HR, IT, and career development. Your talent works from our studio full-time, dedicated to you — not splitting attention across projects."
+      answer: "Those are marketplaces connecting you to individual contractors who work from home, often across multiple clients. First Epic is infrastructure — a physical studio with HR, IT, and professional oversight. Your talent works from our facility full-time, dedicated exclusively to you. We handle the entire employment lifecycle so you just manage the day-to-day work."
     },
     {
       question: "Where is the talent located?",
-      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi - a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not random contractors working from coffee shops."
+      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi — a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not contractors working from home."
     },
     {
       question: "Do you offer managed services?",
-      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team - you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
+      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team — you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
     },
     {
       question: "What if it doesn't work out?",
-      answer: "Free replacements - if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
+      answer: "Free replacements — if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
     },
     {
       question: "How long does hiring take?",
@@ -22,11 +22,11 @@ export default function FAQ() {
     },
     {
       question: "What roles can you fill?",
-      answer: "Technical roles (full-stack, frontend, backend, mobile, AI), creative roles (UI/UX, product design), and business support roles (project managers, operations, admin). Startup founders need support across the board - we can help you build out multiple functions without paying US rates for everything."
+      answer: "Technical roles (full-stack, frontend, backend, mobile, AI/ML), creative roles (UI/UX, product design, motion graphics), and business support roles (project managers, operations, admin). We help tech founders and studio heads build out multiple functions without paying premium local rates."
     },
     {
       question: "Do you charge per-hire fees?",
-      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore - you only pay if you decide to move forward."
+      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore — you only pay if you decide to move forward."
     },
     {
       question: "What timezone options do you offer?",
@@ -34,19 +34,19 @@ export default function FAQ() {
     },
     {
       question: "How do you enable team members with AI tools?",
-      answer: "Your team gets access to cutting-edge AI development and productivity tools based on their role and your requirements. We equip them with what they need to work efficiently in modern workflows."
+      answer: "Your team trains on modern AI development and productivity tools — Cursor, Copilot, Claude, Midjourney, and more based on their role and your requirements. AI multiplies the output of people with deep product context. We're incentivized to make your team more efficient, not bill more hours."
     },
     {
       question: "Who is your typical customer?",
-      answer: "Tech startup founders ready to graduate from Upwork/freelancer churn. Companies scaling their first remote team. Founders looking for dedicated talent with real infrastructure behind them."
+      answer: "Tech founders and studio heads who want dedicated, full-time team members instead of cycling through contractors. Whether you're building your first remote team or replacing freelancers with committed talent, First Epic provides the infrastructure to make it work."
     },
     {
       question: "How much does it cost?",
-      answer: "Custom quotes based on role, timezone, and experience level. Dramatically cheaper than US hiring, with none of the headaches of going direct. Get in touch with Davis for specifics."
+      answer: "Custom quotes based on role, timezone, and experience level. Significantly more affordable than US/UK/Canada hiring, with none of the headaches of going direct in emerging markets. Get in touch with Davis for specifics."
     },
     {
       question: "Can I visit the office?",
-      answer: "Yes, though most clients don't need to. We handle the physical infrastructure - workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
+      answer: "Yes, though most clients don't need to. We handle the physical infrastructure — workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
     }
   ]
 

@@ -81,12 +81,12 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-            <div>READY TO GRADUATE</div>
-            <div className="text-gray-500">FROM UPWORK?</div>
+            <div>BUILD YOUR</div>
+            <div className="text-gray-500">REMOTE TEAM.</div>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            Stop churning through freelancers. Build your remote team with embedded talent that actually sticks around.
+            Small teams. Deep context. AI-enabled. Full-time embedded talent with real infrastructure behind them — so you can build faster without burning through contractors.
           </p>
 
           {/* Stats */}
@@ -102,26 +102,26 @@ export default function Home() {
           </div>
 
           <div>
-            <a href="#origin" className="inline-block border-b border-white pb-1 text-lg hover:text-blue-400 hover:border-blue-400 transition">
-              The Origin Story ↓
+            <a href="#why" className="inline-block border-b border-white pb-1 text-lg hover:text-blue-400 hover:border-blue-400 transition">
+              Why First Epic ↓
             </a>
           </div>
         </div>
       </section>
 
-      {/* Origin Story */}
-      <section id="origin" className="scroll-mt-32 min-h-screen flex items-center py-24 relative border-t border-white/5 bg-[#080808]">
+      {/* Why First Epic */}
+      <section id="why" className="scroll-mt-32 min-h-screen flex items-center py-24 relative border-t border-white/5 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative z-10">
             <div className="font-mono text-xs text-blue-500 mb-6 tracking-widest uppercase">/// Built by a Builder</div>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
-              I Built This to Solve<br />
-              <span className="text-gray-600">My Own Problem.</span>
+              Your Team.<br />
+              <span className="text-gray-600">Our Infrastructure.</span>
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-              <p>For over 20 years as a tech entrepreneur, I&apos;ve hired <strong className="text-white">hundreds of freelancers</strong> across every platform you can name. Upwork, Toptal, Fiverr, direct contractors  -  you name it, I&apos;ve tried it.</p>
-              <p className="text-white">The lessons cost me <strong className="text-blue-400">hundreds of thousands of dollars</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
-              <p>First Epic is what I wish existed when I started. Not another marketplace. Not another agency. The next step after you&apos;ve outgrown freelancers — embedded talent with real infrastructure behind them.</p>
+              <p>Most companies try to build remote teams one of two ways: hire freelancers and manage the chaos, or pay premium local rates and hope the budget holds.</p>
+              <p className="text-white">There&apos;s a third way. <strong className="text-blue-400">Dedicated, full-time team members</strong> who work exclusively for you — from a professional studio with real HR, IT, and operational support.</p>
+              <p>No split attention. No contractor churn. No starting from zero every few months. Just committed people with deep context on your product, backed by infrastructure that keeps them performing.</p>
             </div>
             <div className="mt-12 flex items-center gap-4">
               <img src="/davis-headshot.jpg" alt="Davis Brimer" className="w-16 h-16 rounded-full border border-white/20 object-cover" />
@@ -136,34 +136,34 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg opacity-20 blur-lg"></div>
               <div className="relative bg-[#050505] border border-white/10 p-8 rounded-sm shadow-2xl">
-                <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-4">The Freelancer Fatigue</div>
+                <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-4">The Old Way vs. First Epic</div>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">✗</div>
                     <div>
-                      <div className="text-white font-bold text-sm">Constant Churn</div>
-                      <div className="text-gray-500 text-sm">Every project starts from zero. New freelancer, new onboarding, new trust-building.</div>
+                      <div className="text-white font-bold text-sm">Freelancer Churn</div>
+                      <div className="text-gray-500 text-sm">New contractor every few months. Context lost. Starting from zero.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0 text-yellow-500">!</div>
                     <div>
-                      <div className="text-white font-bold text-sm">No Ownership</div>
-                      <div className="text-gray-500 text-sm">They&apos;re juggling 5 other clients. Your project is just another ticket.</div>
+                      <div className="text-white font-bold text-sm">Split Attention</div>
+                      <div className="text-gray-500 text-sm">Juggling multiple clients. Your project is just another ticket.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0 text-orange-500">?</div>
                     <div>
-                      <div className="text-white font-bold text-sm">Quality Lottery</div>
-                      <div className="text-gray-500 text-sm">Great portfolio, mediocre delivery. The profile never matches the work.</div>
+                      <div className="text-white font-bold text-sm">Management Overhead</div>
+                      <div className="text-gray-500 text-sm">Hours of your week spent supervising, re-explaining, re-onboarding.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
                     <div>
                       <div className="text-white font-bold text-sm">First Epic</div>
-                      <div className="text-gray-500 text-sm">Dedicated talent. Physical workspace. Professional infrastructure.</div>
+                      <div className="text-gray-500 text-sm">Dedicated talent. Deep context. Physical studio. Real infrastructure.</div>
                     </div>
                   </li>
                 </ul>
@@ -179,14 +179,14 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
-            <p className="text-gray-400 text-lg">Build your own dedicated team - we handle the infrastructure and professional support.</p>
+            <p className="text-gray-400 text-lg">Your dedicated remote team — we handle the infrastructure and professional support.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Physical Workspace</div>
               <h4 className="text-xl font-bold text-white mb-3">Real Office, Real Oversight</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professional workspace with HR, IT support, and operational management.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professional studio with HR, IT support, and operational management.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Dedicated to You</div>
@@ -195,18 +195,18 @@ export default function Home() {
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">AI-Enabled</div>
-              <h4 className="text-xl font-bold text-white mb-3">Modern Tools</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team gets access to cutting-edge AI tools to supercharge their productivity.</p>
+              <h4 className="text-xl font-bold text-white mb-3">Modern Tools, Multiplied Output</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">Your team trains on Cursor, Copilot, Claude, and more. AI multiplies the output of people with deep context.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Timezone Flexibility</div>
               <h4 className="text-xl font-bold text-white mb-3">Your Schedule</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Full US business hours overlap available, or async overnight work. You decide.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Full US business hours overlap, or async overnight work. Your team works when you need them.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">No Per-Hire Fees</div>
               <h4 className="text-xl font-bold text-white mb-3">Recruiting Included</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Unlike Arc or Toptal, you don&apos;t pay thousands just to start.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">No placement fees, no per-hire costs. Recruiting, screening, and onboarding are all included.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Free Replacements</div>
@@ -255,8 +255,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Origin Story — moved below process */}
+      <section id="origin" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Origin Story</div>
+          <h3 className="text-3xl md:text-4xl font-bold mb-10">Why I Built This</h3>
+          <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
+            <p>For over 20 years as a tech entrepreneur, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform — Upwork, Toptal, Fiverr, direct contractors. The lessons cost me <strong className="text-blue-400">over $100K</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
+            <p>The problem was never the talent. It was the model. Freelance platforms incentivize short-term behavior — split attention, constant churn, no ownership. I needed people who went deep on one product, not shallow on six.</p>
+            <p className="text-white">So I built First Epic: the infrastructure I wish existed when I started. Not another marketplace. A dedicated team office with real support behind it.</p>
+          </div>
+        </div>
+      </section>
+
       {/* Fit Check */}
-      <section id="fit" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
+      <section id="fit" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// Fit Check</h2>
@@ -267,10 +280,10 @@ export default function Home() {
             <div className="bg-green-500/5 border border-green-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-green-400 mb-6">Great Fit</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Startups ready to move beyond freelancers</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders scaling their first remote team</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies with hard-to-fill technical positions</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams that want ownership, not outsourcing</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Tech founders and studio heads building remote teams</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies tired of contractor churn who want committed team members</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams with hard-to-fill technical or creative roles</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders who want ownership and deep context, not outsourcing</span></li>
               </ul>
             </div>
 
