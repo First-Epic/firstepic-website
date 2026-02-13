@@ -2,19 +2,19 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How is this different from Upwork/Toptal/Arc/Turing?",
-      answer: "Those are marketplaces connecting you to individual contractors who work from home, often across multiple clients. First Epic is infrastructure — a physical studio with HR, IT, and professional oversight. Your talent works from our facility full-time, dedicated exclusively to you. We handle the entire employment lifecycle so you just manage the day-to-day work."
+      answer: "Those are marketplaces connecting you to individual contractors who work from home, often across multiple clients. First Epic is infrastructure - a physical studio with HR, IT, and professional oversight. Your talent works from our facility full-time, dedicated exclusively to you. We handle the entire employment lifecycle so you just manage the day-to-day work."
     },
     {
       question: "Where is the talent located?",
-      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi — a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not contractors working from home."
+      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi - a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not contractors working from home."
     },
     {
       question: "Do you offer managed services?",
-      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team — you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
+      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team - you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
     },
     {
       question: "What if it doesn't work out?",
-      answer: "Free replacements — if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
+      answer: "Free replacements - if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
     },
     {
       question: "How long does hiring take?",
@@ -34,7 +34,7 @@ export default function FAQ() {
     },
     {
       question: "How do you enable team members with AI tools?",
-      answer: "Your team trains on modern AI development and productivity tools — Cursor, Copilot, Claude, Midjourney, and more based on their role and your requirements. AI multiplies the output of people with deep product context. We're incentivized to make your team more efficient, not bill more hours."
+      answer: "Your team trains on modern AI development and productivity tools - Cursor, Copilot, Claude, Midjourney, and more based on their role and your requirements. AI multiplies the output of people with deep product context. We're incentivized to make your team more efficient, not bill more hours."
     },
     {
       question: "Who is your typical customer?",
@@ -46,7 +46,7 @@ export default function FAQ() {
     },
     {
       question: "Can I visit the office?",
-      answer: "Yes, though most clients don't need to. We handle the physical infrastructure — workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
+      answer: "Yes, though most clients don't need to. We handle the physical infrastructure - workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
     }
   ]
 
