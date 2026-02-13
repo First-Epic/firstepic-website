@@ -201,7 +201,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Timezone Flexibility</div>
               <h4 className="text-xl font-bold text-white mb-3">Your Schedule</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Full US business hours overlap, or async overnight work. Your team works when you need them.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Full business hours overlap, or async overnight work. Your team works when you need them.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">No Per-Hire Fees</div>

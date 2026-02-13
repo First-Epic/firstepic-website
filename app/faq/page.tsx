@@ -26,11 +26,11 @@ export default function FAQ() {
     },
     {
       question: "Do you charge per-hire fees?",
-      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore — you only pay if you decide to move forward."
+      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore - you only pay if you decide to move forward."
     },
     {
       question: "What timezone options do you offer?",
-      answer: "We operate 24 hours a day and can accommodate your preferred schedule: overnight async (tasks completed while you sleep), partial overlap (available during your afternoon), or full business hours overlap (real-time collaboration). You choose what works best for your workflow."
+      answer: "We operate 24 hours a day and can accommodate your preferred schedule: overnight async (tasks completed while you sleep), partial overlap (available during your morning/evening), or full business hours overlap (real-time collaboration). You choose what works best for your workflow."
     },
     {
       question: "How do you enable team members with AI tools?",
