@@ -70,7 +70,7 @@ export default function About() {
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Contractors splitting attention across five clients — you&apos;re never the priority</span>
+                  <span>Contractors splitting attention across five clients - you&apos;re never the priority</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
