@@ -77,16 +77,16 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Tech Founders & Studio Heads • Accepting Clients</span>
+            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Founders & Studio Heads Building AI-Enabled Teams • Accepting Clients</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-            <div>STRETCH YOUR RUNWAY.</div>
-            <div className="text-gray-500">NOT YOUR STANDARDS.</div>
+            <div>AI-ENABLED TEAMS.</div>
+            <div className="text-gray-500">WITHOUT THE LOCAL PRICE TAG.</div>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            Your dedicated team, working full-time from our professionally managed studio. We handle recruiting, HR, payroll, AI tools, and operational support. You manage the work. We handle everything else.
+            Your dedicated AI-enabled team, working full-time from our professionally managed studio. We recruit, vet, hire, and support talent trained on the latest AI tools — so one great developer or creative can do the work of three. You manage the work. We handle everything else.
           </p>
 
           {/* Stats */}
@@ -96,8 +96,8 @@ export default function Home() {
               <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Years Building Tech</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover-card hover-glow text-center">
-              <div className="text-4xl font-bold text-white mb-2 font-mono">100%</div>
-              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Client Retention</div>
+              <div className="text-4xl font-bold text-white mb-2 font-mono">3x</div>
+              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Output vs. Traditional Hires</div>
             </div>
           </div>
 
@@ -113,14 +113,14 @@ export default function Home() {
       <section id="why" className="scroll-mt-32 min-h-screen flex items-center py-24 relative border-t border-white/5 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative z-10">
-            <div className="font-mono text-xs text-blue-500 mb-6 tracking-widest uppercase">/// Built by a Builder</div>
+            <div className="font-mono text-xs text-blue-500 mb-6 tracking-widest uppercase">/// Built by a Founder Who&apos;s Been In Your Shoes</div>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
               Your Team.<br />
               <span className="text-gray-600">Our Infrastructure.</span>
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-              <p>Most companies try to hire talent one of two ways: freelancers and manage the chaos, or full-time locally at $150K+ salaries and hope the budget holds.</p>
-              <p className="text-white">There&apos;s a third way. <strong className="text-blue-400">Dedicated, full-time team members</strong> who work exclusively for you - from a professionally managed studio with real HR, IT, and operational support.</p>
+              <p>Most companies try to hire AI-enabled talent one of two ways: freelancers who juggle multiple clients and disappear mid-project, or local hires at $150K+ salaries who may not even exist in your market yet.</p>
+              <p className="text-white">There&apos;s a third way. <strong className="text-blue-400">Dedicated, full-time team members</strong> trained on Cursor, Copilot, Claude, and the latest AI tools — working exclusively for you from a professionally managed studio with real HR, IT, and operational support.</p>
               <p>No split attention. No contractor churn. No starting from zero every few months. Just committed people with deep context on your product, backed by infrastructure that keeps them performing.</p>
             </div>
             <div className="mt-12 flex items-center gap-4">
@@ -160,10 +160,17 @@ export default function Home() {
                     </div>
                   </li>
                   <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center shrink-0 text-purple-500">◎</div>
+                    <div>
+                      <div className="text-white font-bold text-sm">AI Skills Gap</div>
+                      <div className="text-gray-500 text-sm">Every portfolio looks incredible now. AI tools make output look professional. The vetting problem is real.</div>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
                     <div>
                       <div className="text-white font-bold text-sm">First Epic</div>
-                      <div className="text-gray-500 text-sm">Dedicated talent. Deep context. Professionally managed studio. Real infrastructure.</div>
+                      <div className="text-gray-500 text-sm">Dedicated AI-enabled talent. Deep context. Professionally managed studio. Vetted for process, not just portfolio.</div>
                     </div>
                   </li>
                 </ul>
@@ -179,7 +186,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
-            <p className="text-gray-400 text-lg">Your dedicated team - we handle the infrastructure and professional support.</p>
+            <p className="text-gray-400 text-lg">Your dedicated AI-enabled team — we handle the infrastructure and professional support.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -195,8 +202,8 @@ export default function Home() {
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">AI-Enabled</div>
-              <h4 className="text-xl font-bold text-white mb-3">Modern Tools, Multiplied Output</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team trains on Cursor, Copilot, Claude, and more. AI multiplies the output of people with deep context.</p>
+              <h4 className="text-xl font-bold text-white mb-3">The Vetting Problem, Solved</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">Every candidate&apos;s portfolio looks amazing now — AI tools made sure of that. We vet for process, not portfolio. Your team members are trained on Cursor, Copilot, Claude, and production-tested on real client work before they join you.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Timezone Flexibility</div>
@@ -229,7 +236,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">01</div>
               <h4 className="text-lg font-bold text-white mb-2">We Source & Screen</h4>
-              <p className="text-gray-500 text-sm">Tell us what you need. We find, vet, and shortlist candidates.</p>
+              <p className="text-gray-500 text-sm">Tell us what you need. We find, vet, and shortlist candidates — testing for process and production readiness, not just portfolios.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">02</div>
@@ -239,7 +246,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">03</div>
               <h4 className="text-lg font-bold text-white mb-2">We Hire & Onboard</h4>
-              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, equipment.</p>
+              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, equipment, and AI tool setup.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">04</div>
@@ -249,7 +256,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">05</div>
               <h4 className="text-lg font-bold text-white mb-2">We Handle the Rest</h4>
-              <p className="text-gray-500 text-sm">HR, compliance, training, replacements.</p>
+              <p className="text-gray-500 text-sm">HR, compliance, AI training, ongoing support, and replacements.</p>
             </div>
           </div>
         </div>
@@ -263,7 +270,8 @@ export default function Home() {
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
             <p>For over 20 years as a tech entrepreneur, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform - Upwork, Toptal, Fiverr, direct contractors. The lessons cost me <strong className="text-blue-400">over $100K</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
             <p>The problem was never the talent. It was the model. Freelance platforms incentivize short-term behavior - split attention, constant churn, no ownership. I needed people who went deep on one product, not shallow on six.</p>
-            <p className="text-white">So I built First Epic: the infrastructure I wish existed when I started. Not another marketplace. A professionally managed studio with dedicated talent inside it.</p>
+            <p>Now AI has changed the math entirely. One great developer with the right AI tools can cover ground that used to require a small team. But finding that person — and vetting whether they actually know how to ship with AI tools versus just demo with them — is the new bottleneck.</p>
+            <p className="text-white">So I built First Epic: the infrastructure I wish existed when I started. Not another marketplace. A professionally managed studio with dedicated, AI-enabled talent inside it. Vetted for process. Tested on real work. Ready to ship.</p>
           </div>
         </div>
       </section>
@@ -281,6 +289,8 @@ export default function Home() {
               <h4 className="text-2xl font-bold text-green-400 mb-6">Great Fit</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Tech founders and studio heads building dedicated teams</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Studios and agencies scaling AI-native creative production</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders who need AI-enabled developers at a fraction of local cost</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies tired of contractor churn who want committed team members</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams with hard-to-fill technical or creative roles</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders who want ownership and deep context, not outsourcing</span></li>
@@ -379,7 +389,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with professional infrastructure.</span>
+            <span className="text-gray-500 text-sm">AI-enabled remote teams with professional infrastructure.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>

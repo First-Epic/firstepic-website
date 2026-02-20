@@ -2,19 +2,27 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How is this different from Upwork/Toptal/Arc/Turing?",
-      answer: "Those are marketplaces connecting you to individual contractors who work from home, often across multiple clients. First Epic is infrastructure - a physical studio with HR, IT, and professional oversight. Your talent works from our facility full-time, dedicated exclusively to you. We handle the entire employment lifecycle so you just manage the day-to-day work."
+      answer: "Those are marketplaces connecting you to individual contractors who work from home, often across multiple clients. First Epic is infrastructure — a physical studio with HR, IT, and professional oversight. Your talent works from our facility full-time, dedicated exclusively to you, trained on AI tools like Cursor, Copilot, and Claude. We handle the entire employment lifecycle so you just manage the day-to-day work."
     },
     {
       question: "Where is the talent located?",
-      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi - a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not contractors working from home."
+      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi — a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not contractors working from home."
+    },
+    {
+      question: "What does 'AI-enabled' actually mean?",
+      answer: "Every team member we place is trained on the AI tools relevant to their role — Cursor, Copilot, Claude, Midjourney, and more. This isn't a checkbox. We test for it during vetting. An AI-enabled full-stack developer with deep product context can genuinely cover ground that used to require a small team. The tools are commoditized — everyone has access to them. The difference is the person behind them: their judgment, their process, and their ability to ship under real constraints."
+    },
+    {
+      question: "How do you vet talent when AI makes every portfolio look the same?",
+      answer: "We stopped looking at portfolios first. AI tools made everyone's output look professional — that's the trap. Instead, we test for process. Walk me through a project that went sideways. How do you handle a client who rejects the first three outputs? What's your system when the model won't generate what you need? The candidates with real production backgrounds answer in systems and workflows. The ones who learned the tools last quarter answer in vibes and aesthetics. We hire for process, not portfolio."
     },
     {
       question: "Do you offer managed services?",
-      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team - you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
+      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team — you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
     },
     {
       question: "What if it doesn't work out?",
-      answer: "Free replacements - if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
+      answer: "Free replacements — if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
     },
     {
       question: "How long does hiring take?",
@@ -22,31 +30,27 @@ export default function FAQ() {
     },
     {
       question: "What roles can you fill?",
-      answer: "Technical roles (full-stack, frontend, backend, mobile, AI/ML), creative roles (UI/UX, product design, motion graphics), and business support roles (project managers, operations, admin). We help tech founders and studio heads build out multiple functions without paying premium local rates."
+      answer: "Technical roles (full-stack, frontend, backend, mobile, AI/ML), creative roles (AI filmmakers, creative technologists, UI/UX, product design, motion graphics), and business support roles (project managers, operations, admin). We help founders and studio heads build out multiple functions without paying premium local rates."
     },
     {
       question: "Do you charge per-hire fees?",
-      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore - you only pay if you decide to move forward."
+      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore — you only pay if you decide to move forward."
     },
     {
       question: "What timezone options do you offer?",
       answer: "We operate 24 hours a day and can accommodate your preferred schedule: overnight async (tasks completed while you sleep), partial overlap (available during your morning/evening), or full business hours overlap (real-time collaboration). You choose what works best for your workflow."
     },
     {
-      question: "How do you enable team members with AI tools?",
-      answer: "Your team trains on modern AI development and productivity tools - Cursor, Copilot, Claude, Midjourney, and more based on their role and your requirements. AI multiplies the output of people with deep product context. We're incentivized to make your team more efficient, not bill more hours."
-    },
-    {
       question: "Who is your typical customer?",
-      answer: "Tech founders and studio heads who want dedicated, full-time team members instead of cycling through contractors. Whether you're building your first remote team or replacing freelancers with committed talent, First Epic provides the infrastructure to make it work."
+      answer: "Founders and studio heads who need AI-enabled talent but can't find or afford it locally. Whether you're a tech startup scaling past freelancers, a studio building an AI-native creative production team, or a non-technical founder who needs a dedicated developer — First Epic provides the talent and the infrastructure to make it work."
     },
     {
       question: "How much does it cost?",
-      answer: "Custom quotes based on role, timezone, and experience level. Significantly more affordable than US/UK/Canada hiring, with none of the headaches of going direct in emerging markets. Get in touch with Davis for specifics."
+      answer: "Custom quotes based on role, timezone, and experience level. Significantly more affordable than US/UK/Canada hiring, with none of the headaches of going direct in emerging markets. One AI-enabled developer from our studio can do the work of three traditional hires — the math changes fast. Get in touch with Davis for specifics."
     },
     {
       question: "Can I visit the office?",
-      answer: "Yes, though most clients don't need to. We handle the physical infrastructure - workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
+      answer: "Yes, though most clients don't need to. We handle the physical infrastructure — workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
     }
   ]
 
@@ -122,7 +126,7 @@ export default function FAQ() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">Full-time embedded talent with professional infrastructure.</span>
+            <span className="text-gray-500 text-sm">AI-enabled remote teams with professional infrastructure.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>
