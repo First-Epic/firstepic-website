@@ -2,27 +2,27 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How is this different from Upwork/Toptal/Arc/Turing?",
-      answer: "Those are marketplaces connecting you to individual contractors who work from home, often across multiple clients. First Epic is infrastructure — a physical studio with HR, IT, and professional oversight. Your talent works from our facility full-time, dedicated exclusively to you, trained on AI tools like Cursor, Copilot, and Claude. We handle the entire employment lifecycle so you just manage the day-to-day work."
+      answer: "Those are marketplaces connecting you to individual contractors who work from home, often across multiple clients. First Epic is infrastructure - a physical studio with HR, IT, and professional oversight. Your talent works from our facility full-time, dedicated exclusively to you, trained on AI tools like Cursor, Copilot, and Claude. We handle the entire employment lifecycle so you just manage the day-to-day work."
     },
     {
       question: "Where is the talent located?",
-      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi — a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not contractors working from home."
+      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi - a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not contractors working from home."
     },
     {
       question: "What does 'AI-enabled' actually mean?",
-      answer: "Every team member we place is trained on the AI tools relevant to their role — Cursor, Copilot, Claude, Midjourney, and more. This isn't a checkbox. We test for it during vetting. An AI-enabled full-stack developer with deep product context can genuinely cover ground that used to require a small team. The tools are commoditized — everyone has access to them. The difference is the person behind them: their judgment, their process, and their ability to ship under real constraints."
+      answer: "Every team member we place is trained on the AI tools relevant to their role - Cursor, Copilot, Claude, Midjourney, and more. This isn't a checkbox. We test for it during vetting. You provide the tool subscriptions and credentials; we make sure your team actually knows how to use them in production. An AI-enabled full-stack developer with deep product context can genuinely cover ground that used to require a small team. The tools are commoditized - everyone has access to them. The difference is the person behind them: their judgment, their process, and their ability to ship under real constraints."
     },
     {
       question: "How do you vet talent when AI makes every portfolio look the same?",
-      answer: "We stopped looking at portfolios first. AI tools made everyone's output look professional — that's the trap. Instead, we test for process. Walk me through a project that went sideways. How do you handle a client who rejects the first three outputs? What's your system when the model won't generate what you need? The candidates with real production backgrounds answer in systems and workflows. The ones who learned the tools last quarter answer in vibes and aesthetics. We hire for process, not portfolio."
+      answer: "We stopped looking at portfolios first. AI tools made everyone's output look professional - that's the trap. Instead, we test for process. Walk me through a project that went sideways. How do you handle a client who rejects the first three outputs? What's your system when the model won't generate what you need? The candidates with real production backgrounds answer in systems and workflows. The ones who learned the tools last quarter answer in vibes and aesthetics. We hire for process, not portfolio."
     },
     {
       question: "Do you offer managed services?",
-      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team — you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
+      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team - you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
     },
     {
       question: "What if it doesn't work out?",
-      answer: "Free replacements — if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
+      answer: "Free replacements - if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
     },
     {
       question: "How long does hiring take?",
@@ -34,7 +34,7 @@ export default function FAQ() {
     },
     {
       question: "Do you charge per-hire fees?",
-      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore — you only pay if you decide to move forward."
+      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore - you only pay if you decide to move forward."
     },
     {
       question: "What timezone options do you offer?",
@@ -42,15 +42,15 @@ export default function FAQ() {
     },
     {
       question: "Who is your typical customer?",
-      answer: "Founders and studio heads who need AI-enabled talent but can't find or afford it locally. Whether you're a tech startup scaling past freelancers, a studio building an AI-native creative production team, or a non-technical founder who needs a dedicated developer — First Epic provides the talent and the infrastructure to make it work."
+      answer: "Founders and studio heads who need AI-enabled talent but can't find or afford it locally. Whether you're a tech startup scaling past freelancers, a studio building an AI-native creative production team, or a non-technical founder who needs a dedicated developer - First Epic provides the talent and the infrastructure to make it work."
     },
     {
       question: "How much does it cost?",
-      answer: "Custom quotes based on role, timezone, and experience level. Significantly more affordable than US/UK/Canada hiring, with none of the headaches of going direct in emerging markets. One AI-enabled developer from our studio can do the work of three traditional hires — the math changes fast. Get in touch with Davis for specifics."
+      answer: "Custom quotes based on role, timezone, and experience level. Significantly more affordable than US/UK/Canada hiring, with none of the headaches of going direct in emerging markets. One AI-enabled developer from our studio can do the work of three traditional hires - the math changes fast. Get in touch with Davis for specifics."
     },
     {
       question: "Can I visit the office?",
-      answer: "Yes, though most clients don't need to. We handle the physical infrastructure — workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
+      answer: "Yes, though most clients don't need to. We handle the physical infrastructure - workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
     }
   ]
 

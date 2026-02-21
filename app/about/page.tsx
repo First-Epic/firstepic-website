@@ -23,7 +23,7 @@ export default function About() {
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// About</div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">About First Epic</h1>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-            AI-enabled talent infrastructure for founders and studio heads who need great remote teams — without the overhead or the vetting headache.
+            AI-enabled talent infrastructure for founders and studio heads who need great remote teams - without the overhead or the vetting headache.
           </p>
         </div>
       </div>
@@ -36,7 +36,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">What We Do</h2>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
             <p>
-              First Epic provides <strong className="text-white">full-time, AI-enabled team members</strong> — developers, designers, creative technologists, PMs — who work exclusively for you, from our professional studio.
+              First Epic provides <strong className="text-white">full-time, AI-enabled team members</strong> - developers, designers, creative technologists, PMs - who work exclusively for you, from our professional studio.
             </p>
             <p>
               We handle recruiting, vetting, hiring, payroll, HR, workspace, IT, AI tool training, and replacements. You manage the day-to-day work, just like any remote team member.
@@ -50,7 +50,7 @@ export default function About() {
             </div>
 
             <p>
-              Our team members train on Cursor, Copilot, Claude, and more — because AI multiplies the output of people with deep product context. But the tools are commoditized. Everyone has access to them. The difference is the person behind them: their judgment, their process, and their ability to ship under real constraints. That&apos;s what we vet for.
+              Our team members train on Cursor, Copilot, Claude, and more - because AI multiplies the output of people with deep product context. But the tools are commoditized. Everyone has access to them. The difference is the person behind them: their judgment, their process, and their ability to ship under real constraints. That&apos;s what we vet for.
             </p>
           </div>
         </section>
@@ -70,25 +70,25 @@ export default function About() {
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Contractors splitting attention across five clients — you&apos;re never the priority</span>
+                  <span>Contractors splitting attention across five clients - you&apos;re never the priority</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Constant churn — every few months, new person, new onboarding, context lost</span>
+                  <span>Constant churn - every few months, new person, new onboarding, context lost</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>Management overhead — hours per week supervising, re-explaining, reviewing</span>
+                  <span>Management overhead - hours per week supervising, re-explaining, reviewing</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 flex-shrink-0 font-bold">✗</span>
-                  <span>No ownership — work treated as a transaction, not a mission</span>
+                  <span>No ownership - work treated as a transaction, not a mission</span>
                 </li>
               </ul>
             </div>
             
             <p>
-              The problem was never the talent — it was the model. Freelance platforms incentivize short-term behavior. I needed people who went deep on one product, with infrastructure supporting them.
+              The problem was never the talent - it was the model. Freelance platforms incentivize short-term behavior. I needed people who went deep on one product, with infrastructure supporting them.
             </p>
 
             <p>
@@ -120,10 +120,10 @@ export default function About() {
               What makes First Epic different is <strong className="text-blue-400">we own the infrastructure and we solve the vetting problem</strong>. We&apos;re not a marketplace connecting you to contractors. We run the studio, employ the people, provide the AI tools, and handle everything that isn&apos;t your day-to-day work management.
             </p>
             <p>
-              AI tools made every candidate&apos;s output look professional. So we stopped evaluating portfolios first. We test for process — how candidates handle revisions, manage version control across dozens of assets, recover when tools break mid-project, and ship under real deadlines. The portfolio is the tool&apos;s work. The process is the person&apos;s work.
+              AI tools made every candidate&apos;s output look professional. So we stopped evaluating portfolios first. We test for process - how candidates handle revisions, manage version control across dozens of assets, recover when tools break mid-project, and ship under real deadlines. The portfolio is the tool&apos;s work. The process is the person&apos;s work.
             </p>
             <p>
-              The result: AI-enabled team members who stick around, build deep context on your product, and perform like in-house hires — at a fraction of the cost of local hiring.
+              The result: AI-enabled team members who stick around, build deep context on your product, and perform like in-house hires - at a fraction of the cost of local hiring.
             </p>
           </div>
         </section>
@@ -133,7 +133,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">The Mission</h2>
           <div className="text-lg text-gray-400 leading-relaxed">
             <p>
-              Help founders and studio heads build world-class AI-enabled remote teams with real infrastructure behind them. Small teams, deep context, vetted for process — the future of how great companies get built.
+              Help founders and studio heads build world-class AI-enabled remote teams with real infrastructure behind them. Small teams, deep context, vetted for process - the future of how great companies get built.
             </p>
           </div>
         </section>

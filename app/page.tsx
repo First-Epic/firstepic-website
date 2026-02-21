@@ -60,7 +60,7 @@ export default function Home() {
         </a>
         <a href="#contact" className="flex items-center gap-3 group bg-white/10 border border-white/10 px-5 py-3 rounded-sm hover:bg-white hover:text-black transition duration-300">
           <span className="font-mono text-xs font-bold tracking-wide">TALK TO DAVIS</span>
-          <span className="text-xs group-hover:translate-x-1 transition-transform">→</span>
+          <span className="text-xs group-hover:translate-x-1 transition-transform">&rarr;</span>
         </a>
       </header>
 
@@ -77,7 +77,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Founders & Studio Heads Building AI-Enabled Teams • Accepting Clients</span>
+            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Founders & Studio Heads Building AI-Enabled Teams - Accepting Clients</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
@@ -86,7 +86,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            Your dedicated AI-enabled team, working full-time from our professionally managed studio. We recruit, vet, hire, and support talent trained on the latest AI tools — so one great developer or creative can do the work of three. You manage the work. We handle everything else.
+            Your dedicated AI-enabled team, working full-time from our managed studio. We handle recruiting, vetting, HR, and support. You manage the work.
           </p>
 
           {/* Stats */}
@@ -103,7 +103,7 @@ export default function Home() {
 
           <div>
             <a href="#why" className="inline-block border-b border-white pb-1 text-lg hover:text-blue-400 hover:border-blue-400 transition">
-              Why First Epic ↓
+              Why First Epic &darr;
             </a>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function Home() {
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
               <p>Most companies try to hire AI-enabled talent one of two ways: freelancers who juggle multiple clients and disappear mid-project, or local hires at $150K+ salaries who may not even exist in your market yet.</p>
-              <p className="text-white">There&apos;s a third way. <strong className="text-blue-400">Dedicated, full-time team members</strong> trained on Cursor, Copilot, Claude, and the latest AI tools — working exclusively for you from a professionally managed studio with real HR, IT, and operational support.</p>
+              <p className="text-white">There&apos;s a third way. <strong className="text-blue-400">Dedicated, full-time team members</strong> trained on Cursor, Copilot, Claude, and the latest AI tools - working exclusively for you from a professionally managed studio with real HR, IT, and operational support.</p>
               <p>No split attention. No contractor churn. No starting from zero every few months. Just committed people with deep context on your product, backed by infrastructure that keeps them performing.</p>
             </div>
             <div className="mt-12 flex items-center gap-4">
@@ -139,7 +139,7 @@ export default function Home() {
                 <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-4">The Old Way vs. First Epic</div>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">✗</div>
+                    <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">&times;</div>
                     <div>
                       <div className="text-white font-bold text-sm">Freelancer Churn</div>
                       <div className="text-gray-500 text-sm">New contractor every few months. Context lost. Starting from zero.</div>
@@ -160,14 +160,14 @@ export default function Home() {
                     </div>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center shrink-0 text-purple-500">◎</div>
+                    <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center shrink-0 text-purple-500">&#9678;</div>
                     <div>
                       <div className="text-white font-bold text-sm">AI Skills Gap</div>
                       <div className="text-gray-500 text-sm">Every portfolio looks incredible now. AI tools make output look professional. The vetting problem is real.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
+                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">&check;</div>
                     <div>
                       <div className="text-white font-bold text-sm">First Epic</div>
                       <div className="text-gray-500 text-sm">Dedicated AI-enabled talent. Deep context. Professionally managed studio. Vetted for process, not just portfolio.</div>
@@ -186,7 +186,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
-            <p className="text-gray-400 text-lg">Your dedicated AI-enabled team — we handle the infrastructure and professional support.</p>
+            <p className="text-gray-400 text-lg">Your dedicated AI-enabled team - we handle the infrastructure and professional support.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -203,7 +203,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">AI-Enabled</div>
               <h4 className="text-xl font-bold text-white mb-3">The Vetting Problem, Solved</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Every candidate&apos;s portfolio looks amazing now — AI tools made sure of that. We vet for process, not portfolio. Your team members are trained on Cursor, Copilot, Claude, and production-tested on real client work before they join you.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Every candidate&apos;s portfolio looks amazing now - AI tools made sure of that. We vet for process, not portfolio. Your team members are trained on Cursor, Copilot, Claude, and production-tested on real client work before they join you.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Timezone Flexibility</div>
@@ -224,8 +224,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Roles */}
+      <section id="roles" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#080808]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// What We Staff</h2>
+            <h3 className="text-3xl md:text-5xl font-bold mb-6">Engineers. Creatives.<br /><span className="text-gray-600">Business Support.</span></h3>
+            <p className="text-gray-400 text-lg">Every role is AI-enabled and vetted for process, not just portfolio.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Engineering</div>
+              <h4 className="text-xl font-bold text-white mb-4">Technical Roles</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li>Full-Stack Developers</li>
+                <li>Frontend / Backend Engineers</li>
+                <li>Mobile Developers (iOS, Android, React Native)</li>
+                <li>AI / ML Engineers</li>
+                <li>DevOps & Infrastructure</li>
+                <li>QA & Test Automation</li>
+              </ul>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Creative</div>
+              <h4 className="text-xl font-bold text-white mb-4">Creative & Production Roles</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li>AI Filmmakers & Video Producers</li>
+                <li>Creative Technologists</li>
+                <li>UI/UX Designers</li>
+                <li>Product Designers</li>
+                <li>Motion Graphics & Animation</li>
+                <li>Graphic Design</li>
+              </ul>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Business Support</div>
+              <h4 className="text-xl font-bold text-white mb-4">Operations & Management</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li>Project Managers</li>
+                <li>Product Managers</li>
+                <li>Operations & Admin</li>
+                <li>Customer Support</li>
+                <li>Data Entry & Research</li>
+                <li>Virtual Assistants</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
-      <section id="process" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#080808]">
+      <section id="process" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Process</h2>
@@ -236,7 +286,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">01</div>
               <h4 className="text-lg font-bold text-white mb-2">We Source & Screen</h4>
-              <p className="text-gray-500 text-sm">Tell us what you need. We find, vet, and shortlist candidates — testing for process and production readiness, not just portfolios.</p>
+              <p className="text-gray-500 text-sm">Tell us what you need. We find, vet, and shortlist candidates - testing for process and production readiness, not just portfolios.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">02</div>
@@ -246,7 +296,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">03</div>
               <h4 className="text-lg font-bold text-white mb-2">We Hire & Onboard</h4>
-              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, equipment, and AI tool setup.</p>
+              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, and equipment. Your team comes trained on modern AI tools - you provide the subscriptions and credentials.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">04</div>
@@ -256,28 +306,28 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">05</div>
               <h4 className="text-lg font-bold text-white mb-2">We Handle the Rest</h4>
-              <p className="text-gray-500 text-sm">HR, compliance, AI training, ongoing support, and replacements.</p>
+              <p className="text-gray-500 text-sm">HR, compliance, ongoing training, support, and replacements.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Origin Story */}
-      <section id="origin" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
+      <section id="origin" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#080808]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Origin Story</div>
           <h3 className="text-3xl md:text-4xl font-bold mb-10">Why I Built This</h3>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
             <p>For over 20 years as a tech entrepreneur, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform - Upwork, Toptal, Fiverr, direct contractors. The lessons cost me <strong className="text-blue-400">over $100K</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
-            <p>The problem was never the talent. It was the model. Freelance platforms incentivize short-term behavior - split attention, constant churn, no ownership. I needed people who went deep on one product, not shallow on six.</p>
-            <p>Now AI has changed the math entirely. One great developer with the right AI tools can cover ground that used to require a small team. But finding that person — and vetting whether they actually know how to ship with AI tools versus just demo with them — is the new bottleneck.</p>
+            <p>The talent usually wasn&apos;t the problem. It was the model. Freelance platforms incentivize short-term behavior - split attention, constant churn, no ownership. I needed people who went deep on one product, not shallow on six.</p>
+            <p>Now AI has changed the math entirely. One great developer with the right AI tools can cover ground that used to require a small team. But finding that person - and vetting whether they actually know how to ship with AI tools versus just demo with them - is the new bottleneck.</p>
             <p className="text-white">So I built First Epic: the infrastructure I wish existed when I started. Not another marketplace. A professionally managed studio with dedicated, AI-enabled talent inside it. Vetted for process. Tested on real work. Ready to ship.</p>
           </div>
         </div>
       </section>
 
       {/* Fit Check */}
-      <section id="fit" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#080808]">
+      <section id="fit" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// Fit Check</h2>
@@ -288,22 +338,22 @@ export default function Home() {
             <div className="bg-green-500/5 border border-green-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-green-400 mb-6">Great Fit</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Tech founders and studio heads building dedicated teams</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Studios and agencies scaling AI-native creative production</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders who need AI-enabled developers at a fraction of local cost</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies tired of contractor churn who want committed team members</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams with hard-to-fill technical or creative roles</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders who want ownership and deep context, not outsourcing</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Tech founders and studio heads building dedicated teams</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Studios and agencies scaling AI-native creative production</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Founders who need AI-enabled developers at a fraction of local cost</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Companies tired of contractor churn who want committed team members</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Teams with hard-to-fill technical or creative roles</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Founders who want ownership and deep context, not outsourcing</span></li>
               </ul>
             </div>
 
             <div className="bg-red-500/5 border border-red-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-red-400 mb-6">Not For</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Enterprise procurement processes</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>One-off project work</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Managed services buyers</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Lowest-cost-only shoppers</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">&times;</span><span>Enterprise procurement processes</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">&times;</span><span>One-off project work</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">&times;</span><span>Managed services buyers</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">&times;</span><span>Lowest-cost-only shoppers</span></li>
               </ul>
             </div>
           </div>
@@ -325,7 +375,7 @@ export default function Home() {
             {status === 'success' ? (
               <div className="text-center py-8">
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-500 text-3xl">✓</span>
+                  <span className="text-green-500 text-3xl">&check;</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
                 <p className="text-gray-400">Davis will get back to you shortly.</p>
@@ -367,7 +417,7 @@ export default function Home() {
                   disabled={status === 'loading'}
                   className="w-full bg-white text-black font-bold py-4 hover:bg-gray-200 transition duration-300 uppercase tracking-wider disabled:opacity-50"
                 >
-                  {status === 'loading' ? 'Sending...' : 'Send to Davis →'}
+                  {status === 'loading' ? 'Sending...' : 'Send to Davis \u2192'}
                 </button>
                 {status === 'error' && (
                   <p className="text-red-400 text-sm text-center">Something went wrong. Please try again.</p>
@@ -396,7 +446,7 @@ export default function Home() {
             <a href="/faq" className="text-gray-400 hover:text-white transition">FAQ</a>
             <a href="#contact" className="text-gray-400 hover:text-white transition">Contact</a>
           </div>
-          <div className="text-gray-600 text-xs font-mono">© 2026 First Epic</div>
+          <div className="text-gray-600 text-xs font-mono">&copy; 2026 First Epic</div>
         </div>
       </footer>
     </main>
