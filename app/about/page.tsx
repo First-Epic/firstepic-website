@@ -23,7 +23,7 @@ export default function About() {
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// About</div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">About First Epic</h1>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-            AI-enabled talent infrastructure for founders and studio heads who need great remote teams - without the overhead or the vetting headache.
+            AI-enabled talent for founders, studio heads, and tech leaders who need great remote teams - without the overhead or the vetting headache.
           </p>
         </div>
       </div>
@@ -88,7 +88,7 @@ export default function About() {
             </div>
             
             <p>
-              The problem was never the talent - it was the model. Freelance platforms incentivize short-term behavior. I needed people who went deep on one product, with infrastructure supporting them.
+              The talent usually wasn&apos;t the problem - it was the model. Freelance platforms incentivize short-term behavior. I needed people who went deep on one product, with infrastructure supporting them.
             </p>
 
             <p>
@@ -133,7 +133,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">The Mission</h2>
           <div className="text-lg text-gray-400 leading-relaxed">
             <p>
-              Help founders and studio heads build world-class AI-enabled remote teams with real infrastructure behind them. Small teams, deep context, vetted for process - the future of how great companies get built.
+              Help founders, studio heads, and tech leaders build world-class AI-enabled remote teams with real infrastructure behind them. Small teams, deep context, vetted for process - the future of how great companies get built.
             </p>
           </div>
         </section>

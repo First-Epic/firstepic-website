@@ -60,7 +60,7 @@ export default function Home() {
         </a>
         <a href="#contact" className="flex items-center gap-3 group bg-white/10 border border-white/10 px-5 py-3 rounded-sm hover:bg-white hover:text-black transition duration-300">
           <span className="font-mono text-xs font-bold tracking-wide">TALK TO DAVIS</span>
-          <span className="text-xs group-hover:translate-x-1 transition-transform">&rarr;</span>
+          <span className="text-xs group-hover:translate-x-1 transition-transform">→</span>
         </a>
       </header>
 
@@ -77,7 +77,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Founders & Studio Heads Building AI-Enabled Teams - Accepting Clients</span>
+            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Founders, Studio Heads & Tech Leaders - Accepting Clients</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
@@ -86,7 +86,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            Your dedicated AI-enabled team, working full-time from our managed studio. We handle recruiting, vetting, HR, and support. You manage the work.
+            Your dedicated AI-enabled engineers and creatives, working full-time from our managed studio. We handle recruiting, vetting, HR, and support. You manage the work.
           </p>
 
           {/* Stats */}
@@ -103,7 +103,7 @@ export default function Home() {
 
           <div>
             <a href="#why" className="inline-block border-b border-white pb-1 text-lg hover:text-blue-400 hover:border-blue-400 transition">
-              Why First Epic &darr;
+              Why First Epic ↓
             </a>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function Home() {
                 <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-4">The Old Way vs. First Epic</div>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">&times;</div>
+                    <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">✗</div>
                     <div>
                       <div className="text-white font-bold text-sm">Freelancer Churn</div>
                       <div className="text-gray-500 text-sm">New contractor every few months. Context lost. Starting from zero.</div>
@@ -160,14 +160,14 @@ export default function Home() {
                     </div>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center shrink-0 text-purple-500">&#9678;</div>
+                    <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center shrink-0 text-purple-500">◎</div>
                     <div>
                       <div className="text-white font-bold text-sm">AI Skills Gap</div>
                       <div className="text-gray-500 text-sm">Every portfolio looks incredible now. AI tools make output look professional. The vetting problem is real.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">&check;</div>
+                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
                     <div>
                       <div className="text-white font-bold text-sm">First Epic</div>
                       <div className="text-gray-500 text-sm">Dedicated AI-enabled talent. Deep context. Professionally managed studio. Vetted for process, not just portfolio.</div>
@@ -242,6 +242,8 @@ export default function Home() {
                 <li>Frontend / Backend Engineers</li>
                 <li>Mobile Developers (iOS, Android, React Native)</li>
                 <li>AI / ML Engineers</li>
+                <li>Web3 / Blockchain Developers</li>
+                <li>Game Developers</li>
                 <li>DevOps & Infrastructure</li>
                 <li>QA & Test Automation</li>
               </ul>
@@ -296,7 +298,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">03</div>
               <h4 className="text-lg font-bold text-white mb-2">We Hire & Onboard</h4>
-              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, and equipment. Your team comes trained on modern AI tools - you provide the subscriptions and credentials.</p>
+              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, and equipment. Your team comes trained on modern AI tools.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">04</div>
@@ -338,22 +340,22 @@ export default function Home() {
             <div className="bg-green-500/5 border border-green-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-green-400 mb-6">Great Fit</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Tech founders and studio heads building dedicated teams</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Studios and agencies scaling AI-native creative production</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Founders who need AI-enabled developers at a fraction of local cost</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Companies tired of contractor churn who want committed team members</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Teams with hard-to-fill technical or creative roles</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">&check;</span><span>Founders who want ownership and deep context, not outsourcing</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders, studio heads, and tech leaders building dedicated teams</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Studios and agencies scaling AI-native creative production</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams that need AI-enabled talent at a fraction of local cost</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies tired of contractor churn who want committed team members</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams with hard-to-fill technical or creative roles</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Leaders who want ownership and deep context, not outsourcing</span></li>
               </ul>
             </div>
 
             <div className="bg-red-500/5 border border-red-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-red-400 mb-6">Not For</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">&times;</span><span>Enterprise procurement processes</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">&times;</span><span>One-off project work</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">&times;</span><span>Managed services buyers</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">&times;</span><span>Lowest-cost-only shoppers</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Enterprise procurement processes</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>One-off project work</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Managed services buyers</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Lowest-cost-only shoppers</span></li>
               </ul>
             </div>
           </div>
@@ -375,7 +377,7 @@ export default function Home() {
             {status === 'success' ? (
               <div className="text-center py-8">
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-500 text-3xl">&check;</span>
+                  <span className="text-green-500 text-3xl">✓</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
                 <p className="text-gray-400">Davis will get back to you shortly.</p>
@@ -446,7 +448,7 @@ export default function Home() {
             <a href="/faq" className="text-gray-400 hover:text-white transition">FAQ</a>
             <a href="#contact" className="text-gray-400 hover:text-white transition">Contact</a>
           </div>
-          <div className="text-gray-600 text-xs font-mono">&copy; 2026 First Epic</div>
+          <div className="text-gray-600 text-xs font-mono">© 2026 First Epic</div>
         </div>
       </footer>
     </main>

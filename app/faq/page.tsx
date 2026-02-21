@@ -10,7 +10,7 @@ export default function FAQ() {
     },
     {
       question: "What does 'AI-enabled' actually mean?",
-      answer: "Every team member we place is trained on the AI tools relevant to their role - Cursor, Copilot, Claude, Midjourney, and more. This isn't a checkbox. We test for it during vetting. You provide the tool subscriptions and credentials; we make sure your team actually knows how to use them in production. An AI-enabled full-stack developer with deep product context can genuinely cover ground that used to require a small team. The tools are commoditized - everyone has access to them. The difference is the person behind them: their judgment, their process, and their ability to ship under real constraints."
+      answer: "Every team member we place is trained on the AI tools relevant to their role - Cursor, Copilot, Claude, Midjourney, and more. This isn't a checkbox. We test for it during vetting. An AI-enabled full-stack developer with deep product context can genuinely cover ground that used to require a small team. The tools are commoditized - everyone has access to them. The difference is the person behind them: their judgment, their process, and their ability to ship under real constraints."
     },
     {
       question: "How do you vet talent when AI makes every portfolio look the same?",
@@ -30,7 +30,7 @@ export default function FAQ() {
     },
     {
       question: "What roles can you fill?",
-      answer: "Technical roles (full-stack, frontend, backend, mobile, AI/ML), creative roles (AI filmmakers, creative technologists, UI/UX, product design, motion graphics), and business support roles (project managers, operations, admin). We help founders and studio heads build out multiple functions without paying premium local rates."
+      answer: "Technical roles (full-stack, frontend, backend, mobile, AI/ML, Web3, gaming), creative roles (AI filmmakers, creative technologists, UI/UX, product design, motion graphics), and business support roles (project managers, operations, admin). We help founders, studio heads, and tech leaders build out multiple functions without paying premium local rates."
     },
     {
       question: "Do you charge per-hire fees?",
@@ -42,7 +42,7 @@ export default function FAQ() {
     },
     {
       question: "Who is your typical customer?",
-      answer: "Founders and studio heads who need AI-enabled talent but can't find or afford it locally. Whether you're a tech startup scaling past freelancers, a studio building an AI-native creative production team, or a non-technical founder who needs a dedicated developer - First Epic provides the talent and the infrastructure to make it work."
+      answer: "Founders, studio heads, and tech leaders who need AI-enabled talent but can't find or afford it locally. Whether you're a startup scaling past freelancers, a studio building an AI-native creative production team, or a non-technical founder who needs a dedicated developer - First Epic provides the talent and the professional support to make it work."
     },
     {
       question: "How much does it cost?",
