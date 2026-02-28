@@ -30,7 +30,7 @@ export default function FAQ() {
     },
     {
       question: "What roles can you fill?",
-      answer: "Technical roles (full-stack, frontend, backend, mobile, AI/ML, Web3, gaming), creative roles (AI filmmakers, creative technologists, UI/UX, product design, motion graphics), and business support roles (project managers, operations, admin). We help founders, studio heads, and tech leaders build out multiple functions without paying premium local rates."
+      answer: "Creative roles (AI-enabled filmmakers, animators, creative technologists, UI/UX, product design, motion graphics), technical roles (AI-enabledfull-stack, frontend, backend, mobile, AI/ML, Web3, gaming), and business support roles (project managers, operations, admin). We help founders, studio heads, and tech leaders build out multiple functions without paying premium local rates."
     },
     {
       question: "Do you charge per-hire fees?",
@@ -42,7 +42,7 @@ export default function FAQ() {
     },
     {
       question: "Who is your typical customer?",
-      answer: "Founders, studio heads, and tech leaders who need AI-enabled talent but can't find or afford it locally. Whether you're a startup scaling past freelancers, a studio building an AI-native creative production team, or a non-technical founder who needs a dedicated developer - First Epic provides the talent and the professional support to make it work."
+      answer: "Founders, studio heads, and tech leaders who need AI-enabled talent but can't find or afford it locally. Whether you're a studio building an AI-native creative production team, a startup scaling past freelancers, or a non-technical founder who needs a dedicated developer - First Epic provides the talent and the professional support to make it work."
     },
     {
       question: "How much does it cost?",

@@ -23,7 +23,7 @@ export default function About() {
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// About</div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">About First Epic</h1>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-            AI-enabled talent for founders, studio heads, and tech leaders who need great remote teams - without the overhead or the vetting headache.
+          AI-enabled creatives and engineers for founders, studio heads, and tech leaders who need great remote teams - without the overhead or the vetting headache.
           </p>
         </div>
       </div>
@@ -36,7 +36,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">What We Do</h2>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
             <p>
-              First Epic provides <strong className="text-white">full-time, AI-enabled team members</strong> - developers, designers, creative technologists, PMs - who work exclusively for you, from our professional studio.
+              First Epic provides <strong className="text-white">full-time, AI-enabled team members</strong> - AI filmmakers, animtors, designers, creative technologists, developers, PMs - who work exclusively for you, from our professional studio.
             </p>
             <p>
               We handle recruiting, vetting, hiring, payroll, HR, workspace, IT, AI tool training, and replacements. You manage the day-to-day work, just like any remote team member.
@@ -133,7 +133,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">The Mission</h2>
           <div className="text-lg text-gray-400 leading-relaxed">
             <p>
-              Help founders, studio heads, and tech leaders build world-class AI-enabled remote teams with real infrastructure behind them. Small teams, deep context, vetted for process - the future of how great companies get built.
+            Help founders, studio heads, and tech leaders build world-class AI-enabled creative and technical teams with real infrastructure behind them. Small teams, deep context, vetted for process - the future of how great companies get built.
             </p>
           </div>
         </section>
