@@ -25,7 +25,7 @@ export default function About() {
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// About</div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">About First Epic</h1>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-          Dedicated AI-enabled talent and cross-functional teams for Agencies, Studios, and Tech—without the bloated overhead or the vetting headache.
+          Dedicated AI-enabled talent and cross-functional teams for Agencies, Studios, and Tech - without the bloated overhead or the vetting headache.
           </p>
         </div>
       </div>
@@ -65,7 +65,7 @@ export default function About() {
               I&apos;ve been building tech companies for over 20 years. Started my first company in college (UC Santa Barbara, Computer Engineering). Since then: SaaS, Web3, consumer apps, mobile gaming, and more.
             </p>
             <p>
-              Along the way, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform. Some were great. Most relationships didn&apos;t last. I spent <strong className="text-white">over $100K</strong> learning what doesn&apos;t work:
+              Along the way, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform. Some were great. Most relationships didn&apos;t last. I spent <strong className="text-white">a lot of money</strong> learning what doesn&apos;t work:
             </p>
             
             <div className="bg-red-500/10 border-l-4 border-red-500 p-8 rounded-r-lg my-8">
@@ -125,7 +125,7 @@ export default function About() {
               AI tools made every candidate&apos;s output look professional. So we stopped evaluating portfolios first. We test for process - how candidates handle revisions, manage version control across dozens of assets, recover when tools break mid-project, and ship under real deadlines. The portfolio is the tool&apos;s work. The process is the person&apos;s work.
             </p>
             <p>
-              The result: Embedded AI talent that sticks around, builds unbroken institutional memory on your brand, and performs like in-house hires—for one flat monthly rate, with zero hidden overhead.
+              The result: Embedded AI talent that sticks around, builds unbroken institutional memory on your brand, and performs like in-house hires - for one flat monthly rate, with zero hidden overhead.
             </p>
           </div>
         </section>
@@ -135,7 +135,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">The Mission</h2>
           <div className="text-lg text-gray-400 leading-relaxed">
             <p>
-            Help Agencies, Studios, and Tech companies build world-class, AI-enabled creative and engineering teams with real infrastructure behind them. Embedded talent, absolute IP security, and vetted for process - the future of how great companies scale.
+            Help Agencies, Studios, and Tech build world-class, AI-enabled creative and engineering teams with real infrastructure behind them. Embedded talent, absolute IP security, and vetted for process - the future of how great companies scale.
             </p>
           </div>
         </section>

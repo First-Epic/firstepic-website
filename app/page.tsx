@@ -120,7 +120,7 @@ export default function Home() {
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
               <p>Generative AI tools have made it impossible to evaluate candidates based on past work alone. The traditional resume screen is dead. Every candidate&apos;s portfolio looks perfect, making traditional vetting impossible.</p>
-              <p className="text-white">We put every engineer, designer, and filmmaker through <strong className="text-blue-400">rigorous, live technical challenges.</strong> You don&apos;t have to guess if they can handle your actual workflow speed and volume—we prove it before you ever meet them.</p>
+              <p className="text-white">We put every engineer, designer, and filmmaker through <strong className="text-blue-400">rigorous, live technical challenges.</strong> You don&apos;t have to guess if they can handle your actual workflow speed and volume - we prove it before you ever meet them.</p>
               <p>No split attention. No contractor churn. No &quot;Shadow AI&quot; IP leaks. Just dedicated professionals with deep context on your product, backed by a secure 24/7 studio.</p>
             </div>
             <div className="mt-12 flex items-center gap-4">
@@ -155,7 +155,7 @@ export default function Home() {
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0 text-orange-500">?</div>
                     <div>
-                      <div className="text-white font-bold text-sm">The LATAM Reliability Trap</div>
+                      <div className="text-white font-bold text-sm">The Nearshoring Reliability Trap</div>
                       <div className="text-gray-500 text-sm">Hidden compliance fees, wage inflation, and unreliable middlemen draining your margins.</div>
                     </div>
                   </li>
@@ -198,7 +198,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Dedicated to You</div>
               <h4 className="text-xl font-bold text-white mb-3">Zero Gig-Worker Churn</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">You get seamless Slack/Jira integration and unbroken institutional memory. No split attention across other clients.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">You get seamless Slack/Asana/Jira integration and unbroken institutional memory. No split attention across other clients.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Absolute IP Security</div>
@@ -218,7 +218,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">No HR Headaches</div>
               <h4 className="text-xl font-bold text-white mb-3">Zero Cross-Border Compliance</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Bypass the hidden EOR taxes and labor risks of LATAM nearshoring. We handle the infrastructure, you manage the work.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Bypass the hidden EOR taxes and labor risks of nearshoring. We handle the infrastructure, you manage the work.</p>
             </div>
           </div>
         </div>
@@ -296,7 +296,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">03</div>
               <h4 className="text-lg font-bold text-white mb-2">Plug & Play Pilot</h4>
-              <p className="text-gray-500 text-sm">We guarantee Day-1 integration. Your team works in your time zone, inside your Slack, managing tickets in your Jira.</p>
+              <p className="text-gray-500 text-sm">We guarantee Day-1 integration. Your team works in your time zone, inside your Slack, managing tickets in your Asana/Jira.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">04</div>
@@ -318,8 +318,8 @@ export default function Home() {
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Origin Story</div>
           <h3 className="text-3xl md:text-4xl font-bold mb-10">Why I Built This</h3>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-            <p>For over 20 years as a tech entrepreneur, I realized the traditional outsourcing model is fundamentally broken in the AI era. Fragmented freelance marketplaces force talent to operate in silos, creating severe IP security risks.</p>
-            <p>Nearshore markets are saturated—plagued by severe wage inflation, unreliable middleman agencies, and the &apos;overemployment&apos; epidemic (unmonitored contractors moonlighting on your dime).</p>
+            <p>After 20+ years as a tech entrepreneur, I realized the traditional outsourcing model is fundamentally broken in the AI era. Fragmented freelance marketplaces force talent to operate in silos, creating severe IP security risks.</p>
+            <p>Nearshore markets are saturated - plagued by severe wage inflation, unreliable middleman agencies, and the &apos;overemployment&apos; epidemic (unmonitored contractors moonlighting on your dime).</p>
             <p>Most critically, AI tools like Midjourney and Cursor have made every candidate&apos;s portfolio and GitHub look perfect. Traditional vetting is dead. The resume screen no longer works.</p>
             <p className="text-white">So I built First Epic. We provide Agencies, Studios, and Tech with dedicated, pre-vetted AI Creative Technologists and Software Engineers. We don&apos;t sell hours, and we aren&apos;t a middleman network. We sell margin expansion and operational velocity.</p>
           </div>
@@ -340,7 +340,7 @@ export default function Home() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Mid-Market Agencies moving to decoupled production to expand margins</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Production Studios scaling high-volume, AI-native content pipelines</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Tech Companies looking to accelerate engineering roadmaps without LATAM EOR bloat</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Tech Companies looking to accelerate engineering roadmaps without EOR bloat</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams tired of contractor churn who want committed, embedded team members</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies with hard-to-fill AI-forward creative or technical roles</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Leaders who want ownership, absolute IP security, and deep context</span></li>
