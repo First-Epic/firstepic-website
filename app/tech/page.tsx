@@ -109,8 +109,8 @@ export default function Tech() {
               <span className="text-gray-600">We vet for architecture, not presentation.</span>
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-              <p>Tech companies need to ship faster than ever. But finding Software Engineers who truly understand AI architecture—not just junior devs who use Copilot to write boilerplate—is nearly impossible. Every candidate's GitHub repo looks perfect.</p>
-              <p className="text-white">We put every AI Software Engineer through <strong className="text-blue-400">rigorous, live technical challenges.</strong> You don't have to guess if they can handle your actual deployment speed—we prove it before you ever meet them.</p>
+              <p>Tech companies need to ship faster than ever. But finding Software Engineers who truly understand AI architecture - not just junior devs who use Copilot to write boilerplate - is nearly impossible. Every candidate's GitHub repo looks perfect.</p>
+              <p className="text-white">We put every AI Software Engineer through <strong className="text-blue-400">rigorous, live technical challenges.</strong> You don't have to guess if they can handle your actual deployment speed - we prove it before you ever meet them.</p>
               <p>Stop dealing with unreliable contractors who leak your proprietary code into public AI models. Protect your IP, and let our embedded talent act as your dedicated engineering engine.</p>
             </div>
           </div>

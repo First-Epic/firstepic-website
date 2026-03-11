@@ -110,7 +110,7 @@ export default function Studios() {
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
               <p>Studios need high-volume content generated faster than ever. But finding AI Filmmakers and Editors who can actually execute complex workflows (not just type prompts) is nearly impossible. Every candidate's portfolio looks perfect.</p>
-              <p className="text-white">We put every AI Filmmaker and VFX Artist through <strong className="text-blue-400">rigorous, live technical challenges.</strong> You don't have to guess if they can handle your studio's actual pipeline speed—we prove it before you ever meet them.</p>
+              <p className="text-white">We put every AI Filmmaker and VFX Artist through <strong className="text-blue-400">rigorous, live technical challenges.</strong> You don't have to guess if they can handle your studio's actual pipeline speed - we prove it before you ever meet them.</p>
               <p>Stop relying on scattered freelancers. Keep the creative direction in-house, and let our embedded talent act as your dedicated AI production engine.</p>
             </div>
           </div>
