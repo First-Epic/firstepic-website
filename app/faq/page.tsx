@@ -8,19 +8,19 @@ export default function FAQ() {
     },
     {
       question: "Where is the talent located?",
-      answer: "First Epic contracts entirely through our US-based LLC, but our talent operates from our flagship physical studio in Islamabad/Rawalpindi, Pakistan. This allows us to bypass the saturated LATAM nearshore market—avoiding severe wage inflation, unreliable middleman agencies, and hidden Employer-of-Record (EOR) taxes—while delivering elite, 100% dedicated talent at a fraction of the cost."
+      answer: "First Epic contracts entirely through our US-based LLC, but our talent operates from our flagship physical studio in Islamabad/Rawalpindi, Pakistan. This allows us to bypass the saturated nearshore markets - avoiding severe wage inflation, unreliable middleman agencies, and hidden Employer-of-Record (EOR) taxes - while delivering elite, 100% dedicated talent at a fraction of the cost."
     },
     {
       question: "What does 'AI-enabled' actually mean?",
-      answer: "Every team member we place is trained on the latest AI tools relevant to their role—Cursor, Copilot, Claude, Midjourney, ComfyUI, and more. But the tools are commoditized; everyone has access to them. The difference is the person behind them. An AI-enabled Software Engineer or Creative Technologist with deep product context can cover ground that used to require a small team. We test for their judgment, their process, and their ability to ship under real constraints."
+      answer: "Every team member we place is trained on the latest AI tools relevant to their role - Cursor, Copilot, Claude, Midjourney, ComfyUI, and more. But the tools are commoditized; everyone has access to them. The difference is the person behind them. An AI-enabled Software Engineer or Creative Technologist with deep product context can cover ground that used to require a small team. We test for their judgment, their process, and their ability to ship under real constraints."
     },
     {
       question: "How do you vet talent when AI makes every portfolio look the same?",
-      answer: "AI makes portfolios unreliable—that's the trap. The traditional resume screen is dead. We put every engineer, designer, and filmmaker through rigorous, live technical challenges. We test for process: how they handle revisions, manage version control across dozens of assets, recover when tools break mid-project, and ship under real deadlines. We vet for actual workflow speed and competence, not just presentation."
+      answer: "AI makes portfolios unreliable - that's the trap. The traditional resume screen is dead. We put every engineer, designer, and filmmaker through rigorous, live technical challenges. We test for process: how they handle revisions, manage version control across dozens of assets, recover when tools break mid-project, and ship under real deadlines. We vet for actual workflow speed and competence, not just presentation."
     },
     {
       question: "Do you offer managed services?",
-      answer: "Our core model is Embedded Talent. Your team works exclusively for you, integrated directly into your Slack and Jira. Crucially, we use Client-Provisioned Tooling—you provision and own the software seats. This guarantees you retain 100% ownership of your proprietary code and brand assets, with zero risk of 'Shadow AI' bleeding your IP into public models."
+      answer: "Our core model is Embedded Talent. Your team works exclusively for you, integrated directly into your Slack and Asana/Jira. Crucially, we use Client-Provisioned Tooling - you provision and own the software seats. This guarantees you retain 100% ownership of your proprietary code and brand assets, with zero risk of 'Shadow AI' bleeding your IP into public models."
     },
     {
       question: "What if it doesn't work out?",
@@ -44,7 +44,7 @@ export default function FAQ() {
     },
     {
       question: "Who is your typical customer?",
-      answer: "Mid-Market Agencies moving to decoupled production to expand margins, Production Studios scaling high-volume AI-native content pipelines, and Tech Companies looking to accelerate engineering roadmaps without the bloated overhead of LATAM EORs."
+      answer: "Mid-Market Agencies moving to decoupled production to expand margins, Production Studios scaling high-volume AI-native content pipelines, and Tech Companies looking to accelerate engineering roadmaps without the bloated overhead of nearshore EORs."
     },
     {
       question: "How much does it cost?",
@@ -52,7 +52,7 @@ export default function FAQ() {
     },
     {
       question: "Can I visit the office?",
-      answer: "Yes, though most clients don't need to. We handle the physical infrastructure—highly secure workspace, enterprise-grade internet, HR, and operational oversight. You manage the work remotely like any other embedded team."
+      answer: "Yes, though most clients don't need to. We handle the physical infrastructure - highly secure workspace, enterprise-grade internet, HR, and operational oversight. You manage the work remotely like any other embedded team."
     }
   ]
 

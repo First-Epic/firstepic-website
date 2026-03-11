@@ -45,9 +45,10 @@ export default function Tech() {
     <main className="min-h-screen bg-[#050505] text-gray-200 antialiased relative">
       <div className="grid-bg" />
       
-      {/* Header */}
-      <header className="fixed top-0 w-full z-40 p-4 md:p-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5">
-        <a href="/" className="flex items-center gap-3 group">
+{/* Header */}
+<header className="fixed top-0 w-full z-40 p-4 md:p-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5">
+        {/* Changed href="/" to href="#" to stay on page */}
+        <a href="#" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-white text-black flex items-center justify-center font-bold font-mono text-sm rounded-sm group-hover:scale-105 transition shadow-[0_0_15px_rgba(255,255,255,0.3)]">FE</div>
           <div className="hidden md:block">
             <div className="font-bold tracking-tight text-sm leading-none text-white">FIRST EPIC</div>
@@ -254,11 +255,25 @@ export default function Tech() {
                 <button type="submit" disabled={status === 'loading'} className="w-full bg-white text-black font-bold py-4 hover:bg-gray-200 transition duration-300 uppercase tracking-wider disabled:opacity-50">
                   {status === 'loading' ? 'Sending...' : 'Send to Davis \u2192'}
                 </button>
-              </form>
+                </form>
             )}
           </div>
         </div>
       </section>
+
+      {/* Minimal Landing Page Footer */}
+      <footer className="py-12 px-6 border-t border-white/5 bg-[#030303]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-sm rounded-sm">FE</div>
+            <span className="text-gray-600 text-xs font-mono tracking-widest uppercase">© 2026 FIRST EPIC</span>
+          </div>
+          <div className="flex gap-8 text-sm">
+            <a href="/" className="text-gray-600 hover:text-gray-400 transition font-mono text-xs tracking-widest uppercase">Main Website</a>
+          </div>
+        </div>
+      </footer>
+
     </main>
   )
 }
