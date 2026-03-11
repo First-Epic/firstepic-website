@@ -20,7 +20,7 @@ export default function Home() {
     )
     document.querySelectorAll('.fade-in-section').forEach((el) => observer.observe(el))
     return () => observer.disconnect()
-  }, [])
+  },[])
 
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -77,16 +77,16 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Founders, Studio Heads & Tech Leaders - Accepting Clients</span>
+            <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400">For Agencies, Studios & Tech - Accepting Clients</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-            <div>AI-ENABLED TEAMS.</div>
-            <div className="text-gray-500">WITHOUT THE LOCAL PRICE TAG.</div>
+            <div>SCALE YOUR OUTPUT.</div>
+            <div className="text-gray-500">EXPAND YOUR MARGINS.</div>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            Your dedicated AI-enabled creatives and engineers, working full-time from our managed studio. We handle recruiting, vetting, HR, and support. You manage the work.
+            We provide Agencies, Studios, and Tech with dedicated, AI-enabled embedded talent. Whether you need a single expert or a cross-functional team, we supply pre-vetted professionals working from our secure 24/7 physical studio for one flat monthly rate.
           </p>
 
           {/* Stats */}
@@ -115,13 +115,13 @@ export default function Home() {
           <div className="relative z-10">
             <div className="font-mono text-xs text-blue-500 mb-6 tracking-widest uppercase">/// Built by a Founder Who&apos;s Been In Your Shoes</div>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
-              Your Team.<br />
-              <span className="text-gray-600">Our Infrastructure.</span>
+              AI makes portfolios unreliable.<br />
+              <span className="text-gray-600">We vet for process, not presentation.</span>
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-              <p>Most companies try to hire AI-enabled talent one of two ways: freelancers who juggle multiple clients and disappear mid-project, or local hires at $150K+ salaries who may not even exist in your market yet.</p>
-              <p className="text-white">There&apos;s a third way. <strong className="text-blue-400">Dedicated, full-time team members</strong> trained on Cursor, Copilot, Claude, and the latest AI tools - working exclusively for you from a professionally managed studio with real HR, IT, and operational support.</p>
-              <p>No split attention. No contractor churn. No starting from zero every few months. Just committed people with deep context on your product, backed by infrastructure that keeps them performing.</p>
+              <p>Generative AI tools have made it impossible to evaluate candidates based on past work alone. The traditional resume screen is dead. Every candidate&apos;s portfolio looks perfect, making traditional vetting impossible.</p>
+              <p className="text-white">We put every engineer, designer, and filmmaker through <strong className="text-blue-400">rigorous, live technical challenges.</strong> You don&apos;t have to guess if they can handle your actual workflow speed and volume—we prove it before you ever meet them.</p>
+              <p>No split attention. No contractor churn. No &quot;Shadow AI&quot; IP leaks. Just dedicated professionals with deep context on your product, backed by a secure 24/7 studio.</p>
             </div>
             <div className="mt-12 flex items-center gap-4">
               <img src="/davis-headshot.jpg" alt="Davis Brimer" className="w-16 h-16 rounded-full border border-white/20 object-cover" />
@@ -141,36 +141,36 @@ export default function Home() {
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 text-red-500">✗</div>
                     <div>
-                      <div className="text-white font-bold text-sm">Freelancer Churn</div>
-                      <div className="text-gray-500 text-sm">New contractor every few months. Context lost. Starting from zero.</div>
+                      <div className="text-white font-bold text-sm">The Marketplace Trap</div>
+                      <div className="text-gray-500 text-sm">Fragmented gig platforms force talent into silos and destroy institutional memory when contracts end.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center shrink-0 text-yellow-500">!</div>
                     <div>
-                      <div className="text-white font-bold text-sm">Split Attention</div>
-                      <div className="text-gray-500 text-sm">Juggling multiple clients. Your project is just another ticket.</div>
+                      <div className="text-white font-bold text-sm">The Overemployment Epidemic</div>
+                      <div className="text-gray-500 text-sm">Remote contractors moonlighting on your dime. Your project is just another ticket.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0 text-orange-500">?</div>
                     <div>
-                      <div className="text-white font-bold text-sm">Management Overhead</div>
-                      <div className="text-gray-500 text-sm">Hours of your week spent supervising, re-explaining, re-onboarding.</div>
+                      <div className="text-white font-bold text-sm">The LATAM Reliability Trap</div>
+                      <div className="text-gray-500 text-sm">Hidden compliance fees, wage inflation, and unreliable middlemen draining your margins.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center shrink-0 text-purple-500">◎</div>
                     <div>
-                      <div className="text-white font-bold text-sm">AI Skills Gap</div>
-                      <div className="text-gray-500 text-sm">Every portfolio looks incredible now. AI tools make output look professional. The vetting problem is real.</div>
+                      <div className="text-white font-bold text-sm">The Vetting Problem</div>
+                      <div className="text-gray-500 text-sm">AI tools make output look professional. You need to test for actual workflow speed.</div>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 text-green-500">✓</div>
                     <div>
                       <div className="text-white font-bold text-sm">First Epic</div>
-                      <div className="text-gray-500 text-sm">Dedicated AI-enabled talent. Deep context. Professionally managed studio. Vetted for process, not just portfolio.</div>
+                      <div className="text-gray-500 text-sm">Dedicated AI-enabled talent. Absolute IP security. Professionally managed studio. One flat monthly rate.</div>
                     </div>
                   </li>
                 </ul>
@@ -184,41 +184,41 @@ export default function Home() {
       <section id="solution" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The First Epic Difference</h2>
-            <h3 className="text-3xl md:text-5xl font-bold mb-6">Not a Marketplace.<br /><span className="text-gray-600">Not an Agency.</span></h3>
-            <p className="text-gray-400 text-lg">Your dedicated AI-enabled creatives and engineers - we handle the infrastructure and professional support.</p>
+            <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Moat</h2>
+            <h3 className="text-3xl md:text-5xl font-bold mb-6">The End of the<br /><span className="text-gray-600">Marketplace Trap.</span></h3>
+            <p className="text-gray-400 text-lg">Fragmented freelance marketplaces and unreliable nearshore middlemen are broken. Here is how we do it differently.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Physical Workspace</div>
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">The Studio Advantage</div>
               <h4 className="text-xl font-bold text-white mb-3">Real Office, Real Oversight</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team works from a professionally managed studio with HR, IT support, and operational management.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Our talent operates from a highly secure, managed 24/7 physical facility. You get 100% dedicated focus.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Dedicated to You</div>
-              <h4 className="text-xl font-bold text-white mb-3">Full-Time, Embedded</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Your team members work exclusively for you. Not splitting attention across other clients.</p>
+              <h4 className="text-xl font-bold text-white mb-3">Zero Gig-Worker Churn</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">You get seamless Slack/Jira integration and unbroken institutional memory. No split attention across other clients.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">AI-Enabled</div>
-              <h4 className="text-xl font-bold text-white mb-3">The Vetting Problem, Solved</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Every candidate&apos;s portfolio looks amazing now - AI tools made sure of that. We vet for process, not portfolio. Your team members are trained on Cursor, Copilot, Claude, and production-tested on real client work before they join you.</p>
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Absolute IP Security</div>
+              <h4 className="text-xl font-bold text-white mb-3">Client-Provisioned Tooling</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">You provision and own the software seats. You retain 100% ownership of your proprietary code and brand assets.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Timezone Flexibility</div>
-              <h4 className="text-xl font-bold text-white mb-3">Your Schedule</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Full business hours overlap, or async overnight work. Your team works when you need them.</p>
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Zero &quot;Shadow AI&quot;</div>
+              <h4 className="text-xl font-bold text-white mb-3">Data Privacy Guaranteed</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">Because our talent uses your tools within our secure studio, there is zero risk of your IP bleeding into public AI models.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">No Per-Hire Fees</div>
-              <h4 className="text-xl font-bold text-white mb-3">Recruiting Included</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">No placement fees, no per-hire costs. Recruiting, screening, and onboarding are all included.</p>
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Pure Margin Expansion</div>
+              <h4 className="text-xl font-bold text-white mb-3">One Flat Monthly Rate</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">First Epic operates through our US LLC. No hourly billing surprises, no recruitment fees, and no middleman markups.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Free Replacements</div>
-              <h4 className="text-xl font-bold text-white mb-3">Risk-Free Hiring</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">If someone isn&apos;t working out, we replace them. No questions, no fees.</p>
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">No HR Headaches</div>
+              <h4 className="text-xl font-bold text-white mb-3">Zero Cross-Border Compliance</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">Bypass the hidden EOR taxes and labor risks of LATAM nearshoring. We handle the infrastructure, you manage the work.</p>
             </div>
           </div>
         </div>
@@ -228,48 +228,46 @@ export default function Home() {
       <section id="roles" className="scroll-mt-32 py-32 border-t border-white/5 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// What We Staff</h2>
-            <h3 className="text-3xl md:text-5xl font-bold mb-6">Creatives. Engineers.<br /><span className="text-gray-600">Business Support.</span></h3>
-            <p className="text-gray-400 text-lg">Every role is AI-enabled and vetted for process, not just portfolio.</p>
+            <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Roster</h2>
+            <h3 className="text-3xl md:text-5xl font-bold mb-6">A Glimpse of<br /><span className="text-gray-600">Our Bench.</span></h3>
+            <p className="text-gray-400 text-lg">Need a custom role? If it requires AI fluency and strategic execution, we can securely source and vet it.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Engineering</div>
-              <h4 className="text-xl font-bold text-white mb-4">Technical Roles</h4>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li>Full-Stack Developers</li>
-                <li>Frontend / Backend Engineers</li>
-                <li>Mobile Developers (iOS, Android, React Native)</li>
-                <li>AI / ML Engineers</li>
-                <li>Web3 / Blockchain Developers</li>
-                <li>Game Developers</li>
-                <li>DevOps & Infrastructure</li>
-                <li>QA & Test Automation</li>
-              </ul>
-            </div>
-            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Creative</div>
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Agencies</div>
               <h4 className="text-xl font-bold text-white mb-4">Creative & Production Roles</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li>AI Filmmakers & Video Producers</li>
+                <li>AI Production Designers</li>
+                <li>Digital & Social Video Editors</li>
+                <li>Automation Project Managers</li>
                 <li>Creative Technologists</li>
                 <li>UI/UX Designers</li>
-                <li>Product Designers</li>
-                <li>Motion Graphics & Animation</li>
                 <li>Graphic Design</li>
               </ul>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
-              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Business Support</div>
-              <h4 className="text-xl font-bold text-white mb-4">Operations & Management</h4>
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Studios</div>
+              <h4 className="text-xl font-bold text-white mb-4">Narrative & VFX Roles</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li>Project Managers</li>
-                <li>Product Managers</li>
-                <li>Operations & Admin</li>
-                <li>Customer Support</li>
-                <li>Data Entry & Research</li>
-                <li>Virtual Assistants</li>
+                <li>AI Filmmakers</li>
+                <li>Narrative Video Editors</li>
+                <li>Motion Graphics & VFX</li>
+                <li>Post-Production Specialists</li>
+                <li>3D Artists & Generalists</li>
+                <li>Prompt Engineers</li>
+              </ul>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
+              <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Tech</div>
+              <h4 className="text-xl font-bold text-white mb-4">Engineering Roles</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li>AI-Enabled Software Engineers</li>
+                <li>Full-Stack Engineers</li>
+                <li>Backend & DevOps</li>
+                <li>AI Integrations & Workflow Automation</li>
+                <li>Mobile Developers (iOS/Android)</li>
+                <li>QA & Test Automation</li>
               </ul>
             </div>
           </div>
@@ -288,27 +286,27 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">01</div>
               <h4 className="text-lg font-bold text-white mb-2">We Source & Screen</h4>
-              <p className="text-gray-500 text-sm">Tell us what you need. We find, vet, and shortlist candidates - testing for process and production readiness, not just portfolios.</p>
+              <p className="text-gray-500 text-sm">Tell us what you need. We ask for your most pressing JD and design a custom technical challenge for your exact tech stack.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">02</div>
               <h4 className="text-lg font-bold text-white mb-2">You Interview</h4>
-              <p className="text-gray-500 text-sm">You make the final call. Interview candidates, pick your team.</p>
+              <p className="text-gray-500 text-sm">You make the final call. Interview candidates, review their challenge workflows, pick your team.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">03</div>
-              <h4 className="text-lg font-bold text-white mb-2">We Hire & Onboard</h4>
-              <p className="text-gray-500 text-sm">We handle employment, payroll, workspace, and equipment. Your team comes trained on modern AI tools.</p>
+              <h4 className="text-lg font-bold text-white mb-2">Plug & Play Pilot</h4>
+              <p className="text-gray-500 text-sm">We guarantee Day-1 integration. Your team works in your time zone, inside your Slack, managing tickets in your Jira.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">04</div>
               <h4 className="text-lg font-bold text-white mb-2">You Manage</h4>
-              <p className="text-gray-500 text-sm">They&apos;re your team. You assign work, run standups.</p>
+              <p className="text-gray-500 text-sm">They&apos;re your embedded team. You assign work, run standups, and own the IP.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">05</div>
               <h4 className="text-lg font-bold text-white mb-2">We Handle the Rest</h4>
-              <p className="text-gray-500 text-sm">HR, compliance, ongoing training, support, and replacements.</p>
+              <p className="text-gray-500 text-sm">One flat monthly rate. No hidden HR fees, no payroll taxes. Month-to-month flexibility.</p>
             </div>
           </div>
         </div>
@@ -320,10 +318,10 @@ export default function Home() {
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Origin Story</div>
           <h3 className="text-3xl md:text-4xl font-bold mb-10">Why I Built This</h3>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-            <p>For over 20 years as a tech entrepreneur, I hired <strong className="text-white">hundreds of freelancers</strong> across every platform - Upwork, Toptal, Fiverr, direct contractors. The lessons cost me <strong className="text-blue-400">over $100K</strong> in failed projects, missed deadlines, and talent that disappeared mid-sprint.</p>
-            <p>The talent usually wasn&apos;t the problem. It was the model. Freelance platforms incentivize short-term behavior - split attention, constant churn, no ownership. I needed people who went deep on one product, not shallow on six.</p>
-            <p>Now AI has changed the math entirely. One great developer with the right AI tools can cover ground that used to require a small team. But finding that person - and vetting whether they actually know how to ship with AI tools versus just demo with them - is the new bottleneck.</p>
-            <p className="text-white">So I built First Epic: the infrastructure I wish existed when I started. Not another marketplace. A professionally managed studio with dedicated, AI-enabled talent inside it. Vetted for process. Tested on real work. Ready to ship. Most of our clients start with a creative need - an AI filmmaker or animator, a designer, a creative technologist - and expand into engineering as their product grows.</p>
+            <p>For over 20 years as a tech entrepreneur, I realized the traditional outsourcing model is fundamentally broken in the AI era. Fragmented freelance marketplaces force talent to operate in silos, creating severe IP security risks.</p>
+            <p>Nearshore markets are saturated—plagued by severe wage inflation, unreliable middleman agencies, and the &apos;overemployment&apos; epidemic (unmonitored contractors moonlighting on your dime).</p>
+            <p>Most critically, AI tools like Midjourney and Cursor have made every candidate&apos;s portfolio and GitHub look perfect. Traditional vetting is dead. The resume screen no longer works.</p>
+            <p className="text-white">So I built First Epic. We provide Agencies, Studios, and Tech with dedicated, pre-vetted AI Creative Technologists and Software Engineers. We don&apos;t sell hours, and we aren&apos;t a middleman network. We sell margin expansion and operational velocity.</p>
           </div>
         </div>
       </section>
@@ -340,21 +338,21 @@ export default function Home() {
             <div className="bg-green-500/5 border border-green-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-green-400 mb-6">Great Fit</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Studios and agencies scaling AI-native creative production</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Founders, studio heads, and tech leaders building dedicated teams</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams that need AI-enabled talent at a fraction of local cost</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies tired of contractor churn who want committed team members</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams with hard-to-fill creative or technical roles</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Leaders who want ownership and deep context, not outsourcing</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Mid-Market Agencies moving to decoupled production to expand margins</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Production Studios scaling high-volume, AI-native content pipelines</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Tech Companies looking to accelerate engineering roadmaps without LATAM EOR bloat</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Teams tired of contractor churn who want committed, embedded team members</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Companies with hard-to-fill AI-forward creative or technical roles</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-green-500 font-bold">✓</span><span>Leaders who want ownership, absolute IP security, and deep context</span></li>
               </ul>
             </div>
 
             <div className="bg-red-500/5 border border-red-500/20 p-10 rounded-sm">
               <h4 className="text-2xl font-bold text-red-400 mb-6">Not For</h4>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Enterprise procurement processes</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>One-off project work</span></li>
-                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Managed services buyers</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Enterprise procurement processes (6-month bureaucracies)</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Short-term, one-off gig seekers (we build long-term infrastructure)</span></li>
+                <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Companies looking for legacy, low-tier &quot;call center&quot; BPO</span></li>
                 <li className="flex items-start gap-3 text-gray-300"><span className="text-red-500 font-bold">✗</span><span>Lowest-cost-only shoppers</span></li>
               </ul>
             </div>
@@ -366,11 +364,11 @@ export default function Home() {
       <section id="contact" className="scroll-mt-32 min-h-[80vh] flex flex-col justify-center items-center py-24 px-6 relative border-t border-white/5 bg-[#030303]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter leading-none">
-            Ready to Build<br />
-            <span className="text-gray-700">Your Team?</span>
+            Stop renting hours.<br />
+            <span className="text-gray-700">Start scaling output.</span>
           </h2>
           <p className="text-xl text-gray-400 mb-12 max-w-xl mx-auto">
-            Book 30 minutes with Davis. Founder-to-founder.
+            Drop a dedicated, pre-vetted AI professional into your Slack by next week. Book a discovery call with Davis.
           </p>
           
           <div className="bg-white/5 border border-white/10 p-10 rounded-sm hover-card max-w-lg mx-auto backdrop-blur-sm">
@@ -441,7 +439,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">AI-enabled remote teams with professional infrastructure.</span>
+            <span className="text-gray-500 text-sm">Embedded AI talent and cross-functional teams for Agencies, Studios, and Tech.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>

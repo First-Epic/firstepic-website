@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "WebSearch",
+      "WebFetch(domain:www.firstepic.studio)",
+      "WebFetch(domain:colliersimon.com)",
+      "WebFetch(domain:builtin.com)",
+      "WebFetch(domain:www.builtinla.com)",
+      "WebFetch(domain:colliersimon.applytojob.com)",
+      "WebFetch(domain:jobgether.com)"
+    ]
+  }
+}

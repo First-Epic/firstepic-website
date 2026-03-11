@@ -1,3 +1,5 @@
+'use client'
+
 export default function About() {
   return (
     <main className="min-h-screen bg-[#050505] text-gray-200">
@@ -23,7 +25,7 @@ export default function About() {
           <div className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// About</div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">About First Epic</h1>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-          AI-enabled creatives and engineers for founders, studio heads, and tech leaders who need great remote teams - without the overhead or the vetting headache.
+          Dedicated AI-enabled talent and cross-functional teams for Agencies, Studios, and Tech—without the bloated overhead or the vetting headache.
           </p>
         </div>
       </div>
@@ -36,16 +38,16 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">What We Do</h2>
           <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
             <p>
-              First Epic provides <strong className="text-white">full-time, AI-enabled team members</strong> - AI filmmakers, animtors, designers, creative technologists, developers, PMs - who work exclusively for you, from our professional studio.
+              First Epic provides <strong className="text-white">dedicated, AI-enabled embedded talent</strong> - AI Software Engineers, Creative Technologists, AI Filmmakers, and Production Designers - who work exclusively for you, from our managed 24/7 physical studio.
             </p>
             <p>
-              We handle recruiting, vetting, hiring, payroll, HR, workspace, IT, AI tool training, and replacements. You manage the day-to-day work, just like any remote team member.
+              We handle recruiting, vetting, HR, workspace, IT, and cross-border compliance. You provision the software seats to retain 100% IP ownership, and you manage the day-to-day work, just like any embedded team member.
             </p>
 
             <div className="bg-gradient-to-r from-slate-800 to-blue-900/50 p-10 rounded-xl my-8 border border-white/10">
               <p className="text-2xl font-semibold text-white mb-4">One great person with the right AI tools can do the work of three.</p>
               <p className="text-gray-300">
-                Not a marketplace. Not an agency. Dedicated, AI-enabled talent with real infrastructure behind them.
+                Not an unreliable marketplace. Not a nearshore middleman. Dedicated, AI-enabled talent with real infrastructure behind them.
               </p>
             </div>
 
@@ -88,7 +90,7 @@ export default function About() {
             </div>
             
             <p>
-              The talent usually wasn&apos;t the problem - it was the model. Freelance platforms incentivize short-term behavior. I needed people who went deep on one product, with infrastructure supporting them.
+              The talent usually wasn&apos;t the problem - it was the model. Fragmented freelance marketplaces and unreliable nearshore middlemen incentivize short-term behavior. I needed people who went deep on one product, with secure infrastructure supporting them.
             </p>
 
             <p>
@@ -117,13 +119,13 @@ export default function About() {
               That&apos;s noise. Everyone says that.
             </p>
             <p>
-              What makes First Epic different is <strong className="text-blue-400">we own the infrastructure and we solve the vetting problem</strong>. We&apos;re not a marketplace connecting you to contractors. We run the studio, employ the people, provide the AI tools, and handle everything that isn&apos;t your day-to-day work management.
+              What makes First Epic different is <strong className="text-blue-400">we own the infrastructure and we solve the vetting problem</strong>. We&apos;re not an unreliable marketplace or a nearshore middleman. We run the 24/7 physical studio, employ the people, ensure zero &quot;Shadow AI&quot; IP leaks, and handle everything that isn&apos;t your day-to-day work management.
             </p>
             <p>
               AI tools made every candidate&apos;s output look professional. So we stopped evaluating portfolios first. We test for process - how candidates handle revisions, manage version control across dozens of assets, recover when tools break mid-project, and ship under real deadlines. The portfolio is the tool&apos;s work. The process is the person&apos;s work.
             </p>
             <p>
-              The result: AI-enabled team members who stick around, build deep context on your product, and perform like in-house hires - at a fraction of the cost of local hiring.
+              The result: Embedded AI talent that sticks around, builds unbroken institutional memory on your brand, and performs like in-house hires—for one flat monthly rate, with zero hidden overhead.
             </p>
           </div>
         </section>
@@ -133,7 +135,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white tracking-tight">The Mission</h2>
           <div className="text-lg text-gray-400 leading-relaxed">
             <p>
-            Help founders, studio heads, and tech leaders build world-class AI-enabled creative and technical teams with real infrastructure behind them. Small teams, deep context, vetted for process - the future of how great companies get built.
+            Help Agencies, Studios, and Tech companies build world-class, AI-enabled creative and engineering teams with real infrastructure behind them. Embedded talent, absolute IP security, and vetted for process - the future of how great companies scale.
             </p>
           </div>
         </section>
@@ -165,7 +167,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">AI-enabled remote teams with professional infrastructure.</span>
+            <span className="text-gray-500 text-sm">Embedded AI talent and cross-functional teams for Agencies, Studios, and Tech.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-white font-medium">About</a>

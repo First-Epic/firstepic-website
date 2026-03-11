@@ -1,56 +1,58 @@
+'use client'
+
 export default function FAQ() {
-  const faqs = [
+  const faqs =[
     {
       question: "How is this different from Upwork/Toptal/Arc/Turing?",
-      answer: "Those are marketplaces connecting you to individual contractors who work from home, often across multiple clients. First Epic is infrastructure - a physical studio with HR, IT, and professional oversight. Your talent works from our facility full-time, dedicated exclusively to you, trained on AI tools like Cursor, Copilot, and Claude. We handle the entire employment lifecycle so you just manage the day-to-day work."
+      answer: "Those are fragmented freelance marketplaces that force talent into silos, creating IP risks and destroying institutional memory when short-term contracts end. First Epic is infrastructure. We provide dedicated, embedded talent working from our highly secure, managed 24/7 physical studio. We handle the HR, IT, and cross-border compliance so you just manage the day-to-day work."
     },
     {
       question: "Where is the talent located?",
-      answer: "First Epic is a US company with subsidiaries around the world. We currently operate our flagship studio in Islamabad/Rawalpindi - a professional workspace with high-speed internet, IT support, HR, operational management, power backup, and secure facilities. Real infrastructure, not contractors working from home."
+      answer: "First Epic contracts entirely through our US-based LLC, but our talent operates from our flagship physical studio in Islamabad/Rawalpindi, Pakistan. This allows us to bypass the saturated LATAM nearshore market—avoiding severe wage inflation, unreliable middleman agencies, and hidden Employer-of-Record (EOR) taxes—while delivering elite, 100% dedicated talent at a fraction of the cost."
     },
     {
       question: "What does 'AI-enabled' actually mean?",
-      answer: "Every team member we place is trained on the AI tools relevant to their role - Cursor, Copilot, Claude, Midjourney, and more. This isn't a checkbox. We test for it during vetting. An AI-enabled full-stack developer with deep product context can genuinely cover ground that used to require a small team. The tools are commoditized - everyone has access to them. The difference is the person behind them: their judgment, their process, and their ability to ship under real constraints."
+      answer: "Every team member we place is trained on the latest AI tools relevant to their role—Cursor, Copilot, Claude, Midjourney, ComfyUI, and more. But the tools are commoditized; everyone has access to them. The difference is the person behind them. An AI-enabled Software Engineer or Creative Technologist with deep product context can cover ground that used to require a small team. We test for their judgment, their process, and their ability to ship under real constraints."
     },
     {
       question: "How do you vet talent when AI makes every portfolio look the same?",
-      answer: "We stopped looking at portfolios first. AI tools made everyone's output look professional - that's the trap. Instead, we test for process. Walk me through a project that went sideways. How do you handle a client who rejects the first three outputs? What's your system when the model won't generate what you need? The candidates with real production backgrounds answer in systems and workflows. The ones who learned the tools last quarter answer in vibes and aesthetics. We hire for process, not portfolio."
+      answer: "AI makes portfolios unreliable—that's the trap. The traditional resume screen is dead. We put every engineer, designer, and filmmaker through rigorous, live technical challenges. We test for process: how they handle revisions, manage version control across dozens of assets, recover when tools break mid-project, and ship under real deadlines. We vet for actual workflow speed and competence, not just presentation."
     },
     {
       question: "Do you offer managed services?",
-      answer: "Occasionally, with the right partner and project. Our core model is embedded talent who work as part of your remote team - you manage the work day-to-day (Slack, Jira, your workflow) while we handle recruiting, HR, payroll, and workspace. Get in touch and we can discuss what works best for your situation."
+      answer: "Our core model is Embedded Talent. Your team works exclusively for you, integrated directly into your Slack and Jira. Crucially, we use Client-Provisioned Tooling—you provision and own the software seats. This guarantees you retain 100% ownership of your proprietary code and brand assets, with zero risk of 'Shadow AI' bleeding your IP into public models."
     },
     {
       question: "What if it doesn't work out?",
-      answer: "Free replacements - if someone isn't the right fit, we find someone who is, no additional fees. And there's no long-term lock-in. You can cancel anytime if things aren't working for you."
+      answer: "Free replacements. If someone isn't the perfect fit, we replace them immediately with zero additional fees. We offer month-to-month flexibility with no long-term lock-in."
     },
     {
       question: "How long does hiring take?",
-      answer: "Typically 2-4 weeks for a new client, but as fast as a few days for straightforward roles. We source, screen, you interview, we hire and onboard. Timeline depends on role specificity and your availability for interviews."
+      answer: "Typically 2-4 weeks for a new client, but as fast as a few days for straightforward roles. We ask for your JD, we source, we screen via technical challenge, you interview, and we handle the onboarding. The timeline depends on role specificity and your availability for interviews."
     },
     {
       question: "What roles can you fill?",
-      answer: "Creative roles (AI-enabled filmmakers, animators, creative technologists, UI/UX, product design, motion graphics), technical roles (AI-enabledfull-stack, frontend, backend, mobile, AI/ML, Web3, gaming), and business support roles (project managers, operations, admin). We help founders, studio heads, and tech leaders build out multiple functions without paying premium local rates."
+      answer: "We fill roles across three core sectors. For Tech: AI-Enabled Software Engineers, Full-Stack, and Backend/DevOps. For Agencies: AI Production Designers, Digital/Social Video Editors, and Automation PMs. For Studios: AI Filmmakers, Narrative Video Editors, and VFX/Motion Graphics. If it requires AI fluency and strategic execution, our bench runs deep."
     },
     {
       question: "Do you charge per-hire fees?",
-      answer: "No placement fees. Recruiting, screening, and onboarding are included. You pay a monthly fee only for talent you actually hire. Zero risk to explore - you only pay if you decide to move forward."
+      answer: "No placement fees, no hourly billing surprises, and no middleman markups. Recruiting, screening, and onboarding are completely included. You pay one flat, all-inclusive monthly rate for the embedded talent you hire. Pure margin expansion."
     },
     {
       question: "What timezone options do you offer?",
-      answer: "We operate 24 hours a day and can accommodate your preferred schedule: overnight async (tasks completed while you sleep), partial overlap (available during your morning/evening), or full business hours overlap (real-time collaboration). You choose what works best for your workflow."
+      answer: "We operate 24 hours a day. We can accommodate a 100% US business hours overlap for real-time collaboration, a partial overlap for daily standups, or a 'follow-the-sun' async overnight schedule where tasks are completed while you sleep. You dictate the operational rhythm."
     },
     {
       question: "Who is your typical customer?",
-      answer: "Founders, studio heads, and tech leaders who need AI-enabled talent but can't find or afford it locally. Whether you're a studio building an AI-native creative production team, a startup scaling past freelancers, or a non-technical founder who needs a dedicated developer - First Epic provides the talent and the professional support to make it work."
+      answer: "Mid-Market Agencies moving to decoupled production to expand margins, Production Studios scaling high-volume AI-native content pipelines, and Tech Companies looking to accelerate engineering roadmaps without the bloated overhead of LATAM EORs."
     },
     {
       question: "How much does it cost?",
-      answer: "Custom quotes based on role, timezone, and experience level. Significantly more affordable than US/UK/Canada hiring, with none of the headaches of going direct in emerging markets. One AI-enabled developer from our studio can do the work of three traditional hires - the math changes fast. Get in touch with Davis for specifics."
+      answer: "We charge one flat, all-inclusive monthly rate based on the role and experience level. Because you contract through our US LLC, there are no hidden cross-border compliance fees or EOR taxes. It is significantly more affordable than local hiring, allowing you to scale output and drastically expand your gross margins. Get in touch with Davis for specifics."
     },
     {
       question: "Can I visit the office?",
-      answer: "Yes, though most clients don't need to. We handle the physical infrastructure - workspace, IT, HR, operational oversight. You manage the work remotely like any other distributed team."
+      answer: "Yes, though most clients don't need to. We handle the physical infrastructure—highly secure workspace, enterprise-grade internet, HR, and operational oversight. You manage the work remotely like any other embedded team."
     }
   ]
 
@@ -126,7 +128,7 @@ export default function FAQ() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm">FE</div>
-            <span className="text-gray-500 text-sm">AI-enabled remote teams with professional infrastructure.</span>
+            <span className="text-gray-500 text-sm">Embedded AI talent and cross-functional teams for Agencies, Studios, and Tech.</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="/about" className="text-gray-400 hover:text-white transition">About</a>
