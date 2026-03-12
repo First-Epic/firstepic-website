@@ -35,8 +35,8 @@ export default function FAQ() {
       answer: "We fill roles across three core sectors. For Tech: AI-Enabled Software Engineers, Full-Stack, and Backend/DevOps. For Agencies: AI Production Designers, Digital/Social Video Editors, and Automation PMs. For Studios: AI Filmmakers, Narrative Video Editors, and VFX/Motion Graphics. If it requires AI fluency and strategic execution, our bench runs deep."
     },
     {
-      question: "Do you charge per-hire fees?",
-      answer: "No placement fees, no hourly billing surprises, and no middleman markups. Recruiting, screening, and onboarding are completely included. You pay one flat, all-inclusive monthly rate for the embedded talent you hire. Pure margin expansion."
+      question: "Do you charge access fees or per-hire fees?",
+      answer: "No. We are not a SaaS platform and we don't charge recruiting fees. There is zero cost to open a search or interview candidates. You only pay a flat, all-inclusive monthly rate per team member that you actually hire and embed into your team."
     },
     {
       question: "What timezone options do you offer?",
@@ -48,7 +48,7 @@ export default function FAQ() {
     },
     {
       question: "How much does it cost?",
-      answer: "We charge one flat, all-inclusive monthly rate based on the role and experience level. Because you contract through our US LLC, there are no hidden cross-border compliance fees or EOR taxes. It is significantly more affordable than local hiring, allowing you to scale output and drastically expand your gross margins. Get in touch with Davis for specifics."
+      answer: "We charge a flat, all-inclusive monthly rate per dedicated team member based on their role and experience level. Because you contract through our US LLC, there are no hidden cross-border compliance fees or EOR taxes. It is significantly more affordable than local hiring, allowing you to scale your bench and expand your gross margins. Get in touch with Davis for specifics."
     },
     {
       question: "Can I visit the office?",

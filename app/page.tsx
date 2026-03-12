@@ -86,7 +86,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            We provide Agencies, Studios, and Tech with dedicated, AI-enabled embedded talent. Whether you need a single expert or a cross-functional team, we supply pre-vetted professionals working from our secure 24/7 physical studio for one flat monthly rate.
+          We provide Agencies, Studios, and Tech with dedicated, AI-enabled embedded talent. Whether you need a single <strong className="text-white font-semibold">&quot;permalancer&quot;</strong> or a cross-functional team, our talent acts as a <strong className="text-white font-semibold">direct extension of your bench</strong>. No platform fees or SaaS subscriptions - you just pay a flat monthly rate for the talent you hire.
           </p>
 
           {/* Stats */}
@@ -192,8 +192,10 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">The Studio Advantage</div>
-              <h4 className="text-xl font-bold text-white mb-3">Real Office, Real Oversight</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">Our talent operates from a highly secure, managed 24/7 physical facility. You get 100% dedicated focus.</p>
+              <h4 className="text-xl font-bold text-white mb-3">Premium Office, Unmatched Retention</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">
+              Fragmented freelance marketplaces force talent into silos. We do the opposite. Our talent operates from a premium, managed 24/7 physical studio. <strong className="text-white font-semibold">Because we provide highly competitive local salaries, full HR support, and premium infrastructure, our retention is unmatched.</strong> You get 100% dedicated focus, custom time zone alignment (from full US overlap to overnight async delivery), and zero transient gig-worker churn.
+                </p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Dedicated to You</div>
@@ -212,8 +214,8 @@ export default function Home() {
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Pure Margin Expansion</div>
-              <h4 className="text-xl font-bold text-white mb-3">One Flat Monthly Rate</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">First Epic operates through our US LLC. No hourly billing surprises, no recruitment fees, and no middleman markups.</p>
+              <h4 className="text-xl font-bold text-white mb-3">One Flat Rate Per Seat</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">Contracted through our US LLC. You pay a flat rate solely for the talent you hire. No platform subscriptions, no hourly surprises, and no hidden EOR taxes.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-white/20 transition">
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">No HR Headaches</div>
@@ -286,7 +288,9 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">01</div>
               <h4 className="text-lg font-bold text-white mb-2">We Source & Screen</h4>
-              <p className="text-gray-500 text-sm">Tell us what you need. We ask for your most pressing JD and design a custom technical challenge for your exact tech stack.</p>
+              <p className="text-gray-500 text-sm">
+                Tell us what you need. We ask for your most pressing JD and design a custom technical challenge for your exact tech stack. <strong className="text-blue-400 font-semibold">There is no cost to open a search or review candidates.</strong>
+              </p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">02</div>
@@ -306,7 +310,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-5xl font-mono font-bold text-white/10 mb-4">05</div>
               <h4 className="text-lg font-bold text-white mb-2">We Handle the Rest</h4>
-              <p className="text-gray-500 text-sm">One flat monthly rate. No hidden HR fees, no payroll taxes. Month-to-month flexibility.</p>
+              <p className="text-gray-500 text-sm">One flat monthly rate <strong className="text-white">per team member</strong>. No SaaS access fees, no hidden HR costs. Month-to-month flexibility.</p>
             </div>
           </div>
         </div>

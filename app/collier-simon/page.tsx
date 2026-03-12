@@ -174,18 +174,19 @@ export default function CollierSimonPage() {
           </div>
           <div className="w-full md:w-1/2">
             <div className="bg-gradient-to-br from-indigo-900/40 to-purple-900/20 border border-indigo-500/30 rounded-2xl p-8 lg:p-12 text-center">
-              <div className="text-gray-400 font-medium mb-2">Flat, All-Inclusive Rate</div>
-              <div className="text-3xl font-black text-white mb-4">One monthly rate.<br/>No surprises.</div>
-              <div className="mb-8"></div>
-              <ul className="text-left text-sm text-gray-300 space-y-3 max-w-xs mx-auto">
-                <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No recruiting or placement fees</li>
-                <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No payroll taxes or HR overhead</li>
-                <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Month-to-month flexibility</li>
-                <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Free, immediate replacements</li>
-              </ul>
-            </div>
-          </div>
+            <div className="text-gray-400 font-medium mb-2">Flat, All-Inclusive Rate</div>
+          <div className="text-3xl font-black text-white mb-4">One flat rate per team member.<br/>No platform fees.</div>
+          <div className="mb-8"></div>
+          <ul className="text-left text-sm text-gray-300 space-y-3 max-w-xs mx-auto">
+            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No SaaS subscription required</li>
+            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No recruiting or placement fees</li>
+            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No payroll taxes or HR overhead</li>
+            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Month-to-month flexibility</li>
+            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Free, immediate replacements</li>
+          </ul>
         </div>
+      </div>
+    </div>
       </section>
 
       {/* Process */}

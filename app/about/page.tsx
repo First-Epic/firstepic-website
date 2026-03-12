@@ -125,7 +125,7 @@ export default function About() {
               AI tools made every candidate&apos;s output look professional. So we stopped evaluating portfolios first. We test for process - how candidates handle revisions, manage version control across dozens of assets, recover when tools break mid-project, and ship under real deadlines. The portfolio is the tool&apos;s work. The process is the person&apos;s work.
             </p>
             <p>
-              The result: Embedded AI talent that sticks around, builds unbroken institutional memory on your brand, and performs like in-house hires - for one flat monthly rate, with zero hidden overhead.
+            The result: Embedded AI talent that sticks around, builds unbroken institutional memory on your brand, and performs like in-house hires. <strong className="text-white font-semibold">No platform fees, and no retainers to access our network. You simply pay a flat monthly rate per embedded team member</strong>, with zero hidden overhead.
             </p>
           </div>
         </section>
