@@ -155,7 +155,7 @@ export default function Tech() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Moat</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">The End of the<br /><span className="text-gray-600">Marketplace Trap.</span></h3>
-            <p className="text-gray-400 text-lg">Stop relying on scattered freelancers. Build a cohesive engineering pod.</p>
+            <p className="text-gray-400 text-lg">Stop relying on scattered freelancers. Build a cohesive, embedded engineering team.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">

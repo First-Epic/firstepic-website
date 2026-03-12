@@ -83,7 +83,7 @@ export default function Studios() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            We provide production studios with dedicated, AI-enabled execution pods. Scale your high-volume narrative and visual content with pre-vetted talent working from our secure 24/7 physical studio for one flat monthly rate.
+            We provide production studios with dedicated, AI-enabled embeddedtalent. Scale your high-volume narrative and visual content with pre-vetted talent working from our secure 24/7 physical studio for one flat monthly rate.
           </p>
 
           <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
@@ -155,7 +155,7 @@ export default function Studios() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">/// The Moat</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">The End of the<br /><span className="text-gray-600">Marketplace Trap.</span></h3>
-            <p className="text-gray-400 text-lg">Stop relying on scattered freelancers. Build a cohesive post-production pod.</p>
+            <p className="text-gray-400 text-lg">Stop relying on scattered freelancers. Build a cohesive, embedded post-production team.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
