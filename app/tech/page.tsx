@@ -79,17 +79,17 @@ export default function Tech() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
             <div>ACCELERATE YOUR ROADMAP.</div>
-            <div className="text-gray-500">KILL THE EOR TAX.</div>
+            <div className="text-gray-500">EXPAND YOUR RUNWAY.</div>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            We provide tech companies with dedicated, AI-enabled Software Engineers. Secure your codebase and accelerate development with pre-vetted talent, without the hidden compliance costs of LATAM nearshoring.
+          We provide tech companies with dedicated, AI-enabled Software Engineers. Secure your codebase and accelerate development with pre-vetted, embedded talent - without the flight risk and unreliability of freelance marketplaces.
           </p>
 
           <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover-card hover-glow text-center">
               <div className="text-4xl font-bold text-white mb-2 font-mono">0%</div>
-              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Hidden EOR Taxes</div>
+              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Developer Churn</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover-card hover-glow text-center">
               <div className="text-4xl font-bold text-white mb-2 font-mono">100%</div>

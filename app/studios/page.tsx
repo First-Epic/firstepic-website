@@ -83,7 +83,7 @@ export default function Studios() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            We provide production studios with dedicated, AI-enabled embeddedtalent. Scale your high-volume narrative and visual content with pre-vetted talent working from our secure 24/7 physical studio for one flat monthly rate.
+            We provide production studios with dedicated, AI-enabled embedded talent. Scale your high-volume narrative and visual content with pre-vetted talent working from our secure 24/7 physical studio for one flat monthly rate.
           </p>
 
           <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
@@ -191,7 +191,7 @@ export default function Studios() {
               <div className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">Narrative & Generation</div>
               <h4 className="text-xl font-bold text-white mb-4">AI Filmmakers</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li>Runway & Midjourney Masters</li>
+                <li>Veo, Kling, & Midjourney Masters</li>
                 <li>AI Storyboarding & Concept Art</li>
                 <li>Narrative Generation</li>
                 <li>Micro-Drama Production</li>

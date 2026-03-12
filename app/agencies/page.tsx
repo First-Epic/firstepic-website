@@ -88,12 +88,12 @@ export default function Agencies() {
 
           <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover-card hover-glow text-center">
-              <div className="text-4xl font-bold text-white mb-2 font-mono">0%</div>
-              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Hidden EOR Taxes</div>
+              <div className="text-4xl font-bold text-white mb-2 font-mono">50%</div>
+              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Overhead Reduction</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover-card hover-glow text-center">
-              <div className="text-4xl font-bold text-white mb-2 font-mono">100%</div>
-              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">IP Security & Context</div>
+              <div className="text-4xl font-bold text-white mb-2 font-mono">3x</div>
+              <div className="text-gray-400 text-sm font-mono uppercase tracking-wider">Output Velocity</div>
             </div>
           </div>
         </div>
