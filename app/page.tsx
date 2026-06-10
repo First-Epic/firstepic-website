@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { track } from '@vercel/analytics'
 
 export default function Home() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -37,6 +38,7 @@ export default function Home() {
       if (response.ok) {
         setStatus('success')
         setFormData({ name: '', email: '', message: '' })
+        track('contact_form_submitted', { page: 'home' })
       } else {
         setStatus('error')
       }
