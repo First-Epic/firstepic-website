@@ -8,7 +8,7 @@ export async function POST(request: Request) {
   }
 
   const response = NextResponse.json({ success: true })
-  response.cookies.set('aether-lightcraft-auth', 'granted', {
+  response.cookies.set('aether-lightcraft-1040f5d9-auth', 'granted', {
     httpOnly: true,
     sameSite: 'lax',
     path: '/',

@@ -11,10 +11,10 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  if (pathname.startsWith('/aether-lightcraft') && !pathname.startsWith('/aether-lightcraft/login')) {
-    const auth = request.cookies.get('aether-lightcraft-auth')
+  if (pathname.startsWith('/aether-lightcraft-1040f5d9') && !pathname.startsWith('/aether-lightcraft-1040f5d9/login')) {
+    const auth = request.cookies.get('aether-lightcraft-1040f5d9-auth')
     if (auth?.value !== 'granted') {
-      return NextResponse.redirect(new URL('/aether-lightcraft/login', request.url))
+      return NextResponse.redirect(new URL('/aether-lightcraft-1040f5d9/login', request.url))
     }
   }
 
@@ -22,5 +22,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/collier-simon/:path*', '/aether-lightcraft/:path*'],
+  matcher: ['/collier-simon/:path*', '/aether-lightcraft-1040f5d9/:path*'],
 }

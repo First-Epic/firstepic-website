@@ -17,14 +17,14 @@ export default function AetherLightCraftLogin() {
     setLoading(true)
     setError(false)
 
-    const res = await fetch('/api/aether-lightcraft-auth', {
+    const res = await fetch('/api/aether-lightcraft-1040f5d9-auth', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ password }),
     })
 
     if (res.ok) {
-      router.push('/aether-lightcraft')
+      router.push('/aether-lightcraft-1040f5d9')
     } else {
       setError(true)
       setLoading(false)
