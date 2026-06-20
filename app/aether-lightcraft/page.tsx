@@ -120,7 +120,7 @@ export default function AetherLightCraftPage() {
             </div>
             <h3 className="text-lg font-bold text-white mb-2">Unreal Animator / VFX Finishing</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              A later-phase bench for real-time Unreal animation and post/VFX finishing - the expensive, recurring work you&apos;d love to offer clients as a productized service. Built to demo, then scale into recurring revenue.
+              Tied to the AR module: build the launch demo - a short film with first-class Unreal animation plus post/VFX finishing - then offer it as a full-time, productized service to your clients. The recurring-revenue layer on top of the AR system, brought in as the module nears production-ready.
             </p>
           </div>
 
