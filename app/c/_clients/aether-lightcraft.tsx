@@ -37,7 +37,7 @@ export default function AetherLightCraft() {
           for the shots <span className="accent-gradient">no one else can get.</span>
         </h1>
         <p className="text-xl text-gray-400 max-w-3xl leading-relaxed mb-10">
-          You&apos;ve built the AR systems, the drone platforms, and the pipeline that put cameras where they&apos;ve never been. The bottleneck now isn&apos;t know-how - it&apos;s your time. First Epic embeds dedicated, vetted engineers and creative technologists who work exclusively for you, harden what you&apos;ve built, and free you to keep inventing.
+          Across Aether and Light Craft, you&apos;ve built a rare operation - original production and in-house post, plus the capture and AR systems that put cameras where they&apos;ve never been. The bottleneck now isn&apos;t know-how - it&apos;s time. First Epic embeds dedicated, vetted engineers, creative technologists, and post talent who work exclusively for you - so your team can keep creating instead of getting buried in execution.
         </p>
         <div className="flex gap-4 items-center text-sm font-medium text-gray-500 mb-8">
           <span>Prepared for: Davis DiLillo &amp; Kyle Bullington</span>
@@ -71,7 +71,7 @@ export default function AetherLightCraft() {
           <div>
             <h3 className="text-xl font-semibold text-white mb-3">Engineers Who<br />Speak Your Stack</h3>
             <p className="text-gray-400 leading-relaxed">
-              Unreal Engine, custom plugins, NVIDIA Jetson and ROS, NDI pipelines, and modern AI tooling (local and cloud). Creative technologists fluent in dashboard/workflow product design and prompt-orchestration - matched to the exact problem in front of you.
+              Unreal Engine, custom plugins, NVIDIA Jetson and ROS, NDI pipelines, modern AI tooling (local and cloud) - plus the post and creative pipeline (editorial, color, VFX, motion). Engineers and creative technologists matched to the exact problem in front of you, whether on the capture side or in post.
             </p>
           </div>
           <div>
@@ -121,12 +121,23 @@ export default function AetherLightCraft() {
             </p>
           </div>
 
-          {/* Card 4 - Catch-all */}
+          {/* Card 4 - Post & Editorial (Aether-facing) */}
+          <div className="bg-[#111] border border-gray-800 rounded-xl p-8 hover:border-indigo-500/50 transition-colors">
+            <div className="h-12 w-12 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-6">
+              <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+            </div>
+            <h3 className="text-lg font-bold text-white mb-2">Post &amp; Editorial Support</h3>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              Embedded editors, colorists, motion, and VFX-finishing talent to absorb Aether&apos;s post overflow - so the in-house post house can take on more work without stretching the core team. Same exclusivity, oversight, and US-time-zone overlap.
+            </p>
+          </div>
+
+          {/* Card 5 - Catch-all */}
           <div className="bg-[#111] border border-gray-800 border-dashed rounded-xl p-8 hover:border-indigo-500/50 transition-colors">
             <div className="h-12 w-12 rounded-lg bg-gray-500/10 flex items-center justify-center mb-6">
               <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
             </div>
-            <h3 className="text-lg font-bold text-white mb-2">Beyond These Three</h3>
+            <h3 className="text-lg font-bold text-white mb-2">Beyond These Four</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               These reflect where we&apos;d suggest starting, based on our conversations with you so far - and your most pressing need is always yours to define. Our bench runs deep across software, AI/ML, pipeline, and creative engineering. If it&apos;s technical or creative and AI-enabled, we can source it.
             </p>
@@ -178,7 +189,7 @@ export default function AetherLightCraft() {
           <div className="relative">
             <div className="text-5xl font-black text-gray-800 absolute -top-6 -left-4 -z-10">02</div>
             <h4 className="text-lg font-bold text-white mb-2">We Source</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">We recruit specifically for your stack - Unreal, Jetson/ROS, pipeline - and present highly qualified finalists.</p>
+            <p className="text-sm text-gray-400 leading-relaxed">We recruit specifically for each role&apos;s stack - whether that&apos;s Unreal and Jetson/ROS, creative tooling, or post and editorial - and present highly qualified finalists.</p>
           </div>
           <div className="relative">
             <div className="text-5xl font-black text-gray-800 absolute -top-6 -left-4 -z-10">03</div>
