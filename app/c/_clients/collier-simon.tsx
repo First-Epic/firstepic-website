@@ -1,14 +1,10 @@
+// Client content component for the dynamic /c/<token> route (metadata + noindex
+// owned by the route page.tsx). Registered in app/c/_registry.tsx.
 import { Inter } from 'next/font/google';
-import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
-export const metadata: Metadata = {
-  title: 'First Epic x Collier.Simon | AI-Enabled Creative Talent',
-  robots: { index: false, follow: false }, // gated client page - never index
-};
-
-export default function CollierSimonPage() {
+export default function CollierSimon() {
   return (
     <div className={`${inter.className} bg-[#0a0a0a] text-gray-200 antialiased selection:bg-indigo-500 selection:text-white`}>
       <style>{`

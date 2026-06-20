@@ -4,13 +4,6 @@ import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  if (pathname.startsWith('/collier-simon') && !pathname.startsWith('/collier-simon/login')) {
-    const auth = request.cookies.get('collier-simon-auth')
-    if (auth?.value !== 'granted') {
-      return NextResponse.redirect(new URL('/collier-simon/login', request.url))
-    }
-  }
-
   // Generic gate for all dynamic client pages at /c/<token>.
   if (pathname.startsWith('/c/')) {
     const seg = pathname.split('/') // ['', 'c', token, ...]
@@ -27,5 +20,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/collier-simon/:path*', '/c/:path*'],
+  matcher: ['/c/:path*'],
 }
