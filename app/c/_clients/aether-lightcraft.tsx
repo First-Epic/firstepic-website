@@ -22,7 +22,7 @@ export default function AetherLightCraft() {
             <span className="bg-white text-black w-8 h-8 inline-flex items-center justify-center text-sm font-black">FE</span> FIRST EPIC
           </div>
           <div className="text-sm text-gray-400 hidden sm:block">
-            Prepared exclusively for Aether / Light Craft
+            Prepared exclusively for Aether / Lightcraft
           </div>
         </div>
       </nav>
@@ -37,7 +37,7 @@ export default function AetherLightCraft() {
           for the shots <span className="accent-gradient">no one else can get.</span>
         </h1>
         <p className="text-xl text-gray-400 max-w-3xl leading-relaxed mb-10">
-          Across Aether and Light Craft, you&apos;ve built a rare operation - original production and in-house post, plus the capture and AR systems that put cameras where they&apos;ve never been. The bottleneck now isn&apos;t know-how - it&apos;s time. First Epic embeds dedicated, vetted engineers, creative technologists, and post talent who work exclusively for you - so your team can keep creating instead of getting buried in execution.
+          Across Aether and Lightcraft, you&apos;ve built a rare operation - original production and in-house post, plus the capture and AR systems that put cameras where they&apos;ve never been. The bottleneck now isn&apos;t know-how - it&apos;s time. First Epic embeds dedicated, vetted engineers, creative technologists, and post talent who work exclusively for you - so your team can keep creating instead of getting buried in execution.
         </p>
         <div className="flex gap-4 items-center text-sm font-medium text-gray-500 mb-8">
           <span>Prepared for: Davis DiLillo &amp; Kyle Bullington</span>
@@ -155,7 +155,7 @@ export default function AetherLightCraft() {
               Embedded First Epic talent comes in well below the all-in cost of a comparable US hire - no payroll taxes, no benefits overhead, no recruiting or placement fees - so you recapture margin without compromising speed or quality.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              And because we believe partnerships only work when they&apos;re mutual, we&apos;ll structure a discount in exchange for Aether / Light Craft becoming a flagship case study - the proof point that opens the next ten doors for both of us.
+              And because we believe partnerships only work when they&apos;re mutual, we&apos;ll structure a discount in exchange for Aether / Lightcraft becoming a flagship case study - the proof point that opens the next ten doors for both of us.
             </p>
           </div>
           <div className="w-full md:w-1/2">
