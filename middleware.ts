@@ -11,9 +11,16 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  if (pathname.startsWith('/aether-lightcraft') && !pathname.startsWith('/aether-lightcraft/login')) {
+    const auth = request.cookies.get('aether-lightcraft-auth')
+    if (auth?.value !== 'granted') {
+      return NextResponse.redirect(new URL('/aether-lightcraft/login', request.url))
+    }
+  }
+
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: '/collier-simon/:path*',
+  matcher: ['/collier-simon/:path*', '/aether-lightcraft/:path*'],
 }
