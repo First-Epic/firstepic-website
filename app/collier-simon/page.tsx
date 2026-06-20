@@ -5,6 +5,7 @@ const inter = Inter({ subsets: ['latin'], weight: ['300', '400', '500', '600', '
 
 export const metadata: Metadata = {
   title: 'First Epic x Collier.Simon | AI-Enabled Creative Talent',
+  robots: { index: false, follow: false }, // gated client page - never index
 };
 
 export default function CollierSimonPage() {
