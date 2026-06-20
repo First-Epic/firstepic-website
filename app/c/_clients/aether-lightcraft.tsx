@@ -173,7 +173,7 @@ export default function AetherLightCraft() {
           <div className="relative">
             <div className="text-5xl font-black text-gray-800 absolute -top-6 -left-4 -z-10">01</div>
             <h4 className="text-lg font-bold text-white mb-2">Define the Roles</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">We shape each role you&apos;re weighing into a precise spec - starting, for example, with the AR Systems engineer - and keep the conversation open across the others as priorities firm up.</p>
+            <p className="text-sm text-gray-400 leading-relaxed">We turn each role you want to fill into a clear, detailed spec - starting with the AR Systems engineer - then keep working through the others with you.</p>
           </div>
           <div className="relative">
             <div className="text-5xl font-black text-gray-800 absolute -top-6 -left-4 -z-10">02</div>
