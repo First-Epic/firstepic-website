@@ -65,7 +65,7 @@ export default function AetherLightCraft() {
           <div>
             <h3 className="text-xl font-semibold text-white mb-3">Embedded, With<br />Real Oversight.</h3>
             <p className="text-gray-400 leading-relaxed">
-              Not home-based contractors with split attention. Our talent works exclusively for you from our managed studio - on firm-provided hardware and fiber, in-office, no moonlighting - fully embedded in your stack and your standards.
+              Not home-based contractors with split attention. Our talent works exclusively for you from our managed studio - on First Epic-provided hardware and fiber internet, in-office, no moonlighting - fully embedded in your stack and your standards.
             </p>
           </div>
           <div>
@@ -128,7 +128,7 @@ export default function AetherLightCraft() {
             </div>
             <h3 className="text-lg font-bold text-white mb-2">Beyond These Three</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              These reflect where we&apos;d suggest starting - but your most pressing need is yours to define. Our bench runs deep across software, AI/ML, pipeline, and creative engineering. If it&apos;s technical or creative and AI-enabled, we can source it.
+              These reflect where we&apos;d suggest starting, based on our conversations with you so far - and your most pressing need is always yours to define. Our bench runs deep across software, AI/ML, pipeline, and creative engineering. If it&apos;s technical or creative and AI-enabled, we can source it.
             </p>
           </div>
         </div>
@@ -155,7 +155,8 @@ export default function AetherLightCraft() {
           <ul className="text-left text-sm text-gray-300 space-y-3 max-w-xs mx-auto">
             <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No recruiting or placement fees</li>
             <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No payroll taxes or HR overhead</li>
-            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Firm-provided hardware &amp; fiber</li>
+            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> First Epic-provided hardware</li>
+            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Fiber internet</li>
             <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Month-to-month flexibility</li>
             <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Free, immediate replacements</li>
           </ul>
@@ -171,8 +172,8 @@ export default function AetherLightCraft() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="relative">
             <div className="text-5xl font-black text-gray-800 absolute -top-6 -left-4 -z-10">01</div>
-            <h4 className="text-lg font-bold text-white mb-2">Define the Role</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">We start with the AR systems role - turning your priorities into a precise spec for the right engineer.</p>
+            <h4 className="text-lg font-bold text-white mb-2">Define the Roles</h4>
+            <p className="text-sm text-gray-400 leading-relaxed">We shape each role you&apos;re weighing into a precise spec - starting, for example, with the AR Systems engineer - and keep the conversation open across the others as priorities firm up.</p>
           </div>
           <div className="relative">
             <div className="text-5xl font-black text-gray-800 absolute -top-6 -left-4 -z-10">02</div>
