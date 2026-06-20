@@ -1,14 +1,16 @@
 import { NextResponse } from 'next/server'
+import { CLIENTS } from '../../c/_registry'
 
 export async function POST(request: Request) {
-  const { password } = await request.json()
+  const { token, password } = await request.json()
+  const client = CLIENTS[token]
 
-  if (password !== 'lightcraft') {
+  if (!client || password !== client.password) {
     return NextResponse.json({ error: 'Incorrect password' }, { status: 401 })
   }
 
   const response = NextResponse.json({ success: true })
-  response.cookies.set('aether-lightcraft-1040f5d9-auth', 'granted', {
+  response.cookies.set(`c_auth_${token}`, 'granted', {
     httpOnly: true,
     sameSite: 'lax',
     path: '/',

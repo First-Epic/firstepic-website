@@ -1,14 +1,10 @@
+// Client content component for the dynamic /c/<token> route (no metadata here — the
+// route page.tsx owns title + noindex). Registered in app/c/_registry.tsx.
 import { Inter } from 'next/font/google';
-import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
-export const metadata: Metadata = {
-  title: 'First Epic x Aether / Light Craft | Embedded AI-Enabled Talent',
-  robots: { index: false, follow: false }, // gated client page - never index
-};
-
-export default function AetherLightCraftPage() {
+export default function AetherLightCraft() {
   return (
     <div className={`${inter.className} bg-[#0a0a0a] text-gray-200 antialiased selection:bg-indigo-500 selection:text-white`}>
       <style>{`

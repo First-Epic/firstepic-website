@@ -2,11 +2,13 @@
 
 import { Inter } from 'next/font/google'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
-export default function AetherLightCraftLogin() {
+export default function ClientLogin() {
+  const params = useParams<{ token: string }>()
+  const token = params.token
   const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -17,14 +19,14 @@ export default function AetherLightCraftLogin() {
     setLoading(true)
     setError(false)
 
-    const res = await fetch('/api/aether-lightcraft-1040f5d9-auth', {
+    const res = await fetch('/api/c-auth', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password }),
+      body: JSON.stringify({ token, password }),
     })
 
     if (res.ok) {
-      router.push('/aether-lightcraft-1040f5d9')
+      router.push(`/c/${token}`)
     } else {
       setError(true)
       setLoading(false)
