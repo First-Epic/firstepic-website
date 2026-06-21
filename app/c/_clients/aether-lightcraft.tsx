@@ -86,7 +86,7 @@ export default function AetherLightCraft() {
       {/* Roles / Projects */}
       <section className="max-w-6xl mx-auto px-6 py-20 border-b border-gray-800/50">
         <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-3">/// Where We&apos;d Start</h2>
-        <p className="text-gray-400 leading-relaxed mb-10 max-w-3xl">Every hour spent hardening the rig or babysitting pre-production is an hour not spent winning the next job. Here&apos;s what we&apos;d take off your plate first:</p>
+        <p className="text-gray-400 leading-relaxed mb-10 max-w-3xl">This works two ways: it <strong className="text-white">frees your team&apos;s time</strong> to take on more clients - and it turns what you&apos;ve built into <strong className="text-white">products and services you can sell.</strong> Here&apos;s where we&apos;d start:</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1 - Unreal / AR Systems Engineer */}
@@ -96,7 +96,7 @@ export default function AetherLightCraft() {
             </div>
             <h3 className="text-lg font-bold text-white mb-2">Unreal / AR Systems Engineer</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Harden the on-set AR system into something bulletproof and simple to run. Unreal plugin development, the middle-tier software around Jetson/ROS sensor fusion, NDI streaming to director and DP, and the alignment dashboard - so the system just works, on a drone or anywhere, with no markers.
+              Harden the on-set AR system into something bulletproof and simple to run. Unreal plugin development, the middle-tier software around Jetson/ROS sensor fusion, NDI streaming to director and DP, and the alignment dashboard - so the system just works, on a drone or anywhere, with no markers, and becomes solid enough to be a product you can sell, not just an in-house rig.
             </p>
           </div>
 
