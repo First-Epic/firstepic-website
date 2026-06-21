@@ -197,11 +197,11 @@ export default function AetherLightCraft() {
       {/* Risk reversal */}
       <section className="max-w-6xl mx-auto px-6 py-20 border-b border-gray-800/50">
         <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-3 text-center">/// Why It&apos;s Low-Risk</h2>
-        <p className="text-center text-gray-500 text-sm mb-12">The hard part is deciding to start. After that, we&apos;ve taken the downside off the table.</p>
+        <p className="text-center text-gray-500 text-sm mb-12">We&apos;ve taken the downside off the table - so getting started is easy, and easy to undo.</p>
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-7 max-w-4xl mx-auto">
           <div className="flex gap-3">
             <svg className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
-            <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">You choose every hire.</strong> You interview and approve each person before they start - nobody lands on your team you didn&apos;t pick.</p>
+            <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">You choose from a shortlist.</strong> We bring you 3-5 vetted finalists per role - you interview and pick. Nobody joins your team you didn&apos;t choose.</p>
           </div>
           <div className="flex gap-3">
             <svg className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
@@ -225,7 +225,7 @@ export default function AetherLightCraft() {
       {/* Close */}
       <section className="max-w-4xl mx-auto px-6 py-24 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Let&apos;s agree where to <span className="accent-gradient">start.</span></h2>
-        <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">One role or several - whichever match your priorities right now. Once we pick where to begin, we turn it into a clear spec and have qualified, vetted people in front of you within weeks - fully embedded, at half the cost, with the guarantees above behind it.</p>
+        <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">One role or several - whichever match your priorities right now. Once we pick where to begin, we turn it into a clear spec and have vetted finalists in front of you within weeks - fully embedded, at half the cost, backed by the First Epic promise.</p>
       </section>
 
       {/* Footer */}
