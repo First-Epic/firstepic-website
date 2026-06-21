@@ -152,7 +152,7 @@ export default function AetherLightCraft() {
             <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-4">/// A Mutual Partnership</h2>
             <h3 className="text-3xl font-bold text-white mb-6">Built to be mutual.</h3>
             <p className="text-gray-400 leading-relaxed mb-6">
-              Our talent is globally based - working exclusively for you from our managed overseas studio - which is exactly how First Epic comes in at <strong className="text-white">half, or less than half, the all-in cost of a comparable US hire</strong>. Same embedded, vetted, IP-secure model from up top - just at a fraction of the price, with none of the usual offshore downsides.
+              Our talent is globally based - working exclusively for you from our managed overseas studio - which is exactly how First Epic comes in at <strong className="text-white">half, or less than half, the all-in cost of a comparable US hire</strong>. The same embedded, vetted, IP-secure model - at a fraction of the price, with none of the usual offshore downsides.
             </p>
             <p className="text-gray-400 leading-relaxed">
               And because we believe partnerships only work when they&apos;re mutual, we&apos;ll structure a further discount on top in exchange for Aether / Lightcraft becoming a flagship case study - the proof point that opens the next ten doors for both of us.
