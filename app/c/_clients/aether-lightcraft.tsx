@@ -61,7 +61,7 @@ export default function AetherLightCraft() {
       {/* Why First Epic */}
       <section className="max-w-6xl mx-auto px-6 py-20 border-b border-gray-800/50">
         <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-8">/// The First Epic Difference</h2>
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-xl font-semibold text-white mb-3">Embedded, With<br />Real Oversight.</h3>
             <p className="text-gray-400 leading-relaxed">
@@ -72,12 +72,6 @@ export default function AetherLightCraft() {
             <h3 className="text-xl font-semibold text-white mb-3">Engineers Who<br />Speak Your Stack</h3>
             <p className="text-gray-400 leading-relaxed">
               Unreal Engine, custom plugins, NVIDIA Jetson and ROS, NDI pipelines, modern AI tooling (local and cloud) - plus the post and creative pipeline (editorial, color, VFX, motion). Engineers and creative technologists matched to the exact problem in front of you, whether on the capture side or in post.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-3">IP-Secure &amp;<br />US-Aligned</h3>
-            <p className="text-gray-400 leading-relaxed">
-              A US LLC with real legal assurances, rigorous English and skills vetting, time-zone overlap for live deploys, and HR/compliance handled. Your footage, your code, your pipeline - protected.
             </p>
           </div>
         </div>
@@ -166,10 +160,6 @@ export default function AetherLightCraft() {
             <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> One flat monthly rate per team member</li>
             <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No recruiting, placement, or platform fees</li>
             <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> No payroll taxes or HR overhead</li>
-            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> First Epic-provided hardware</li>
-            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Fiber internet</li>
-            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Month-to-month flexibility</li>
-            <li className="flex items-center gap-2"><svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Free, immediate replacements</li>
           </ul>
         </div>
       </div>
@@ -184,7 +174,7 @@ export default function AetherLightCraft() {
           <div className="relative">
             <div className="text-5xl font-black text-gray-800 absolute -top-6 -left-4 -z-10">01</div>
             <h4 className="text-lg font-bold text-white mb-2">Define the Roles</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">We turn each role you want to fill into a clear, detailed spec - starting with the AR Systems engineer - then keep working through the others with you.</p>
+            <p className="text-sm text-gray-400 leading-relaxed">We turn each role you want to fill into a clear, detailed spec - in whatever order you prioritize - and work through them with you.</p>
           </div>
           <div className="relative">
             <div className="text-5xl font-black text-gray-800 absolute -top-6 -left-4 -z-10">02</div>
@@ -234,8 +224,8 @@ export default function AetherLightCraft() {
 
       {/* Close */}
       <section className="max-w-4xl mx-auto px-6 py-24 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Let&apos;s start with the <span className="accent-gradient">AR role.</span></h2>
-        <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">This is a starting point, not a fixed menu. Lock the first spec and we&apos;ll have qualified, vetted people in front of you within weeks - fully embedded, at half the cost, with everything above to back it up.</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Let&apos;s agree where to <span className="accent-gradient">start.</span></h2>
+        <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">One role or several - whichever match your priorities right now. Once we pick where to begin, we turn it into a clear spec and have qualified, vetted people in front of you within weeks - fully embedded, at half the cost, with the guarantees above behind it.</p>
       </section>
 
       {/* Footer */}
