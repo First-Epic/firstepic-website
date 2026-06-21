@@ -230,7 +230,7 @@ export default function AetherLightCraft() {
 
       {/* Footer */}
       <footer className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <p className="text-gray-600 text-sm">© First Epic Studio</p>
+        <p className="text-gray-600 text-sm">© 2026 First Epic</p>
       </footer>
     </div>
   );
