@@ -9,4 +9,5 @@ export type ClientMeta = { name: string; password: string }
 export const CLIENTS: Record<string, ClientMeta> = {
   'f1e5691bd491': { name: 'Aether / Lightcraft', password: 'lightcraft' },
   'c5f085d1a2c0': { name: 'Collier.Simon', password: 'cosi' },
+  '86846dc081c6': { name: 'Paul Siegel & Sanjee Gupta', password: 'eagleworld' },
 }
