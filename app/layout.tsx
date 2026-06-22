@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
+import KnownVisitor from './_known-visitor'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <Analytics />
+        <KnownVisitor />
         <Script id="linkedin-partner-id" strategy="afterInteractive">
           {`
             _linkedin_partner_id = "8765564";

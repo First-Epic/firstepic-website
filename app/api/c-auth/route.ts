@@ -16,5 +16,13 @@ export async function POST(request: Request) {
     path: '/',
     maxAge: 60 * 60 * 24 * 7, // 7 days
   })
+  // Persistent first-party identity for cross-site recognition (readable by analytics).
+  // Low-sensitivity: it's the same token already in their URL.
+  response.cookies.set('fe_visitor', token, {
+    httpOnly: false,
+    sameSite: 'lax',
+    path: '/',
+    maxAge: 60 * 60 * 24 * 180, // 180 days
+  })
   return response
 }

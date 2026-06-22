@@ -5,6 +5,7 @@ import { CLIENTS } from '../_registry';
 import AetherLightCraft from '../_clients/aether-lightcraft';
 import CollierSimon from '../_clients/collier-simon';
 import SiegelGupta from '../_clients/siegel-gupta';
+import VisitBeacon from '../_visit-beacon';
 
 // token -> content component. Keep in sync with _registry.tsx.
 const COMPONENTS: Record<string, ComponentType> = {
@@ -26,5 +27,11 @@ export async function generateMetadata(
 export default function ClientPage({ params }: { params: { token: string } }) {
   const Comp = COMPONENTS[params.token];
   if (!Comp) notFound();
-  return <Comp />;
+  const client = CLIENTS[params.token]?.name ?? params.token;
+  return (
+    <>
+      <VisitBeacon client={client} token={params.token} />
+      <Comp />
+    </>
+  );
 }
