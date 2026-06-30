@@ -10,4 +10,6 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'f1e5691bd491': { name: 'Aether / Lightcraft', password: 'lightcraft' },
   'c5f085d1a2c0': { name: 'Collier.Simon', password: 'cosi' },
   '86846dc081c6': { name: 'Paul Siegel & Sanjee Gupta', password: 'eagleworld' },
+  // Candidate presentation (page TYPE differs from the proposal pages above).
+  '79bb44c4e853': { name: 'Lyra-01 (Science - Marie Nahon)', password: 'science-marie' },
 }
