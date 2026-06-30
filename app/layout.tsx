@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import KnownVisitor from './_known-visitor'
+import LinkedInInsight from './_linkedin-insight'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -24,33 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            alt=""
-            src="https://px.ads.linkedin.com/collect/?pid=8765564&fmt=gif"
-          />
-        </noscript>
-      </head>
       <body className="antialiased">
         {children}
         <Analytics />
         <KnownVisitor />
-        <Script id="linkedin-partner-id" strategy="afterInteractive">
-          {`
-            _linkedin_partner_id = "8765564";
-            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-          `}
-        </Script>
-        <Script
-          id="linkedin-insight"
-          strategy="afterInteractive"
-          src="https://snap.licdn.com/li.lms-analytics/insight.min.js"
-        />
+        {/* LinkedIn ad pixel — marketing pages only; suppressed on /c/* (see component) */}
+        <LinkedInInsight />
       </body>
     </html>
   )
