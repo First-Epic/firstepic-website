@@ -7,6 +7,7 @@ import CollierSimon from '../_clients/collier-simon';
 import SiegelGupta from '../_clients/siegel-gupta';
 import CandidateLyra01 from '../_clients/lyra-01';
 import CandidateLyra02 from '../_clients/lyra-02';
+import CandidateLyra03 from '../_clients/lyra-03';
 import VisitBeacon from '../_visit-beacon';
 
 // token -> content component. Keep in sync with _registry.tsx.
@@ -16,6 +17,7 @@ const COMPONENTS: Record<string, ComponentType> = {
   '86846dc081c6': SiegelGupta,
   '79bb44c4e853': CandidateLyra01,
   'ca86bfd06ed5': CandidateLyra02,
+  'b5b49ff29fe5': CandidateLyra03,
 };
 
 export async function generateMetadata(
