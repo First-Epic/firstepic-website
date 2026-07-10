@@ -14,4 +14,5 @@ export const CLIENTS: Record<string, ClientMeta> = {
   '79bb44c4e853': { name: 'Lyra-01 (Science - Marie Nahon)', password: 'science-marie' },
   'ca86bfd06ed5': { name: 'Lyra-02 (Science - Marie Nahon)', password: 'science-marie' },
   'b5b49ff29fe5': { name: 'Lyra-03 (Science - Marie Nahon)', password: 'science-marie' },
+  'b9d108639e10': { name: 'Lyra-04 (Science - Marie Nahon)', password: 'science-marie' },
 }
