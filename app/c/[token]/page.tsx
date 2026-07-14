@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import type { ComponentType } from 'react';
 import { notFound } from 'next/navigation';
-import { cookies } from 'next/headers';
 import { CLIENTS, getPositionForCandidate } from '../_registry';
 import AetherLightCraft from '../_clients/aether-lightcraft';
 import CollierSimon from '../_clients/collier-simon';
@@ -40,13 +39,12 @@ export default function ClientPage({ params }: { params: { token: string } }) {
   if (!Comp) notFound();
   const client = CLIENTS[params.token]?.name ?? params.token;
 
-  // Show an on-page "Back to dashboard" link only when this candidate belongs to
-  // a position AND the viewer is a portal-authenticated client (has the client
-  // cookie). Legacy per-token viewers (no dashboard) never see it.
+  // Show an on-page "Back to dashboard" link on any candidate that belongs to a
+  // position, regardless of how the viewer arrived. If they don't yet have the
+  // client cookie, the dashboard just asks for the (same) password. Non-position
+  // pages (the proposal decks) never get it.
   const position = getPositionForCandidate(params.token);
-  const showBack =
-    !!position &&
-    cookies().get(`p_auth_${position.clientToken}`)?.value === 'granted';
+  const showBack = !!position;
 
   return (
     <>
