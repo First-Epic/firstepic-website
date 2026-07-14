@@ -98,3 +98,12 @@ export function getPositionCandidates(clientToken: string): CandidateDisplay[] {
     .map((t) => CANDIDATE_DISPLAY[t])
     .filter((c): c is CandidateDisplay => Boolean(c))
 }
+
+// Reverse lookup: the position (dashboard) a candidate token belongs to, if any.
+// Used by the candidate page to offer a "Back to dashboard" link.
+export function getPositionForCandidate(candidateToken: string): PositionMeta | undefined {
+  for (const key in POSITIONS) {
+    if (POSITIONS[key].candidateTokens.includes(candidateToken)) return POSITIONS[key]
+  }
+  return undefined
+}

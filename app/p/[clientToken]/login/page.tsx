@@ -45,7 +45,10 @@ export default function ClientDashboardLogin() {
 
     if (res.ok) {
       rememberIdentity(email)
-      router.push(`/p/${clientToken}`)
+      // replace (not push) so the login page is NOT left in history - otherwise
+      // Back from a candidate page can land on the sign-in screen instead of
+      // the dashboard.
+      router.replace(`/p/${clientToken}`)
     } else {
       setError(true)
       setLoading(false)
