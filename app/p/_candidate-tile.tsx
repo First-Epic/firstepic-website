@@ -20,6 +20,12 @@ export default function CandidateTile({ card }: { card: CandidateDisplay }) {
   return (
     <a
       href={`/c/${card.token}`}
+      // Part C click-stream: the delegated tracker reads these to log a
+      // tile_click with the candidate token + label. Purely informational
+      // attributes; they don't affect layout or navigation.
+      data-track="tile"
+      data-track-token={card.token}
+      data-track-label={label}
       className="group block bg-[#111] border border-gray-800 rounded-xl overflow-hidden hover:border-indigo-500/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
     >
       {/* Uniform hero: every tile is the same aspect so the grid stays even. */}

@@ -22,6 +22,11 @@ export type PortalLinkPayload = {
   clientToken: string // which position/client this link authenticates
   target: string      // where to land after auth (a relative path, e.g. /p/<t> or /c/<t>)
   exp: number         // expiry as unix seconds
+  viewerId?: string   // OPTIONAL per-viewer id (Tier-1a identity). When a link is
+                      // minted for a specific named person on the client's team,
+                      // this rides along so the enter route can set fe_viewer and
+                      // we can attribute the click-stream to that viewer (high
+                      // confidence). Absent for generic/shared links.
 }
 
 function getSecret(): string {
@@ -49,7 +54,7 @@ function hmac(secret: string, data: string): Buffer {
 // Mint a signed deep-link token. `ttlSeconds` sets how long the link is valid
 // (default 14 days). Returns the "<payload>.<sig>" string to embed in a URL.
 export function sign(
-  input: { clientToken: string; target: string; exp?: number; ttlSeconds?: number },
+  input: { clientToken: string; target: string; exp?: number; ttlSeconds?: number; viewerId?: string },
 ): string {
   const secret = getSecret()
   const exp =
@@ -59,6 +64,11 @@ export function sign(
     clientToken: input.clientToken,
     target: input.target,
     exp,
+  }
+  // Only include viewerId when actually provided (keeps generic links compact
+  // and their payloads unchanged from before this feature).
+  if (typeof input.viewerId === 'string' && input.viewerId) {
+    payload.viewerId = input.viewerId
   }
   const payloadB64 = b64url(Buffer.from(JSON.stringify(payload), 'utf8'))
   const sig = b64url(hmac(secret, payloadB64))

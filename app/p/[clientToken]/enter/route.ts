@@ -62,6 +62,20 @@ export async function GET(
       path: '/',
       maxAge: 60 * 60 * 24 * 7, // 7 days
     })
+    // TIER-1a IDENTITY: if this deep-link was minted for a specific named viewer,
+    // it carries a viewerId. Set the durable fe_viewer cookie so the click-stream
+    // tracker can attribute activity to that viewer with HIGH confidence. The
+    // cookie is NOT httpOnly because the browser tracker reads it to build the
+    // identity block; it carries no secret (just an opaque viewer id) and grants
+    // no access on its own (access is the p_auth cookie above).
+    if (typeof payload.viewerId === 'string' && payload.viewerId) {
+      response.cookies.set('fe_viewer', payload.viewerId, {
+        httpOnly: false,
+        sameSite: 'lax',
+        path: '/',
+        maxAge: 60 * 60 * 24 * 90, // 90 days
+      })
+    }
     return response
   } catch {
     // Fail closed: any unexpected error routes to the normal login.
