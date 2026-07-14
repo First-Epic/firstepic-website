@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { CLIENTS } from '../../c/_registry'
+import { CLIENTS, getPositionForCandidate } from '../../c/_registry'
 import {
   passwordsMatch,
   isRateLimited,
@@ -46,5 +46,19 @@ export async function POST(request: Request) {
     path: '/',
     maxAge: 60 * 60 * 24 * 180, // 180 days
   })
+  // One login covers both: if this candidate belongs to a position (dashboard),
+  // and the candidate password matches the position password, also unlock the
+  // dashboard so the client never has to sign in a second time. Same password,
+  // same client - no new access is granted beyond what they already proved.
+  const position = getPositionForCandidate(token)
+  if (position && passwordsMatch(password, position.password)) {
+    response.cookies.set(`p_auth_${position.clientToken}`, 'granted', {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'lax',
+      path: '/',
+      maxAge: 60 * 60 * 24 * 7, // 7 days
+    })
+  }
   return response
 }
