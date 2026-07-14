@@ -6,21 +6,17 @@ import { useRouter, useParams } from 'next/navigation'
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
-// Identity is collected here at login (name + email) instead of in a separate
-// pop-up after entry. Only the password is required; name/email are captured
-// when given and written to the fe_identity cookie the tracker reads, plus
-// fe_identity_seen so the post-login prompt never appears.
-function rememberIdentity(name: string, email: string) {
+// The form reads as a standard email + password sign-in. Only the password is
+// actually required; the email is captured when given (written to the
+// fe_identity cookie the tracker reads, plus fe_identity_seen so the separate
+// prompt never appears) so we have a better chance of knowing who is reviewing.
+function rememberIdentity(email: string) {
   try {
-    const n = name.trim()
     const em = email.trim()
-    if (n || em) {
-      const payload = encodeURIComponent(
-        JSON.stringify({ name: n || undefined, email: em || undefined }),
-      )
+    if (em) {
+      const payload = encodeURIComponent(JSON.stringify({ email: em }))
       document.cookie = `fe_identity=${payload}; path=/; max-age=${60 * 60 * 24 * 90}; SameSite=Lax`
     }
-    // They saw the fields here, so never show the separate identify prompt.
     document.cookie = `fe_identity_seen=1; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`
   } catch {
     /* best-effort; never block login */
@@ -30,7 +26,6 @@ function rememberIdentity(name: string, email: string) {
 export default function ClientDashboardLogin() {
   const params = useParams<{ clientToken: string }>()
   const clientToken = params.clientToken
-  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
@@ -49,7 +44,7 @@ export default function ClientDashboardLogin() {
     })
 
     if (res.ok) {
-      rememberIdentity(name, email)
+      rememberIdentity(email)
       router.push(`/p/${clientToken}`)
     } else {
       setError(true)
@@ -68,24 +63,14 @@ export default function ClientDashboardLogin() {
           FIRST EPIC
         </div>
         <form onSubmit={handleSubmit} className="bg-[#111] border border-gray-800 rounded-xl p-8">
-          <h1 className="text-white font-semibold text-lg mb-2">Sign in to review</h1>
-          <p className="text-gray-500 text-sm mb-6">
-            Enter the password to continue. Adding your name and email lets us tag your feedback.
-          </p>
-          <input
-            type="text"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            placeholder="Name"
-            autoComplete="name"
-            className={inputClass}
-          />
+          <h1 className="text-white font-semibold text-lg mb-6">Sign in to continue</h1>
           <input
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder="Email"
             autoComplete="email"
+            autoFocus
             className={inputClass}
           />
           <input
@@ -102,7 +87,7 @@ export default function ClientDashboardLogin() {
             disabled={loading || !password}
             className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white font-semibold py-3 rounded-lg transition-colors"
           >
-            {loading ? 'Checking...' : 'Continue'}
+            {loading ? 'Signing in...' : 'Sign in'}
           </button>
         </form>
       </div>
