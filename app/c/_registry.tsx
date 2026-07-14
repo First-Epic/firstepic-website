@@ -58,11 +58,13 @@ const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
   'ca86bfd06ed5': {
     token: 'ca86bfd06ed5', codename: 'Lyra-02', name: 'Hiba R.',
     role: 'Designer / Art Director',
+    hero: '/c-assets/ca86bfd06ed5/lyra-02/hero-photo.png',
     hook: 'Brand and packaging design, concept to production-ready.',
   },
   'b5b49ff29fe5': {
     token: 'b5b49ff29fe5', codename: 'Lyra-03', name: 'Ameer M.',
     role: 'Designer / Art Director',
+    hero: '/c-assets/b5b49ff29fe5/lyra-03/hero-photo.jpg',
     hook: 'Brand and packaging design, concept to production-ready.',
   },
   'b9d108639e10': {
