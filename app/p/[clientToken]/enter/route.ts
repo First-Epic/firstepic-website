@@ -58,6 +58,7 @@ export async function GET(
     const response = NextResponse.redirect(new URL(target, request.url))
     response.cookies.set(`p_auth_${clientToken}`, 'granted', {
       httpOnly: true,
+      secure: true,
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7, // 7 days
@@ -71,6 +72,7 @@ export async function GET(
     if (typeof payload.viewerId === 'string' && payload.viewerId) {
       response.cookies.set('fe_viewer', payload.viewerId, {
         httpOnly: false,
+        secure: true,
         sameSite: 'lax',
         path: '/',
         maxAge: 60 * 60 * 24 * 90, // 90 days
