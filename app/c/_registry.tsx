@@ -15,6 +15,10 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'ca86bfd06ed5': { name: 'Lyra-02 (Science - Marie Nahon)', password: 'science-marie' },
   'b5b49ff29fe5': { name: 'Lyra-03 (Science - Marie Nahon)', password: 'science-marie' },
   'b9d108639e10': { name: 'Lyra-04 (Science - Marie Nahon)', password: 'science-marie' },
+  // Lyra-05: engagement-57 client identity is FIREWALLED pre-placement, so the
+  // label carries the role, not a client name. Page password = the builder-
+  // generated per-candidate password (in the presentation-email draft).
+  '97620f3ea5a8': { name: 'Lyra-05 (Designer / Art Director)', password: 'epic-7543d6' },
 }
 
 // ---------------------------------------------------------------------------
@@ -65,6 +69,10 @@ const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
     token: 'b9d108639e10', codename: 'Lyra-04', name: 'Urooj Z.',
     role: 'Designer / Art Director',
     hero: '/c/b9d108639e10/assets/hero-photo.png',  },
+  '97620f3ea5a8': {
+    token: '97620f3ea5a8', codename: 'Lyra-05', name: 'Azhar R.',
+    role: 'Designer / Art Director',
+    hero: '/c/97620f3ea5a8/assets/hero-photo.png',  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -74,7 +82,7 @@ export const POSITIONS: Record<string, PositionMeta> = {
     clientName: 'Science - Marie Nahon',
     position: 'Designer / Art Director',
     password: 'science-marie',
-    candidateTokens: ['79bb44c4e853', 'ca86bfd06ed5', 'b5b49ff29fe5', 'b9d108639e10'],
+    candidateTokens: ['79bb44c4e853', 'ca86bfd06ed5', 'b5b49ff29fe5', 'b9d108639e10', '97620f3ea5a8'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
