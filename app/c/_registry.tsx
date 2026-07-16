@@ -15,10 +15,10 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'ca86bfd06ed5': { name: 'Lyra-02 (Science - Marie Nahon)', password: 'science-marie' },
   'b5b49ff29fe5': { name: 'Lyra-03 (Science - Marie Nahon)', password: 'science-marie' },
   'b9d108639e10': { name: 'Lyra-04 (Science - Marie Nahon)', password: 'science-marie' },
-  // Lyra-05: engagement-57 client identity is FIREWALLED pre-placement, so the
-  // label carries the role, not a client name. Page password = the builder-
-  // generated per-candidate password (in the presentation-email draft).
-  '97620f3ea5a8': { name: 'Lyra-05 (Designer / Art Director)', password: 'epic-7543d6' },
+  // Lyra-05: the client-facing surface names the client normally (Davis 2026-07-15;
+  // the identity firewall is candidate-facing only). Password unchanged - it's the
+  // builder-generated per-candidate password already in the client-email draft.
+  '97620f3ea5a8': { name: 'Lyra-05 (Science - Marie Nahon)', password: 'epic-7543d6' },
 }
 
 // ---------------------------------------------------------------------------
