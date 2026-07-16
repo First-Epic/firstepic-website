@@ -6,9 +6,28 @@ import { useRouter, useParams } from 'next/navigation'
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
+// Same email-capture as the dashboard sign-in (/p/ login): the form reads as a
+// standard email + password sign-in. Only the password is actually required;
+// the email is captured when given (fe_identity cookie the tracker reads, plus
+// fe_identity_seen so the separate prompt never appears) so we know who is
+// reviewing even on a direct candidate-page visit.
+function rememberIdentity(email: string) {
+  try {
+    const em = email.trim()
+    if (em) {
+      const payload = encodeURIComponent(JSON.stringify({ email: em }))
+      document.cookie = `fe_identity=${payload}; path=/; max-age=${60 * 60 * 24 * 90}; SameSite=Lax`
+    }
+    document.cookie = `fe_identity_seen=1; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`
+  } catch {
+    /* best-effort; never block login */
+  }
+}
+
 export default function ClientLogin() {
   const params = useParams<{ token: string }>()
   const token = params.token
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -26,6 +45,7 @@ export default function ClientLogin() {
     })
 
     if (res.ok) {
+      rememberIdentity(email)
       router.push(`/c/${token}`)
     } else {
       setError(true)
@@ -41,13 +61,20 @@ export default function ClientLogin() {
           FIRST EPIC
         </div>
         <form onSubmit={handleSubmit} className="bg-[#111] border border-gray-800 rounded-xl p-8">
-          <h1 className="text-white font-semibold text-lg mb-6">Enter password to continue</h1>
+          <h1 className="text-white font-semibold text-lg mb-6">Sign in to continue</h1>
+          <input
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="Email"
+            autoFocus
+            className="w-full bg-[#0a0a0a] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500 mb-4"
+          />
           <input
             type="password"
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder="Password"
-            autoFocus
             className="w-full bg-[#0a0a0a] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500 mb-4"
           />
           {error && <p className="text-red-400 text-sm mb-4">Incorrect password.</p>}
