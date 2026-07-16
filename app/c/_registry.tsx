@@ -15,6 +15,11 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'ca86bfd06ed5': { name: 'Lyra-02 (Science - Marie Nahon)', password: 'science-marie' },
   'b5b49ff29fe5': { name: 'Lyra-03 (Science - Marie Nahon)', password: 'science-marie' },
   'b9d108639e10': { name: 'Lyra-04 (Science - Marie Nahon)', password: 'science-marie' },
+  // Lyra-05: the client-facing surface names the client normally (Davis 2026-07-15;
+  // the identity firewall is candidate-facing only). Password unified to the
+  // position password (Davis ruling 8, 2026-07-16): pages take the POSITION entry's
+  // password, never a per-candidate random one.
+  '97620f3ea5a8': { name: 'Lyra-05 (Science - Marie Nahon)', password: 'science-marie' },
 }
 
 // ---------------------------------------------------------------------------
@@ -65,6 +70,10 @@ const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
     token: 'b9d108639e10', codename: 'Lyra-04', name: 'Urooj Z.',
     role: 'Designer / Art Director',
     hero: '/c/b9d108639e10/assets/hero-photo.png',  },
+  '97620f3ea5a8': {
+    token: '97620f3ea5a8', codename: 'Lyra-05', name: 'Azhar R.',
+    role: 'Designer / Art Director',
+    hero: '/c/97620f3ea5a8/assets/hero-photo.png',  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -74,7 +83,7 @@ export const POSITIONS: Record<string, PositionMeta> = {
     clientName: 'Science - Marie Nahon',
     position: 'Designer / Art Director',
     password: 'science-marie',
-    candidateTokens: ['79bb44c4e853', 'ca86bfd06ed5', 'b5b49ff29fe5', 'b9d108639e10'],
+    candidateTokens: ['79bb44c4e853', 'ca86bfd06ed5', 'b5b49ff29fe5', 'b9d108639e10', '97620f3ea5a8'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])

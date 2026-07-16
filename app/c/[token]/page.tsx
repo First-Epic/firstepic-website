@@ -9,9 +9,9 @@ import CandidateLyra01 from '../_clients/lyra-01';
 import CandidateLyra02 from '../_clients/lyra-02';
 import CandidateLyra03 from '../_clients/lyra-03';
 import CandidateLyra04 from '../_clients/lyra-04';
+import CandidateLyra05 from '../_clients/lyra-05';
 import VisitBeacon from '../_visit-beacon';
 import Tracker from '../../_tracker';
-import IdentifyPrompt from '../../_identify-prompt';
 
 // token -> content component. Keep in sync with _registry.tsx.
 const COMPONENTS: Record<string, ComponentType> = {
@@ -22,6 +22,7 @@ const COMPONENTS: Record<string, ComponentType> = {
   'ca86bfd06ed5': CandidateLyra02,
   'b5b49ff29fe5': CandidateLyra03,
   'b9d108639e10': CandidateLyra04,
+  '97620f3ea5a8': CandidateLyra05,
 };
 
 export async function generateMetadata(
@@ -55,7 +56,6 @@ export default function ClientPage({ params }: { params: { token: string } }) {
           opens) to /api/track. Best-effort; cannot break the page. */}
       <Tracker token={params.token} surface="candidate" />
       {/* Part C: optional, dismissable self-identification (attribution only). */}
-      <IdentifyPrompt token={params.token} surface="candidate" clientName={client} />
       {showBack && (
         <a
           href={`/p/${position!.clientToken}`}
