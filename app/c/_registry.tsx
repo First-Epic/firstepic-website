@@ -16,9 +16,10 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'b5b49ff29fe5': { name: 'Lyra-03 (Science - Marie Nahon)', password: 'science-marie' },
   'b9d108639e10': { name: 'Lyra-04 (Science - Marie Nahon)', password: 'science-marie' },
   // Lyra-05: the client-facing surface names the client normally (Davis 2026-07-15;
-  // the identity firewall is candidate-facing only). Password unchanged - it's the
-  // builder-generated per-candidate password already in the client-email draft.
-  '97620f3ea5a8': { name: 'Lyra-05 (Science - Marie Nahon)', password: 'epic-7543d6' },
+  // the identity firewall is candidate-facing only). Password unified to the
+  // position password (Davis ruling 8, 2026-07-16): pages take the POSITION entry's
+  // password, never a per-candidate random one.
+  '97620f3ea5a8': { name: 'Lyra-05 (Science - Marie Nahon)', password: 'science-marie' },
 }
 
 // ---------------------------------------------------------------------------
