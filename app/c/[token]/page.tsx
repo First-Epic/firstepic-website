@@ -12,7 +12,6 @@ import CandidateLyra04 from '../_clients/lyra-04';
 import CandidateLyra05 from '../_clients/lyra-05';
 import VisitBeacon from '../_visit-beacon';
 import Tracker from '../../_tracker';
-import IdentifyPrompt from '../../_identify-prompt';
 
 // token -> content component. Keep in sync with _registry.tsx.
 const COMPONENTS: Record<string, ComponentType> = {
@@ -57,7 +56,6 @@ export default function ClientPage({ params }: { params: { token: string } }) {
           opens) to /api/track. Best-effort; cannot break the page. */}
       <Tracker token={params.token} surface="candidate" />
       {/* Part C: optional, dismissable self-identification (attribution only). */}
-      <IdentifyPrompt token={params.token} surface="candidate" clientName={client} />
       {showBack && (
         <a
           href={`/p/${position!.clientToken}`}

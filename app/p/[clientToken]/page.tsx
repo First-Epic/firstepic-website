@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation'
 import { getPosition } from '../../c/_registry'
 import CandidateTile from '../_candidate-tile'
 import Tracker from '../../_tracker'
-import IdentifyPrompt from '../../_identify-prompt'
 
 // CLIENT DASHBOARD - /p/<clientToken>
 // A per-POSITION landing page: one branded grid of the candidate presentations
@@ -43,12 +42,6 @@ export default function ClientDashboard(
       {/* Part C: click-stream + optional self-identify on the dashboard surface.
           Best-effort; cannot break the page. */}
       <Tracker token={pos.clientToken} surface="dashboard" clientToken={pos.clientToken} />
-      <IdentifyPrompt
-        token={pos.clientToken}
-        surface="dashboard"
-        clientToken={pos.clientToken}
-        clientName={pos.clientName}
-      />
       {/* .accent-gradient is page-local (matches the candidate pages' style). */}
       <style>{`
         .accent-gradient {
