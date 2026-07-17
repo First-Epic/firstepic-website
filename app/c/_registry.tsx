@@ -20,6 +20,10 @@ export const CLIENTS: Record<string, ClientMeta> = {
   // position password (Davis ruling 8, 2026-07-16): pages take the POSITION entry's
   // password, never a per-candidate random one.
   '97620f3ea5a8': { name: 'Lyra-05 (Science - Marie Nahon)', password: 'science-marie' },
+  // Lyra-06 (Zubair K.): PREVIEW-ONLY. Added to CLIENTS so the password-gated
+  // /c/ page works; deliberately NOT added to POSITIONS/CANDIDATE_DISPLAY below,
+  // so it stays off the client dashboard until Davis approves live-to-client.
+  '220ff76fc6f1': { name: 'Lyra-06 (Science - Marie Nahon)', password: 'science-marie' },
 }
 
 // ---------------------------------------------------------------------------
