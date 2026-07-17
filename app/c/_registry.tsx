@@ -78,6 +78,14 @@ const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
     token: '97620f3ea5a8', codename: 'Lyra-05', name: 'Azhar R.',
     role: 'Designer / Art Director',
     hero: '/c/97620f3ea5a8/assets/hero-photo.png',  },
+  // Lyra-06 (Zubair K.): display meta with hero present. Still PREVIEW-ONLY -
+  // deliberately NOT added to POSITIONS.candidateTokens, so it stays off the
+  // client dashboard until Davis approves live-to-client (that token addition
+  // is the actual gate; this entry is inert until then).
+  '220ff76fc6f1': {
+    token: '220ff76fc6f1', codename: 'Lyra-06', name: 'Zubair K.',
+    role: 'Designer / Art Director',
+    hero: '/c/220ff76fc6f1/assets/hero-photo.png',  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
