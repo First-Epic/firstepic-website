@@ -89,13 +89,13 @@ const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
-  // Science / Marie Nahon - the four Lyra designer candidates.
+  // Science / Marie Nahon - the Lyra designer candidates.
   '7f3a9c2e1d84': {
     clientToken: '7f3a9c2e1d84',
     clientName: 'Science - Marie Nahon',
     position: 'Designer / Art Director',
     password: 'science-marie',
-    candidateTokens: ['79bb44c4e853', 'ca86bfd06ed5', 'b5b49ff29fe5', 'b9d108639e10', '97620f3ea5a8'],
+    candidateTokens: ['79bb44c4e853', 'ca86bfd06ed5', 'b5b49ff29fe5', 'b9d108639e10', '97620f3ea5a8', '220ff76fc6f1'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
