@@ -24,6 +24,9 @@ export const CLIENTS: Record<string, ClientMeta> = {
   // /c/ page works; deliberately NOT added to POSITIONS/CANDIDATE_DISPLAY below,
   // so it stays off the client dashboard until Davis approves live-to-client.
   '220ff76fc6f1': { name: 'Lyra-06 (Science - Marie Nahon)', password: 'science-marie' },
+  // Carina-01 (Affan K.) for CARINA / The Artist's Journey. Password matches the CARINA
+  // position below so one position login also unlocks this candidate page.
+  'ddf2afe2e2e8': { name: "Carina-01 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
 }
 
 // ---------------------------------------------------------------------------
@@ -86,6 +89,11 @@ const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
     token: '220ff76fc6f1', codename: 'Lyra-06', name: 'Zubair K.',
     role: 'Designer / Art Director',
     hero: '/c/220ff76fc6f1/assets/hero-photo.png',  },
+  // Carina-01 (Affan K.): codenamed, no headshot (identity firewall) -> hero omitted,
+  // the tile falls back to the branded monogram placeholder.
+  'ddf2afe2e2e8': {
+    token: 'ddf2afe2e2e8', codename: 'Carina-01', name: 'Affan K.',
+    role: 'AI Video Team Lead',  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -96,6 +104,21 @@ export const POSITIONS: Record<string, PositionMeta> = {
     position: 'Designer / Art Director',
     password: 'science-marie',
     candidateTokens: ['79bb44c4e853', 'ca86bfd06ed5', 'b5b49ff29fe5', 'b9d108639e10', '97620f3ea5a8', '220ff76fc6f1'],
+    get candidates() {
+      return this.candidateTokens
+        .map((t) => CANDIDATE_DISPLAY[t])
+        .filter((c): c is CandidateDisplay => Boolean(c))
+    },
+  },
+  // The Artist's Journey / Wilfred Lee - the CARINA "AI Video Team Lead" shortlist.
+  // Password matches the Carina-01 CLIENTS entry so a position login also unlocks the
+  // candidate page (GRANTED_BY reverse-index in middleware.ts rebuilds from this).
+  'a6dfec43b882': {
+    clientToken: 'a6dfec43b882',
+    clientName: "The Artist's Journey - Wilfred Lee",
+    position: 'AI Video Team Lead',
+    password: 'journey-wilfred',
+    candidateTokens: ['ddf2afe2e2e8'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
