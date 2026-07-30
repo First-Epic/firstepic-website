@@ -4,6 +4,13 @@ import { notFound } from 'next/navigation'
 import { getPosition } from '../../c/_registry'
 import CandidateTile from '../_candidate-tile'
 import Tracker from '../../_tracker'
+import PositionChallenge from '../_position-challenge'
+
+// Positions that carry a Workflow-Challenge section under the candidate grid. The
+// section's decks/assets are position-specific, so it renders only for a listed
+// clientToken (CARINA today). Add a token here when a position gets its own challenge
+// island + assets under public/p/<clientToken>/assets/.
+const POSITIONS_WITH_CHALLENGE = new Set<string>(['a6dfec43b882'])
 
 // CLIENT DASHBOARD - /p/<clientToken>
 // A per-POSITION landing page: one branded grid of the candidate presentations
@@ -99,6 +106,11 @@ export default function ClientDashboard(
           <p className="text-gray-500">No candidates to show yet.</p>
         )}
       </main>
+
+      {/* Workflow-Challenge section (approved position_page.py design): the exact
+          materials every candidate received, each opening in the shared deck viewer /
+          lightbox (arrows + swipe). Only for positions that have their own challenge. */}
+      {POSITIONS_WITH_CHALLENGE.has(pos.clientToken) && <PositionChallenge />}
 
       <footer className="max-w-4xl mx-auto px-6 py-16 text-center">
         <p className="text-gray-600 text-sm">
