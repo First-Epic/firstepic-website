@@ -91,17 +91,15 @@ const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
     token: '220ff76fc6f1', codename: 'Lyra-06', name: 'Zubair K.',
     role: 'Designer / Art Director',
     hero: '/c/220ff76fc6f1/assets/hero-photo.png',  },
-  // Carina-01 (Affan K.): codenamed, no headshot (identity firewall) -> hero omitted,
-  // the tile falls back to the branded monogram placeholder.
   'ddf2afe2e2e8': {
     token: 'ddf2afe2e2e8', codename: 'Carina-01', name: 'Affan K.',
-    role: 'AI Video Team Lead',  },
+    role: 'AI Video Team Lead', hero: '/c/ddf2afe2e2e8/assets/profile-photo.jpg',  },
   'ab9a97f74f07': {
     token: 'ab9a97f74f07', codename: 'Carina-02', name: 'Hafsa M.',
-    role: 'AI Video Team Lead',  },
+    role: 'AI Video Team Lead', hero: '/c/ab9a97f74f07/assets/profile-photo.jpg',  },
   '50c0238d4d04': {
     token: '50c0238d4d04', codename: 'Vela-01', name: 'Qasim Z.',
-    role: 'AI Video Generation Artist',  },
+    role: 'AI Video Generation Artist', hero: '/c/50c0238d4d04/assets/profile-photo.jpg',  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -153,6 +151,62 @@ export function getPosition(clientToken: string): PositionMeta | undefined {
   return POSITIONS[clientToken]
 }
 
+// ---------------------------------------------------------------------------
+// HUBS: the client-facing HUB layer (/p/<hubToken>). A hub groups MULTIPLE
+// positions (its child dashboards) into one gated landing page a client can be
+// sent as a single link. One hub login unlocks the hub cookie AND each child
+// position's cookie, so clicking through to a position never re-prompts.
+// DATA ONLY (no component imports) so it stays safe to import from an auth route.
+// The hubToken is a fresh opaque random token, distinct from every position and
+// candidate token, so the hub URL can't be guessed from a child URL.
+// ---------------------------------------------------------------------------
+export interface HubMeta {
+  hubToken: string
+  clientName: string
+  password: string
+  positions: Array<{
+    clientToken: string
+    codename: string
+    role: string
+    avatars: string[]
+    count: number
+  }>
+  comingSoon: Array<{ codename: string; role: string }>
+}
+
+export const HUBS: Record<string, HubMeta> = {
+  // The Artist's Journey / Wilfred Lee - a single hub over the CARINA + VELA
+  // positions (PUPPIS is coming soon). Password matches the child position
+  // passwords so one hub login also unlocks each position dashboard.
+  '99a3acb38ee4': {
+    hubToken: '99a3acb38ee4',
+    clientName: "The Artist's Journey - Wilfred Lee",
+    password: 'journey-wilfred',
+    positions: [
+      {
+        clientToken: 'a6dfec43b882',
+        codename: 'CARINA',
+        role: 'AI Video Team Lead',
+        avatars: ['affan.jpg', 'hafsa.jpg'],
+        count: 2,
+      },
+      {
+        clientToken: '575f4ee8aeb7',
+        codename: 'VELA',
+        role: 'AI Video Generation Artist',
+        avatars: ['qasim.jpg'],
+        count: 1,
+      },
+    ],
+    comingSoon: [{ codename: 'PUPPIS', role: 'AI Image Artist' }],
+  },
+}
+
+// Look up a hub by its opaque hubToken. Returns undefined if unknown.
+export function getHub(token: string): HubMeta | undefined {
+  return HUBS[token]
+}
+
 // Display meta (name, role, hero path, hook) for a position's candidates, in
 // registry order. Degrades gracefully: candidates without a display entry are
 // dropped rather than fabricated.
@@ -169,6 +223,15 @@ export function getPositionCandidates(clientToken: string): CandidateDisplay[] {
 export function getPositionForCandidate(candidateToken: string): PositionMeta | undefined {
   for (const key in POSITIONS) {
     if (POSITIONS[key].candidateTokens.includes(candidateToken)) return POSITIONS[key]
+  }
+  return undefined
+}
+
+// The hub (if any) a position belongs to - powers the "back to positions" pill on
+// a dashboard so the client can return to the multi-position landing page.
+export function getHubForPosition(clientToken: string): HubMeta | undefined {
+  for (const key in HUBS) {
+    if (HUBS[key].positions.some((p) => p.clientToken === clientToken)) return HUBS[key]
   }
   return undefined
 }
