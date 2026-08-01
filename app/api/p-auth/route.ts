@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { POSITIONS } from '../../c/_registry'
+import { POSITIONS, getHub } from '../../c/_registry'
 import {
   passwordsMatch,
   isRateLimited,
@@ -27,6 +27,34 @@ export async function POST(request: Request) {
       )
     }
 
+    const cookieOpts = {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'lax' as const,
+      path: '/',
+      maxAge: 60 * 60 * 24 * 7, // 7 days
+    }
+
+    // ---------------------------------------------------------------------
+    // HUB path: when the token isn't a position, it may be a HUB. A hub login
+    // sets the hub cookie AND each child position's cookie, so clicking through
+    // from the hub to a position dashboard never re-prompts. This is ADDITIVE
+    // and leaves the position path below completely unchanged.
+    // ---------------------------------------------------------------------
+    if (!pos) {
+      const hub = getHub(clientToken)
+      if (hub && passwordsMatch(password, hub.password)) {
+        clearFailures(rlKey)
+        const response = NextResponse.json({ success: true })
+        response.cookies.set(`p_auth_${hub.hubToken}`, 'granted', cookieOpts)
+        for (const p of hub.positions) {
+          response.cookies.set(`p_auth_${p.clientToken}`, 'granted', cookieOpts)
+        }
+        return response
+      }
+      // Not a valid hub login -> fall through to the failure path below.
+    }
+
     if (!pos || !passwordsMatch(password, pos.password)) {
       recordFailure(rlKey)
       return NextResponse.json({ error: 'Incorrect password' }, { status: 401 })
@@ -36,13 +64,7 @@ export async function POST(request: Request) {
     clearFailures(rlKey)
 
     const response = NextResponse.json({ success: true })
-    response.cookies.set(`p_auth_${clientToken}`, 'granted', {
-      httpOnly: true,
-      secure: true,
-      sameSite: 'lax',
-      path: '/',
-      maxAge: 60 * 60 * 24 * 7, // 7 days
-    })
+    response.cookies.set(`p_auth_${clientToken}`, 'granted', cookieOpts)
     return response
   } catch {
     // Malformed body etc. -> fail closed.
