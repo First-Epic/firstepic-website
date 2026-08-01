@@ -46,7 +46,7 @@ export default function CandidateCarina01() {
   <div className="inline-flex items-center px-3 py-1 mb-8 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium">
     Candidate Presentation<span className='text-gray-600'>&nbsp;·&nbsp;</span><span className='text-gray-500'>Carina-01</span>
   </div>
-  <div><h1 className='text-6xl md:text-7xl font-bold text-white leading-none tracking-tight mb-1'>Affan K.</h1><p className='text-2xl md:text-3xl font-light text-gray-300 mt-3 tracking-tight'>AI Video Team Lead</p></div>
+  <div className='flex items-center gap-6 md:gap-8'><img src='/c/ddf2afe2e2e8/assets/profile-photo.jpg' alt='Affan K.' className='w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover border border-gray-700 shrink-0 shadow-lg' /><div><h1 className='text-6xl md:text-7xl font-bold text-white leading-none tracking-tight mb-1'>Affan K.</h1><p className='text-2xl md:text-3xl font-light text-gray-300 mt-3 tracking-tight'>AI Video Team Lead</p></div></div>
   <p className="text-xl text-gray-400 max-w-3xl leading-relaxed mt-8">A hands-on AI video lead who can both direct other artists&#x27; generation and personally carry an episode from research to final edit.</p>
   <div className="mt-10 pt-8 border-t border-gray-800/50 text-sm font-medium text-gray-500">
     Prepared exclusively for <span className="text-gray-300">The Artist&#x27;s Journey - Wilfred Lee</span>
