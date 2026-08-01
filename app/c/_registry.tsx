@@ -226,3 +226,12 @@ export function getPositionForCandidate(candidateToken: string): PositionMeta | 
   }
   return undefined
 }
+
+// The hub (if any) a position belongs to - powers the "back to positions" pill on
+// a dashboard so the client can return to the multi-position landing page.
+export function getHubForPosition(clientToken: string): HubMeta | undefined {
+  for (const key in HUBS) {
+    if (HUBS[key].positions.some((p) => p.clientToken === clientToken)) return HUBS[key]
+  }
+  return undefined
+}

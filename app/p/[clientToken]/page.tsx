@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
-import { getPosition, getHub } from '../../c/_registry'
+import { getPosition, getHub, getHubForPosition } from '../../c/_registry'
 import CandidateTile from '../_candidate-tile'
 import Tracker from '../../_tracker'
 import PositionChallenge from '../_position-challenge'
@@ -184,6 +184,17 @@ export default function ClientDashboard(
       {/* Part C: click-stream + optional self-identify on the dashboard surface.
           Best-effort; cannot break the page. */}
       <Tracker token={pos.clientToken} surface="dashboard" clientToken={pos.clientToken} />
+      {/* Floating "back to positions" pill -> the client hub (same pill design as the
+          candidate pages). Only shown when this position belongs to a hub. */}
+      {getHubForPosition(pos.clientToken) && (
+        <a
+          href={`/p/${getHubForPosition(pos.clientToken)!.hubToken}`}
+          data-track="back-to-hub"
+          className="fixed bottom-5 left-5 z-[100] inline-flex items-center gap-2 rounded-full border border-gray-700 bg-black/80 px-4 py-2.5 text-sm font-medium text-gray-200 shadow-lg backdrop-blur transition-colors hover:border-indigo-500 hover:text-white"
+        >
+          <span aria-hidden="true">&larr;</span> Back to positions
+        </a>
+      )}
       {/* .accent-gradient is page-local (matches the candidate pages' style). */}
       <style>{`
         .accent-gradient {
