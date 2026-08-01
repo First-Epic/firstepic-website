@@ -27,6 +27,8 @@ export const CLIENTS: Record<string, ClientMeta> = {
   // Carina-01 (Affan K.) for CARINA / The Artist's Journey. Password matches the CARINA
   // position below so one position login also unlocks this candidate page.
   'ddf2afe2e2e8': { name: "Carina-01 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
+  'ab9a97f74f07': { name: "Carina-02 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
+  '50c0238d4d04': { name: "Vela-01 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
 }
 
 // ---------------------------------------------------------------------------
@@ -94,6 +96,12 @@ const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
   'ddf2afe2e2e8': {
     token: 'ddf2afe2e2e8', codename: 'Carina-01', name: 'Affan K.',
     role: 'AI Video Team Lead',  },
+  'ab9a97f74f07': {
+    token: 'ab9a97f74f07', codename: 'Carina-02', name: 'Hafsa M.',
+    role: 'AI Video Team Lead',  },
+  '50c0238d4d04': {
+    token: '50c0238d4d04', codename: 'Vela-01', name: 'Qasim Z.',
+    role: 'AI Video Generation Artist',  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -118,7 +126,20 @@ export const POSITIONS: Record<string, PositionMeta> = {
     clientName: "The Artist's Journey - Wilfred Lee",
     position: 'AI Video Team Lead',
     password: 'journey-wilfred',
-    candidateTokens: ['ddf2afe2e2e8'],
+    candidateTokens: ['ddf2afe2e2e8', 'ab9a97f74f07'],
+    get candidates() {
+      return this.candidateTokens
+        .map((t) => CANDIDATE_DISPLAY[t])
+        .filter((c): c is CandidateDisplay => Boolean(c))
+    },
+  },
+  // The Artist's Journey / Wilfred Lee - the VELA "AI Video Generation Artist" shortlist.
+  '575f4ee8aeb7': {
+    clientToken: '575f4ee8aeb7',
+    clientName: "The Artist's Journey - Wilfred Lee",
+    position: 'AI Video Generation Artist',
+    password: 'journey-wilfred',
+    candidateTokens: ['50c0238d4d04'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
