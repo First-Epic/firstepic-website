@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { CLIENTS, POSITIONS } from '../../c/_registry'
+import { CLIENTS, POSITIONS, CANDIDATE_DISPLAY } from '../../c/_registry'
 import { COOKIE_VISITOR } from '../../../lib/tracking'
 import type { TrackEvent } from '../../../lib/tracking'
 
@@ -95,8 +95,16 @@ export async function POST(request: Request) {
     .filter(e => e && typeof e === 'object' && typeof e.type === 'string' && knownToken(String(e.token || '')))
     .map(e => {
       const identity = (e.identity && typeof e.identity === 'object') ? e.identity : ({} as TrackEvent['identity'])
+      // Resolve the candidate NAME from the token so notifications say "Raees S."
+      // not "None". Prefer the display name, then codename; fall back to the CLIENTS
+      // label's codename prefix (before " (") for a candidate not in CANDIDATE_DISPLAY.
+      const tok = String(e.token || '')
+      const cd = CANDIDATE_DISPLAY[tok]
+      const candidate =
+        cd?.name || cd?.codename || (CLIENTS[tok]?.name || '').split(' (')[0] || null
       return {
         ...e,
+        candidate,                      // resolved candidate label for notifications
         identity: {
           ...identity,
           fe_visitor: visitorId,        // authoritative server-side id

@@ -63,7 +63,14 @@ export type PositionMeta = {
 // Hero paths point at assets already shipped under /public/c/<token>/assets/.
 // Where an asset isn't present we omit `hero` and the tile falls back to a
 // branded placeholder (we don't fabricate an image path that doesn't exist).
-const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
+export const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
+  // Vela-02 (Raees S.) — PREVIEW-ONLY: present for name resolution in tracking
+  // notifications; deliberately NOT in any POSITIONS.candidateTokens, so it stays
+  // off the client dashboard until Davis approves live-to-client.
+  'f85636a7caad': {
+    token: 'f85636a7caad', codename: 'Vela-02', name: 'Raees S.',
+    role: 'AI Video Generation Artist',
+  },
   '79bb44c4e853': {
     token: '79bb44c4e853', codename: 'Lyra-01', name: 'Abdullah B.',
     role: 'Designer / Art Director',
