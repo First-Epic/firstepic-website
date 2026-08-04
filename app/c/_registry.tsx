@@ -64,12 +64,12 @@ export type PositionMeta = {
 // Where an asset isn't present we omit `hero` and the tile falls back to a
 // branded placeholder (we don't fabricate an image path that doesn't exist).
 export const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
-  // Vela-02 (Raees S.) — PREVIEW-ONLY: present for name resolution in tracking
-  // notifications; deliberately NOT in any POSITIONS.candidateTokens, so it stays
-  // off the client dashboard until Davis approves live-to-client.
+  // Vela-02 (Raees S.) for the Vela / AI Video Generation Artist position
+  // (The Artist's Journey - Wilfred Lee). Live to client 2026-08-04.
   'f85636a7caad': {
     token: 'f85636a7caad', codename: 'Vela-02', name: 'Raees S.',
     role: 'AI Video Generation Artist',
+    hero: '/c/f85636a7caad/assets/hero-photo.png',
   },
   '79bb44c4e853': {
     token: '79bb44c4e853', codename: 'Lyra-01', name: 'Abdullah B.',
@@ -145,7 +145,7 @@ export const POSITIONS: Record<string, PositionMeta> = {
     clientName: "The Artist's Journey - Wilfred Lee",
     position: 'AI Video Generation Artist',
     password: 'journey-wilfred',
-    candidateTokens: ['50c0238d4d04'],
+    candidateTokens: ['50c0238d4d04', 'f85636a7caad'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
