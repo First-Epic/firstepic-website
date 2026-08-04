@@ -29,6 +29,7 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'ddf2afe2e2e8': { name: "Carina-01 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
   'ab9a97f74f07': { name: "Carina-02 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
   '50c0238d4d04': { name: "Vela-01 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
+  'f85636a7caad': { name: "Vela-02 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
 }
 
 // ---------------------------------------------------------------------------
