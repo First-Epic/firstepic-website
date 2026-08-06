@@ -332,17 +332,46 @@ function start({
   const videoCleanups: Array<() => void> = []
   try {
     const videos = Array.from(document.querySelectorAll<HTMLVideoElement>('video'))
+    // Media IDENTITY resolver (2026-08-05): the generated pages label every portfolio
+    // video with the same generic aria-label ('video'), so notifications read
+    // "started 'a video'" with no way to tell WHICH one. Resolve a human title,
+    // best-signal-first; runs on pages ALREADY deployed (the real titles live in the
+    // sibling caption div next to each media box).
+    const videoTitle = (v: HTMLVideoElement): string => {
+      try {
+        // 1. explicit data attribute (future generated pages)
+        const dt = v.getAttribute('data-media-title')
+        if (dt && dt.trim()) return dt.trim()
+        // 2. the card's caption title: walk up a few ancestors and take the first
+        //    .accent-gradient text that isn't empty (the visible video title).
+        let el: HTMLElement | null = v.parentElement
+        for (let hops = 0; el && hops < 4; hops++, el = el.parentElement) {
+          const cap = el.parentElement?.querySelector('.accent-gradient')
+            || el.querySelector('.accent-gradient')
+          const t = cap?.textContent?.trim()
+          if (t) return t
+        }
+        // 3. aria-label, but only when it is NOT the generic placeholder
+        const al = (v.getAttribute('aria-label') || '').trim()
+        if (al && !/^(video)$/i.test(al)) {
+          return /^walkthrough$/i.test(al) ? 'Screen-record walkthrough' : al
+        }
+        // 4. the file name from the source URL
+        const srcU = v.querySelector('source')?.getAttribute('src') || v.currentSrc || ''
+        const base = srcU.split('?')[0].split('/').pop()
+        if (base) return base
+        return al || 'video'
+      } catch { return v.getAttribute('aria-label') || 'video' }
+    }
     videos.forEach((v) => {
       let playedEmitted = false
       let completeEmitted = false
-      const label =
-        v.getAttribute('aria-label') ||
-        v.querySelector('source')?.getAttribute('src') ||
-        v.currentSrc || ''
+      const label = videoTitle(v)
+      const srcAttr = v.querySelector('source')?.getAttribute('src') || ''
       const onPlay = () => {
         if (playedEmitted) return
         playedEmitted = true
-        emit('video_play', { label, src: v.currentSrc || '' })
+        emit('video_play', { label, src: v.currentSrc || srcAttr })
       }
       const onTime = () => {
         if (completeEmitted || !v.duration || !isFinite(v.duration)) return
@@ -351,6 +380,7 @@ function start({
           completeEmitted = true
           emit('video_complete', {
             label,
+            src: v.currentSrc || srcAttr,
             videoPct: Math.round((v.currentTime / v.duration) * 100),
           })
         }
@@ -358,7 +388,7 @@ function start({
       const onEnded = () => {
         if (completeEmitted) return
         completeEmitted = true
-        emit('video_complete', { label, videoPct: 100 })
+        emit('video_complete', { label, src: v.currentSrc || srcAttr, videoPct: 100 })
       }
       v.addEventListener('play', onPlay)
       v.addEventListener('timeupdate', onTime)
