@@ -368,9 +368,15 @@ function start({
       let completeEmitted = false
       const label = videoTitle(v)
       const srcAttr = v.querySelector('source')?.getAttribute('src') || ''
+      // EVERY watch notifies (Davis 2026-08-05): the latches are PER-WATCH, not
+      // per-page-load. A completed watch resets both, so a re-watch emits a fresh
+      // start + finish; a play from ~the beginning also counts as a new start even
+      // without a completion (the viewer scrubbed back and restarted). Pause/resume
+      // mid-video stays silent (one start per watch-through, never resume spam).
       const onPlay = () => {
-        if (playedEmitted) return
+        if (playedEmitted && v.currentTime > 3) return   // resume, not a new watch
         playedEmitted = true
+        completeEmitted = false
         emit('video_play', { label, src: v.currentSrc || srcAttr })
       }
       const onTime = () => {
@@ -378,6 +384,7 @@ function start({
         // "played to end" ~ within the last 2% (or last 1.5s) of the video.
         if (v.currentTime >= v.duration - Math.max(1.5, v.duration * 0.02)) {
           completeEmitted = true
+          playedEmitted = false      // next play is a NEW watch -> notifies again
           emit('video_complete', {
             label,
             src: v.currentSrc || srcAttr,
@@ -386,8 +393,9 @@ function start({
         }
       }
       const onEnded = () => {
-        if (completeEmitted) return
+        if (completeEmitted) { playedEmitted = false; return }
         completeEmitted = true
+        playedEmitted = false        // next play is a NEW watch -> notifies again
         emit('video_complete', { label, src: v.currentSrc || srcAttr, videoPct: 100 })
       }
       v.addEventListener('play', onPlay)

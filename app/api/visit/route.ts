@@ -33,7 +33,9 @@ export async function POST(request: Request) {
     return res
   }
 
-  if (/(?:^|; )fe_pinged=1/.test(cookies)) return NextResponse.json({ ok: true, skipped: 'throttled' })
+  // NO visit throttle (Davis 2026-08-05): notify on EVERY page open, repeats included —
+  // the fe_pinged 1h cookie used to collapse re-opens into silence. Owner exclusion
+  // above still applies (Davis's own visits never notify).
 
   if (SECRET) {
     try {
@@ -49,7 +51,5 @@ export async function POST(request: Request) {
     } catch { /* best-effort; never break the page */ }
   }
 
-  const res = NextResponse.json({ ok: true, logged: true })
-  res.cookies.set('fe_pinged', '1', { httpOnly: true, sameSite: 'lax', path: '/', maxAge: 60 * 60 }) // 1h throttle
-  return res
+  return NextResponse.json({ ok: true, logged: true })
 }
