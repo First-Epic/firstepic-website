@@ -108,7 +108,7 @@ export async function POST(request: Request) {
       const posMeta = POSITIONS[tok]
       const hubMeta = HUBS[tok]
       const pageLabel =
-        cd ? `${cd.codename} — ${cd.name}`
+        cd ? `${cd.name} (${cd.codename})`
         : posMeta ? `the ${posMeta.position} shortlist`
         : hubMeta ? `${hubMeta.clientName} — portal`
         : (candidate || CLIENTS[tok]?.name || null)
