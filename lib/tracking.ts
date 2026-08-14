@@ -24,6 +24,7 @@ export type TrackEventType =
   | 'deck_open'        // a multi-page deck viewer was opened
   | 'lightbox_open'    // an image/video lightbox was opened
   | 'video_play'       // an inline/lightbox video started playing
+  | 'video_progress'   // how far a partial watch reached (on pause / tab-away)
   | 'video_complete'   // a video played to (or near) its end
   | 'portfolio_open'   // a curated-portfolio piece was opened
   | 'folder_open'      // the optional-deliverables folder was expanded

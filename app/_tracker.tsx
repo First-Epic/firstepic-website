@@ -330,8 +330,12 @@ function start({
     } catch { /* never break the page */ }
   }
 
-  // ----- video play / play-to-end -----
+  // ----- video play / progress / play-to-end -----
   const videoCleanups: Array<() => void> = []
+  // Per-video progress flushers, called on pause + tab-away so a PARTIAL watch
+  // reports how far the viewer actually got (not just start/finish). Fixes the
+  // "watched ~0%" in the session summary for videos that weren't finished.
+  const videoFlush: Array<() => void> = []
   try {
     const videos = Array.from(document.querySelectorAll<HTMLVideoElement>('video'))
     // Media IDENTITY resolver (2026-08-05): the generated pages label every portfolio
@@ -381,8 +385,20 @@ function start({
         completeEmitted = false
         emit('video_play', { label, src: v.currentSrc || srcAttr })
       }
+      // Max fraction of THIS watch the viewer reached, and the last value we
+      // reported, so a partial watch (e.g. 40%) is captured even if never finished.
+      let maxPct = 0
+      let sentPct = 0
+      const flushProgress = () => {
+        if (completeEmitted || maxPct <= sentPct + 1) return
+        sentPct = maxPct
+        emit('video_progress', { label, src: v.currentSrc || srcAttr, videoPct: Math.round(maxPct) })
+      }
       const onTime = () => {
-        if (completeEmitted || !v.duration || !isFinite(v.duration)) return
+        if (!v.duration || !isFinite(v.duration)) return
+        const pct = (v.currentTime / v.duration) * 100
+        if (pct > maxPct) maxPct = pct
+        if (completeEmitted) return
         // "played to end" ~ within the last 2% (or last 1.5s) of the video.
         if (v.currentTime >= v.duration - Math.max(1.5, v.duration * 0.02)) {
           completeEmitted = true
@@ -403,19 +419,26 @@ function start({
       v.addEventListener('play', onPlay)
       v.addEventListener('timeupdate', onTime)
       v.addEventListener('ended', onEnded)
+      v.addEventListener('pause', flushProgress)  // report partial progress on pause
+      videoFlush.push(flushProgress)              // and on tab-away / unload (below)
       videoCleanups.push(() => {
         v.removeEventListener('play', onPlay)
         v.removeEventListener('timeupdate', onTime)
         v.removeEventListener('ended', onEnded)
+        v.removeEventListener('pause', flushProgress)
       })
     })
   } catch { /* ignore */ }
 
   // ----- lifecycle / flush hooks -----
+  function flushVideos(): void {
+    videoFlush.forEach((f) => { try { f() } catch { /* ignore */ } })
+  }
   function onVisibility(): void {
     if (document.visibilityState === 'hidden') {
-      // Tab hidden or navigating away: flush dwell (beacon-safe on unload path,
-      // but here we can still use fetch/keepalive; use beacon to be safe).
+      // Tab hidden or navigating away: flush partial video progress + dwell
+      // (beacon-safe on unload path, but here we can still use fetch/keepalive).
+      flushVideos()
       emitDwell(true)
     } else {
       // Became visible again: restart the visible clock.
@@ -423,8 +446,8 @@ function start({
       flushedFinal = false
     }
   }
-  function onPageHide(): void { emitDwell(true) }
-  function onBeforeUnload(): void { emitDwell(true) }
+  function onPageHide(): void { flushVideos(); emitDwell(true) }
+  function onBeforeUnload(): void { flushVideos(); emitDwell(true) }
 
   // Periodic heartbeat so long-dwell sessions report even without navigation.
   const heartbeat = setInterval(() => {
