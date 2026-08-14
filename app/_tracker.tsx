@@ -297,9 +297,11 @@ function start({
       ) as HTMLElement | null
       if (!el) return
 
-      // Explicit data-track wins (dashboard tiles, or anything we tag later).
+      // Explicit data-track wins: a candidate tile on a position dashboard
+      // ('tile') OR a position card on the hub ('position'). Both are a real
+      // "clicked into X" engagement action; emit tile_click with the label+token.
       const tag = el.getAttribute('data-track')
-      if (tag === 'tile') {
+      if (tag === 'tile' || tag === 'position') {
         emit('tile_click', {
           label: el.getAttribute('data-track-label') || '',
           candidateToken: el.getAttribute('data-track-token') || '',

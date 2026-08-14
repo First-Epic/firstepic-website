@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { CLIENTS, POSITIONS, CANDIDATE_DISPLAY } from '../../c/_registry'
+import { CLIENTS, POSITIONS, CANDIDATE_DISPLAY, HUBS } from '../../c/_registry'
 import { COOKIE_VISITOR } from '../../../lib/tracking'
 import type { TrackEvent } from '../../../lib/tracking'
 
@@ -37,7 +37,7 @@ function clientIp(req: Request): string {
 // only forward events for surfaces we recognize, mirroring /api/visit's
 // unknown-token guard.
 function knownToken(token: string): boolean {
-  return Boolean(CLIENTS[token]) || Boolean(POSITIONS[token])
+  return Boolean(CLIENTS[token]) || Boolean(POSITIONS[token]) || Boolean(HUBS[token])
 }
 
 // Accepts either a single event or a batch. Kept permissive: bad shapes are
@@ -102,9 +102,20 @@ export async function POST(request: Request) {
       const cd = CANDIDATE_DISPLAY[tok]
       const candidate =
         cd?.name || cd?.codename || (CLIENTS[tok]?.name || '').split(' (')[0] || null
+      // Human PAGE label so START/summary emails read for EVERY surface, not just
+      // candidate pages: a candidate -> "Carina-03 — Afham K."; a position
+      // dashboard -> "the AI Video Team Lead shortlist"; the hub -> "<client> portal".
+      const posMeta = POSITIONS[tok]
+      const hubMeta = HUBS[tok]
+      const pageLabel =
+        cd ? `${cd.codename} — ${cd.name}`
+        : posMeta ? `the ${posMeta.position} shortlist`
+        : hubMeta ? `${hubMeta.clientName} — portal`
+        : (candidate || CLIENTS[tok]?.name || null)
       return {
         ...e,
         candidate,                      // resolved candidate label for notifications
+        pageLabel,                      // human label for the page/surface (all types)
         identity: {
           ...identity,
           fe_visitor: visitorId,        // authoritative server-side id
