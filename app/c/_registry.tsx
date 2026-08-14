@@ -30,6 +30,11 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'ab9a97f74f07': { name: "Carina-02 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
   '50c0238d4d04': { name: "Vela-01 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
   'f85636a7caad': { name: "Vela-02 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
+  // Carina-03 (Afham K.) + Vela-03 (Alyan K.), live to client 2026-08-13. Password unified to
+  // 'journey-wilfred' (the position/hub password) so one login unlocks these too, matching the
+  // -01/-02 convention (Afham's build manifest said 'firewalled-82e5' - overridden here).
+  'bf924fe7e643': { name: "Carina-03 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
+  '3b5e50b5b51f': { name: "Vela-03 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
 }
 
 // ---------------------------------------------------------------------------
@@ -108,6 +113,12 @@ export const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
   '50c0238d4d04': {
     token: '50c0238d4d04', codename: 'Vela-01', name: 'Qasim Z.',
     role: 'AI Video Generation Artist', hero: '/c/50c0238d4d04/assets/profile-photo.jpg',  },
+  'bf924fe7e643': {
+    token: 'bf924fe7e643', codename: 'Carina-03', name: 'Afham K.',
+    role: 'AI Video Team Lead', hero: '/c/bf924fe7e643/assets/hero-photo.png',  },
+  '3b5e50b5b51f': {
+    token: '3b5e50b5b51f', codename: 'Vela-03', name: 'Alyan K.',
+    role: 'AI Video Generation Artist', hero: '/c/3b5e50b5b51f/assets/hero-photo.png',  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -132,7 +143,7 @@ export const POSITIONS: Record<string, PositionMeta> = {
     clientName: "The Artist's Journey - Wilfred Lee",
     position: 'AI Video Team Lead',
     password: 'journey-wilfred',
-    candidateTokens: ['ddf2afe2e2e8', 'ab9a97f74f07'],
+    candidateTokens: ['ddf2afe2e2e8', 'ab9a97f74f07', 'bf924fe7e643'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
@@ -145,7 +156,7 @@ export const POSITIONS: Record<string, PositionMeta> = {
     clientName: "The Artist's Journey - Wilfred Lee",
     position: 'AI Video Generation Artist',
     password: 'journey-wilfred',
-    candidateTokens: ['50c0238d4d04', 'f85636a7caad'],
+    candidateTokens: ['50c0238d4d04', 'f85636a7caad', '3b5e50b5b51f'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
@@ -195,15 +206,15 @@ export const HUBS: Record<string, HubMeta> = {
         clientToken: 'a6dfec43b882',
         codename: 'CARINA',
         role: 'AI Video Team Lead',
-        avatars: ['affan.jpg', 'hafsa.jpg'],
-        count: 2,
+        avatars: ['affan.jpg', 'hafsa.jpg', 'afham.jpg'],
+        count: 3,
       },
       {
         clientToken: '575f4ee8aeb7',
         codename: 'VELA',
         role: 'AI Video Generation Artist',
-        avatars: ['qasim.jpg', 'raees.jpg'],
-        count: 2,
+        avatars: ['qasim.jpg', 'raees.jpg', 'alyan.jpg'],
+        count: 3,
       },
     ],
     comingSoon: [{ codename: 'PUPPIS', role: 'AI Image Artist' }],

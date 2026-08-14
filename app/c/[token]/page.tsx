@@ -15,6 +15,8 @@ import CandidateCarina01 from '../_clients/carina-01';
 import CandidateCarina02 from '../_clients/carina-02';
 import CandidateVela01 from '../_clients/vela-01';
 import CandidateVela02 from '../_clients/vela-02';
+import CandidateCarina03 from '../_clients/carina-03';
+import CandidateVela03 from '../_clients/vela-03';
 import VisitBeacon from '../_visit-beacon';
 import Tracker from '../../_tracker';
 
@@ -33,6 +35,8 @@ const COMPONENTS: Record<string, ComponentType> = {
   'ab9a97f74f07': CandidateCarina02,
   '50c0238d4d04': CandidateVela01,
   'f85636a7caad': CandidateVela02,
+  'bf924fe7e643': CandidateCarina03,
+  '3b5e50b5b51f': CandidateVela03,
 };
 
 export async function generateMetadata(
