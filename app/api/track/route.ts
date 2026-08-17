@@ -109,7 +109,12 @@ export async function POST(request: Request) {
       const hubMeta = HUBS[tok]
       const pageLabel =
         cd ? `${cd.name} (${cd.codename})`
-        : posMeta ? `the ${posMeta.position} shortlist`
+        // Position dashboard: name the CLIENT + position so the session summary is
+        // unambiguous (one client can hold several positions — e.g. The Artist's
+        // Journey has both the AI Video Team Lead and AI Video Generation Artist
+        // shortlists). Previously "the <position> shortlist" omitted the client, and
+        // a pre-enrichment view showed the bare clientToken (Davis 2026-08-17).
+        : posMeta ? `${posMeta.clientName} — ${posMeta.position} shortlist`
         : hubMeta ? `${hubMeta.clientName} — portal`
         : (candidate || CLIENTS[tok]?.name || null)
       return {
