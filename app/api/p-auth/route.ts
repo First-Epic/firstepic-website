@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { POSITIONS, getHub } from '../../c/_registry'
+import { POSITIONS, getHub, getHubForPosition } from '../../c/_registry'
 import {
   passwordsMatch,
   isRateLimited,
@@ -65,6 +65,16 @@ export async function POST(request: Request) {
 
     const response = NextResponse.json({ success: true })
     response.cookies.set(`p_auth_${clientToken}`, 'granted', cookieOpts)
+    // Cascade UP to the hub (and its sibling dashboards) so entering at a position
+    // dashboard also covers the hub landing page - backing out never re-prompts
+    // (Davis 2026-08-20). Same shared password, no new access granted.
+    const hub = getHubForPosition(clientToken)
+    if (hub && passwordsMatch(password, hub.password)) {
+      response.cookies.set(`p_auth_${hub.hubToken}`, 'granted', cookieOpts)
+      for (const p of hub.positions) {
+        response.cookies.set(`p_auth_${p.clientToken}`, 'granted', cookieOpts)
+      }
+    }
     return response
   } catch {
     // Malformed body etc. -> fail closed.

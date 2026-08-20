@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { CLIENTS, getPositionForCandidate } from '../../c/_registry'
+import { CLIENTS, getPositionForCandidate, getHubForPosition } from '../../c/_registry'
 import {
   passwordsMatch,
   isRateLimited,
@@ -46,19 +46,28 @@ export async function POST(request: Request) {
     path: '/',
     maxAge: 60 * 60 * 24 * 180, // 180 days
   })
-  // One login covers both: if this candidate belongs to a position (dashboard),
-  // and the candidate password matches the position password, also unlock the
-  // dashboard so the client never has to sign in a second time. Same password,
-  // same client - no new access is granted beyond what they already proved.
+  // One login covers the whole same-password tree. If this candidate belongs to a
+  // position (dashboard) and the candidate password matches, unlock the dashboard -
+  // AND cascade UP to the hub (and its sibling dashboards) so backing out
+  // candidate -> dashboard -> hub never re-prompts (Davis 2026-08-20). No new access
+  // is granted beyond what the shared password already proved.
+  const gate = {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'lax' as const,
+    path: '/',
+    maxAge: 60 * 60 * 24 * 7, // 7 days
+  }
   const position = getPositionForCandidate(token)
   if (position && passwordsMatch(password, position.password)) {
-    response.cookies.set(`p_auth_${position.clientToken}`, 'granted', {
-      httpOnly: true,
-      secure: true,
-      sameSite: 'lax',
-      path: '/',
-      maxAge: 60 * 60 * 24 * 7, // 7 days
-    })
+    response.cookies.set(`p_auth_${position.clientToken}`, 'granted', gate)
+    const hub = getHubForPosition(position.clientToken)
+    if (hub && passwordsMatch(password, hub.password)) {
+      response.cookies.set(`p_auth_${hub.hubToken}`, 'granted', gate)
+      for (const p of hub.positions) {
+        response.cookies.set(`p_auth_${p.clientToken}`, 'granted', gate)
+      }
+    }
   }
   return response
 }
