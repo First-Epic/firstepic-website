@@ -8,26 +8,22 @@ import type { CandidateDisplay } from '../c/_registry'
 // use the registry `hero` path when present, and if it (or a candidate without
 // one) fails to load we render a branded placeholder instead of crashing.
 //
+// A candidate whose /c/ presentation is not built yet is marked `pending` in the
+// registry: the tile still shows the client WHO is coming (codename, name, photo)
+// but renders as a NON-LINK "Presentation pending" card (no dead /c/ link) until
+// the page is live.
+//
 // The hook line comes from the registry (a short, clearly-generic one-liner,
 // not a fabricated claim). A later pass can replace it with real per-candidate
 // copy.
 export default function CandidateTile({ card }: { card: CandidateDisplay }) {
   const [broken, setBroken] = useState(false)
   const showImage = Boolean(card.hero) && !broken
-
   const label = card.name ? `${card.codename} - ${card.name}` : card.codename
+  const pending = Boolean(card.pending)
 
-  return (
-    <a
-      href={`/c/${card.token}`}
-      // Part C click-stream: the delegated tracker reads these to log a
-      // tile_click with the candidate token + label. Purely informational
-      // attributes; they don't affect layout or navigation.
-      data-track="tile"
-      data-track-token={card.token}
-      data-track-label={label}
-      className="group block bg-[#111] border border-gray-800 rounded-xl overflow-hidden hover:border-indigo-500/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
-    >
+  const inner = (
+    <>
       {/* Uniform hero: every tile is the same aspect so the grid stays even. */}
       <div className="relative aspect-[4/3] bg-[#0a0a0a] overflow-hidden">
         {showImage ? (
@@ -45,25 +41,58 @@ export default function CandidateTile({ card }: { card: CandidateDisplay }) {
             </span>
           </div>
         )}
-        {/* Status chip - a neutral, honest state for now. */}
-        <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 bg-black/70 backdrop-blur-sm text-gray-100 text-xs font-medium rounded-full px-3 py-1 z-10">
-          <span className="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
-          Ready for review
+        {/* Status chip - honest state: ready to review, or presentation pending. */}
+        <div
+          className={`absolute top-3 left-3 inline-flex items-center gap-1.5 backdrop-blur-sm text-xs font-medium rounded-full px-3 py-1 z-10 ${
+            pending ? 'bg-black/60 text-gray-300' : 'bg-black/70 text-gray-100'
+          }`}
+        >
+          <span className={`w-1.5 h-1.5 rounded-full ${pending ? 'bg-gray-400' : 'bg-indigo-400'}`}></span>
+          {pending ? 'Presentation pending' : 'Ready for review'}
         </div>
       </div>
       <div className="px-5 py-4 border-t border-gray-800">
         <div className="font-bold text-base mb-0.5 truncate accent-gradient">{label}</div>
-        {card.role ? (
-          <div className="text-sm text-gray-400 truncate">{card.role}</div>
-        ) : null}
+        {card.role ? <div className="text-sm text-gray-400 truncate">{card.role}</div> : null}
         {card.hook ? (
           <p className="text-sm text-gray-500 leading-relaxed mt-2 line-clamp-2">{card.hook}</p>
         ) : null}
-        <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-400 group-hover:text-indigo-300 transition-colors">
-          View presentation
-          <span aria-hidden="true">&rarr;</span>
-        </div>
+        {pending ? (
+          <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-gray-500">
+            Presentation coming soon
+          </div>
+        ) : (
+          <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-400 group-hover:text-indigo-300 transition-colors">
+            View presentation
+            <span aria-hidden="true">&rarr;</span>
+          </div>
+        )}
       </div>
+    </>
+  )
+
+  // Pending: a NON-LINK card (no /c/ page exists yet), slightly muted.
+  if (pending) {
+    return (
+      <div className="group block bg-[#111] border border-gray-800 rounded-xl overflow-hidden opacity-80">
+        {inner}
+      </div>
+    )
+  }
+
+  // Live: links to the candidate's /c/<token> presentation.
+  return (
+    <a
+      href={`/c/${card.token}`}
+      // Part C click-stream: the delegated tracker reads these to log a
+      // tile_click with the candidate token + label. Purely informational
+      // attributes; they don't affect layout or navigation.
+      data-track="tile"
+      data-track-token={card.token}
+      data-track-label={label}
+      className="group block bg-[#111] border border-gray-800 rounded-xl overflow-hidden hover:border-indigo-500/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+    >
+      {inner}
     </a>
   )
 }

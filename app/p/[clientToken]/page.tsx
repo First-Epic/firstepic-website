@@ -6,6 +6,7 @@ import CandidateTile from '../_candidate-tile'
 import Tracker from '../../_tracker'
 import PositionChallenge from '../_position-challenge'
 import PositionChallengeVela from '../_position-challenge-vela'
+import PositionChallengeOrion from '../_position-challenge-orion'
 
 // The Workflow-Challenge section under the candidate grid is position-specific
 // (its decks/assets differ per role), so each position renders its OWN challenge
@@ -258,6 +259,7 @@ export default function ClientDashboard(
           lightbox (arrows + swipe). Only for positions that have their own challenge. */}
       {pos.clientToken === 'a6dfec43b882' && <PositionChallenge />}
       {pos.clientToken === '575f4ee8aeb7' && <PositionChallengeVela />}
+      {pos.clientToken === 'a1d8e3f0c6b5' && <PositionChallengeOrion />}
 
       <footer className="max-w-4xl mx-auto px-6 py-16 text-center">
         <p className="text-gray-600 text-sm">

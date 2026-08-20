@@ -1,0 +1,45 @@
+{
+  "fixture": "FIXTURE-orion-reconstruction-artifact",
+  "origin": "First Epic synthesized (data path B); no client data. Candidate-facing.",
+  "note_to_candidate": "This is a reconstruction output (a structure-from-motion solve plus the Gaussian-splat training config that consumed it) from a capture pipeline. Review it. (a) Find the defect that would make the delivered scene wrong, and explain how you would verify it. (b) Write the qualification check (the gate) that should have caught it before training. Human-readable; you do NOT need to run COLMAP or any solver.",
+  "capture": {
+    "name": "riverside-plaza-capture-07",
+    "cameras": 2,
+    "camera_models": ["fisheye_opencv (station A)", "pinhole (aerial RTK stills)"],
+    "images_total": 812,
+    "images_registered": 611,
+    "rtk_metric_reference": {"available": true, "baseline_points": 6, "baseline_units": "meters"}
+  },
+  "sfm_solve": {
+    "solver": "pycolmap",
+    "registration_retention": 0.752,
+    "mean_track_length": 3.1,
+    "observations_total": 214880,
+    "reprojection_error_px": {"median": 2.94, "p95": 11.7, "max": 41.2},
+    "inlier_ratio": 0.61,
+    "bundle_adjustment_final_cost": 18234.5,
+    "metric_scale": {
+      "method": "estimated_from_rtk_baselines",
+      "reported_scale_factor": 1.000,
+      "rtk_baseline_check": {
+        "measured_vs_reference_m": [
+          {"pair": "b1", "reference_m": 12.40, "reconstructed_m": 10.63},
+          {"pair": "b2", "reference_m": 8.10, "reconstructed_m": 6.94},
+          {"pair": "b3", "reference_m": 20.05, "reconstructed_m": 17.19}
+        ],
+        "note": "reconstructed distances vs the surveyed RTK baselines"
+      }
+    },
+    "coordinate_frame": {"handedness": "right", "up_axis": "Z", "origin": "first-camera"},
+    "qualification": {"qualified": true, "gate_version": "none", "reviewed_by": "auto"}
+  },
+  "splat_training": {
+    "consumed_solve": "riverside-plaza-capture-07",
+    "trainer": "gsplat",
+    "iterations": 30000,
+    "input_gate": "solve.qualification.qualified == true",
+    "gpu": "24 GB",
+    "output": "neutral master + 2 creative derivatives",
+    "delivered": true
+  }
+}

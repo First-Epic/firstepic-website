@@ -37,6 +37,8 @@ export const CLIENTS: Record<string, ClientMeta> = {
   '3b5e50b5b51f': { name: "Vela-03 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
   // Vela-04 (Hassan A.) - resubmitted workflow challenge, live to client 2026-08-14.
   '55284a02c6f5': { name: "Vela-04 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
+  'e4b91c7a2f60': { name: 'Orion-01 (Lightcraft)', password: 'lightcraft-davis' },
+  'c9a4e7b2d1f6': { name: 'Orion-02 (Lightcraft)', password: 'lightcraft-davis' },
 }
 
 // ---------------------------------------------------------------------------
@@ -55,6 +57,9 @@ export type CandidateDisplay = {
   role?: string        // e.g. 'Designer / Art Director'
   hero?: string        // absolute path to a hero image under /public, if one exists
   hook?: string        // short, generic one-liner for the tile (NOT a fabricated claim)
+  pending?: boolean    // true => shown on the shortlist as a named "presentation pending"
+                       // NON-LINK tile (the /c/ page isn't built yet). No CLIENTS entry / no
+                       // /c/ route needed while pending.
 }
 
 export type PositionMeta = {
@@ -124,6 +129,22 @@ export const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
   '55284a02c6f5': {
     token: '55284a02c6f5', codename: 'Vela-04', name: 'Hassan A.',
     role: 'AI Video Generation Artist', hero: '/c/55284a02c6f5/assets/hero-photo.png',  },
+  // Orion-01 (Asad Z.) for ORION / Lightcraft. PENDING: shown on the shortlist as a named
+  // "presentation pending" tile; his /c/ page is a later wave, so there is intentionally NO
+  // CLIENTS entry and NO /c/ route for this token yet. Hero is hosted with the position assets.
+  'e4b91c7a2f60': {
+    token: 'e4b91c7a2f60', codename: 'Orion-01', name: 'Asad Z.',
+    role: 'Senior 3D Vision & Real-Time Graphics Engineer',
+    hero: '/p/a1d8e3f0c6b5/assets/orion01.jpg',
+    hook: 'Solved the camera-pose coordinate problem in the timed challenge - 2.17 cm at 30 Hz.',
+  },
+  // Orion-02 (Ali M.) for ORION / Lightcraft.
+  'c9a4e7b2d1f6': {
+    token: 'c9a4e7b2d1f6', codename: 'Orion-02', name: 'Ali M.',
+    role: 'Senior 3D Vision & Real-Time Graphics Engineer',
+    hero: '/c/c9a4e7b2d1f6/assets/avatar.jpg',
+    hook: 'Fused camera, IMU, GPS and RTK into a 48 Hz pose stream at 2.67 cm - with a unit-tested transform into Unreal\'s camera frame that round-trips to 0.0 cm.',
+  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -162,6 +183,22 @@ export const POSITIONS: Record<string, PositionMeta> = {
     position: 'AI Video Generation Artist',
     password: 'journey-wilfred',
     candidateTokens: ['50c0238d4d04', 'f85636a7caad', '3b5e50b5b51f', '55284a02c6f5'],
+    get candidates() {
+      return this.candidateTokens
+        .map((t) => CANDIDATE_DISPLAY[t])
+        .filter((c): c is CandidateDisplay => Boolean(c))
+    },
+  },
+  // Lightcraft - the ORION "Senior 3D Vision & Real-Time Graphics Engineer" shortlist.
+  // Password 'lightcraft-davis' matches the Lightcraft hub below. Orion-01 (Asad) is a
+  // PENDING tile for now (no /c/ page yet) - his candidateToken is listed so he shows on
+  // the shortlist; the tile is a non-link until his page ships.
+  'a1d8e3f0c6b5': {
+    clientToken: 'a1d8e3f0c6b5',
+    clientName: 'Lightcraft',
+    position: 'Senior 3D Vision & Real-Time Graphics Engineer (Unreal / Reconstruction)',
+    password: 'lightcraft-davis',
+    candidateTokens: ['e4b91c7a2f60', 'c9a4e7b2d1f6'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
@@ -223,6 +260,23 @@ export const HUBS: Record<string, HubMeta> = {
       },
     ],
     comingSoon: [{ codename: 'PUPPIS', role: 'AI Image Artist' }],
+  },
+  // Lightcraft - a hub over the ORION engineering position (more roles may follow).
+  // Password 'lightcraft-davis' matches the ORION position so one hub login unlocks it.
+  'f7c2a9e14b83': {
+    hubToken: 'f7c2a9e14b83',
+    clientName: 'Lightcraft',
+    password: 'lightcraft-davis',
+    positions: [
+      {
+        clientToken: 'a1d8e3f0c6b5',
+        codename: 'ORION',
+        role: 'Senior 3D Vision & Real-Time Graphics Engineer',
+        avatars: ['orion01.jpg', 'orion02.jpg'],
+        count: 2,
+      },
+    ],
+    comingSoon: [],
   },
 }
 

@@ -1,0 +1,42 @@
+{
+  "contract": "FIXTURE-orion-pose-contract",
+  "version": 2,
+  "publish_rate_hz_min": 24,
+  "source_world": "ENU right-handed meters; quaternion [w,x,y,z] body->world; monotonic source seconds",
+  "target_frame_conventions": {
+    "handedness": "left",
+    "units": "centimeters",
+    "axes": "X=East, Y=Up, Z=North (Y-up)",
+    "quaternion_storage": "[x, y, z, w] (w last)",
+    "transform_kind": "point transform",
+    "origin": "translated so t=0 position is the origin"
+  },
+  "output_stream_fields": {
+    "seq": "int, strictly increasing",
+    "t_source": "float s, monotonic",
+    "pos_target": "[x,y,z] in the TARGET frame/units you compose from target_frame_conventions",
+    "quat_target": "quaternion in the TARGET storage order",
+    "confidence": "0..1",
+    "source_age_s": "now - t_captured",
+    "state": "tracking | degraded | lost"
+  },
+  "rules": [
+    "Output >= 24 Hz. pose_source drifts and is biased and has dropouts; hold accuracy by fusing IMU (bounded by the low-rate RTK), not by republishing pose_source or RTK.",
+    "Transform your pose into the TARGET frame defined by target_frame_conventions (compose it yourself; no literal transform is given).",
+    "During a dropout, publish state=degraded/lost with the LAST good pose HELD (or a disclosed decay) - never a fresh pose presented as tracking; source_age_s must grow.",
+    "Reject invalid observations (duplicate / stale / out-of-order) with a reason."
+  ],
+  "submission": {
+    "you_get": [
+      "orion-dev-log.json (with orion-dev-selfcheck.json)",
+      "orion-eval-log.json (RAW - run your service on it and submit the output)"
+    ],
+    "you_submit": [
+      "your output stream on the EVAL log (orion-eval-output.jsonl, one JSON object per line with the output_stream_fields)",
+      "your rejected-observation log {seq, reason}",
+      "a timestamped latency trace",
+      "your service code + config",
+      "the recording + AI session log"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<meta name='robots' content='noindex'>
+<title>orion-dev-selfcheck.json — First Epic</title>
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#0a0a0a;color:#e5e7eb;
+  font-family:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 24px 64px}
+.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.12em;
+  font-size:13px}
+.brand .fe{background:#fff;color:#000;width:28px;height:28px;display:inline-flex;
+  align-items:center;justify-content:center;font-weight:900;font-size:12px}
+.prep{font-size:12px;color:#6b7280} .prep span{color:#cbd5e1;font-weight:500}
+.pill{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;
+  color:#a5b4fc;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.3);
+  border-radius:999px;padding:4px 12px;margin-bottom:14px}
+h1{font-size:26px;margin:0 0 8px;font-weight:700;
+  font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;color:#fff}
+.desc{color:#9ca3af;font-size:15px;line-height:1.55;max-width:70ch;margin:0 0 22px}
+.bar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.dl{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#6366f1,#a855f7);
+  color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:11px 20px;
+  border:0;cursor:pointer;font-family:inherit;
+  border-radius:10px;box-shadow:0 6px 20px rgba(99,102,241,.28)}
+.dl:hover{filter:brightness(1.08)}
+.note{font-size:12px;color:#6b7280}
+pre{background:#1e1e1e;border:1px solid #2b2b2b;border-radius:12px;padding:18px 20px;
+  overflow:auto;max-height:72vh;font-size:12.5px;line-height:1.6;
+  font-family:'SF Mono',SFMono-Regular,ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
+  color:#d4d4d4;white-space:pre;tab-size:2}
+/* JSON token palette — matches the S3 code viewer (VS Code Dark+). */
+.j-key{color:#9cdcfe} .j-str{color:#ce9178} .j-num{color:#b5cea8} .j-kw{color:#569cd6}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:#0a0a0a}
+::-webkit-scrollbar-thumb{background:#33333f;border-radius:8px;border:2px solid #0a0a0a}
+.foot{margin-top:26px;font-size:11px;color:#4b5563}
+</style></head>
+<body><div class='wrap'>
+  <div class='nav'>
+    <div class='brand'><span class='fe'>FE</span> FIRST EPIC</div>
+    <div class='prep'>Prepared for <span>Lightcraft</span></div>
+  </div>
+  <div class='pill'>Workflow-challenge file</div>
+  <h1>orion-dev-selfcheck.json</h1>
+  <p class='desc'>Sparse self-check for the dev log — a handful of keyframes and tolerance bands to validate handedness, scale, and quaternion order.</p>
+  <div class='bar'><button type='button' class='dl' onclick='dlFile()'>&darr;&nbsp; Download orion-dev-selfcheck.json</button><span class='note'>1 KB · full file</span></div>
+  <pre id='filebody'>Loading&hellip;</pre>
+  <div class='foot'>First Epic &middot; original challenge material, provided for review.</div>
+</div><script>
+var _B64="eyJub3RlIjogInNwYXJzZSBrZXlmcmFtZXMgZm9yIHNlbGYtdmFsaWRhdGlvbiBvbmx5OyB0aGUgZ3JhZGVkIGV2YWwgbG9nIGhhcyBubyB0cnV0aCIsICJrZXlmcmFtZXMiOiBbeyJ0IjogMTAwMC4wLCAicG9zX20iOiBbMC4wLCAxLjA1OTkxNCwgMS41MjU0NzZdLCAicXVhdF93eHl6IjogWzAuOTk2ODA3NSwgMC4wNjIwOTk1MywgMC4wNTAwODcxMywgLTAuMDAzMTIwMzVdfSwgeyJ0IjogMTAwMy4wLCAicG9zX20iOiBbMS41NTYxMDcsIDAuODI5MzQ2LCAxLjY0MjI1M10sICJxdWF0X3d4eXoiOiBbMC45ODg5MDgzNSwgMC4wNTAxMjU5MiwgMC4xMDU0MjM5NywgMC4wOTE4MzM4Ml19LCB7InQiOiAxMDA2LjAsICJwb3NfbSI6IFswLjk0OTk3MiwgLTAuMDc0MjYxLCAxLjYxNTI3OF0sICJxdWF0X3d4eXoiOiBbMC45ODE1NDg1NCwgLTAuMDExMzM3MDUsIDAuMDkxNzA1NDcsIDAuMTY3NDAzODNdfSwgeyJ0IjogMTAwOS4wLCAicG9zX20iOiBbLTAuNjQzNTYsIC0xLjAxMjQ4MywgMS40NTU4ODFdLCAicXVhdF93eHl6IjogWzAuOTc5MzMyOTksIC0wLjA2MDczNTQ5LCAwLjAxOTg0MTE0LCAwLjE5MTg5NjkxXX0sIHsidCI6IDEwMTIuMCwgInBvc19tIjogWy0wLjU4MTg5OSwgLTEuMzIwNjk4LCAxLjIzMTAxMl0sICJxdWF0X3d4eXoiOiBbMC45ODQ1MjA0NSwgLTAuMDU3MDM4NjgsIC0wLjA1Nzg4ODM3LCAwLjE1NTI5MDFdfSwgeyJ0IjogMTAxNS4wLCAicG9zX20iOiBbMS4wOTQ1NDIsIC0wLjgxMTA2MiwgMS4wMzUxMTldLCAicXVhdF93eHl6IjogWzAuOTkxNjkzNzgsIC0wLjAwNzg0NDc3LCAtMC4xMDA0NTQ2NSwgMC4wNzk5NDIzMV19LCB7InQiOiAxMDE4LjAsICJwb3NfbSI6IFsxLjcxNzA3OCwgMC4wODUzMzUsIDAuOTUwNDhdLCAicXVhdF93eHl6IjogWzAuOTk0Mzk3OTYsIDAuMDQ1OTM5OCwgLTAuMDk0MTE3NzgsIC0wLjAxNDI4NTU3XX0sIHsidCI6IDEwMjEuMCwgInBvc19tIjogWzAuMTY0NzI4LCAwLjY0NDcxMiwgMS4wMTI2NDVdLCAicXVhdF93eHl6IjogWzAuOTkwODI5MzQsIDAuMDY0NDA2NjQsIC0wLjA0MDc5MjM5LCAtMC4xMTE1NTcxM119LCB7InQiOiAxMDI0LjAsICJwb3NfbSI6IFstMS4zNjI1MTUsIDAuMzk4MzM2LCAxLjE5NTUwM10sICJxdWF0X3d4eXoiOiBbMC45ODI2NjEyOCwgMC4wMzUxNzQ4OCwgMC4wNDA1ODY5MSwgLTAuMTc3NDYwNTVdfSwgeyJ0IjogMTAyNy4wLCAicG9zX20iOiBbLTAuNzQ2Mjg2LCAtMC41MTI3NDcsIDEuNDIyMjUyXSwgInF1YXRfd3h5eiI6IFswLjk3NzIxMzY1LCAtMC4wMTkwNDU2NywgMC4xMDQxNjYyOCwgLTAuMTgzOTU2ODVdfV0sICJiYW5kcyI6IHsicG9zaXRpb25fbWVkaWFuX20iOiAwLjAzLCAicG9zaXRpb25fcDk1X20iOiAwLjA4LCAib3JpZW50YXRpb25fbWVkaWFuX2RlZyI6IDAuOCwgIm9yaWVudGF0aW9uX3A5NV9kZWciOiAyLjUsICJwdWJsaXNoX3JhdGVfaHpfbWluIjogMjR9fQ==",_FN="orion-dev-selfcheck.json";
+function _bytes(){var bin=atob(_B64),a=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++){a[i]=bin.charCodeAt(i);}return a;}
+function _hlJson(j){j=j.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+return j.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,function(m){var c='j-num';if(/^"/.test(m)){c=/:$/.test(m)?'j-key':'j-str';}else if(/true|false|null/.test(m)){c='j-kw';}return '<span class="'+c+'">'+m+'</span>';});}
+(function(){var raw=new TextDecoder().decode(_bytes());var el=document.getElementById('filebody');var pretty,ok=true;try{pretty=JSON.stringify(JSON.parse(raw),null,2);}catch(e){ok=false;pretty=raw;}if(ok){el.innerHTML=_hlJson(pretty);}else{el.textContent=pretty;}})();
+function dlFile(){var url=URL.createObjectURL(new Blob([_bytes()],{type:'application/json'}));var el=document.createElement('a');el.href=url;el.download=_FN;document.body.appendChild(el);el.click();el.remove();setTimeout(function(){URL.revokeObjectURL(url);},2000);}
+</script></body></html>
