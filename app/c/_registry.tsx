@@ -39,6 +39,7 @@ export const CLIENTS: Record<string, ClientMeta> = {
   '55284a02c6f5': { name: "Vela-04 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
   'e4b91c7a2f60': { name: 'Orion-01 (Lightcraft)', password: 'lightcraft-davis' },
   'c9a4e7b2d1f6': { name: 'Orion-02 (Lightcraft)', password: 'lightcraft-davis' },
+  '9f2b1a7c': { name: 'Orion-03 (Lightcraft)', password: 'lightcraft-davis' },
 }
 
 // ---------------------------------------------------------------------------
@@ -145,6 +146,12 @@ export const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
     hero: '/c/c9a4e7b2d1f6/assets/avatar.jpg',
     hook: 'Fused camera, IMU, GPS and RTK into a 48 Hz pose stream at 2.67 cm - with a unit-tested transform into Unreal\'s camera frame that round-trips to 0.0 cm.',
   },
+  '9f2b1a7c': {
+    token: '9f2b1a7c', codename: 'Orion-03', name: 'Sultan M.',
+    role: 'Senior 3D Vision & Real-Time Graphics Engineer',
+    hero: '/c/9f2b1a7c/assets/avatar.jpg',
+    hook: 'Locked camera orientation to 0.12 degrees and held EKF pose fusion through signal dropouts at 48 Hz in the timed challenge.',
+  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -198,7 +205,7 @@ export const POSITIONS: Record<string, PositionMeta> = {
     clientName: 'Lightcraft',
     position: 'Senior 3D Vision & Real-Time Graphics Engineer (Unreal / Reconstruction)',
     password: 'lightcraft-davis',
-    candidateTokens: ['e4b91c7a2f60', 'c9a4e7b2d1f6'],
+    candidateTokens: ['e4b91c7a2f60', 'c9a4e7b2d1f6', '9f2b1a7c'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
@@ -272,8 +279,8 @@ export const HUBS: Record<string, HubMeta> = {
         clientToken: 'a1d8e3f0c6b5',
         codename: 'ORION',
         role: 'Senior 3D Vision & Real-Time Graphics Engineer',
-        avatars: ['orion01.jpg', 'orion02.jpg'],
-        count: 2,
+        avatars: ['orion01.jpg', 'orion02.jpg', 'orion03.jpg'],
+        count: 3,
       },
     ],
     comingSoon: [],

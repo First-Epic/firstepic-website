@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
-import { getPosition, getHub, getHubForPosition } from '../../c/_registry'
+import { getPosition, getHub, getHubForPosition, getPositionCandidates } from '../../c/_registry'
 import CandidateTile from '../_candidate-tile'
 import Tracker from '../../_tracker'
 import PositionChallenge from '../_position-challenge'
@@ -105,7 +105,12 @@ export default function ClientDashboard(
             /// Positions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {hub.positions.map((p) => (
+            {hub.positions.map((p) => {
+              // Finalist count is DERIVED from the position's live candidate list (the single
+              // source of truth), not a hardcoded number that silently drifts when a candidate is
+              // added. Falls back to the tile's own count only if the position isn't registered.
+              const liveCount = getPositionCandidates(p.clientToken).length || p.count
+              return (
               <a
                 key={p.clientToken}
                 href={`/p/${p.clientToken}`}
@@ -133,7 +138,7 @@ export default function ClientDashboard(
                       ))}
                     </div>
                     <span className="text-sm text-gray-500">
-                      {p.count} finalist{p.count !== 1 ? 's' : ''} ready
+                      {liveCount} finalist{liveCount !== 1 ? 's' : ''} ready
                     </span>
                   </div>
                 </div>
@@ -142,7 +147,8 @@ export default function ClientDashboard(
                   <span aria-hidden="true">&rarr;</span>
                 </div>
               </a>
-            ))}
+              )
+            })}
 
             {hub.comingSoon.map((c) => (
               <div

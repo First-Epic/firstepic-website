@@ -293,7 +293,7 @@ function start({
       const start = e.target as Element | null
       if (!start) return
       const el = start.closest?.(
-        '.deck-trigger, .lb-trigger, .folder-tile, [data-track]',
+        '.deck-trigger, .lb-trigger, .folder-tile, [data-tvw-src], [data-track]',
       ) as HTMLElement | null
       if (!el) return
 
@@ -324,6 +324,17 @@ function start({
         emit(inPortfolio ? 'portfolio_open' : 'lightbox_open', {
           label: el.getAttribute('data-lb-title') || '',
           src: el.getAttribute('data-lb-src') || '',
+        })
+        return
+      }
+      if (el.hasAttribute('data-tvw-src')) {
+        // TaliaViewer lightbox (the newer image/media viewer used by code-candidate
+        // pages, e.g. orion-03): an open is a portfolio/image open, tracked like .lb-trigger
+        // so image-opens reach Estelle's session summary.
+        const inPortfolio = Boolean(el.closest('#sec-portfolio'))
+        emit(inPortfolio ? 'portfolio_open' : 'lightbox_open', {
+          label: el.getAttribute('data-tvw-label') || el.getAttribute('alt') || '',
+          src: el.getAttribute('data-tvw-src') || '',
         })
         return
       }
