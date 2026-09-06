@@ -40,6 +40,7 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'e4b91c7a2f60': { name: 'Orion-01 (Lightcraft)', password: 'lightcraft-davis' },
   'c9a4e7b2d1f6': { name: 'Orion-02 (Lightcraft)', password: 'lightcraft-davis' },
   '9f2b1a7c': { name: 'Orion-03 (Lightcraft)', password: 'lightcraft-davis' },
+  'fd3401b6f76d': { name: 'Orion-04 (Lightcraft)', password: 'lightcraft-davis' },
 }
 
 // ---------------------------------------------------------------------------
@@ -152,6 +153,12 @@ export const CANDIDATE_DISPLAY: Record<string, CandidateDisplay> = {
     hero: '/c/9f2b1a7c/assets/avatar.jpg',
     hook: 'Locked camera orientation to 0.12 degrees and held EKF pose fusion through signal dropouts at 48 Hz in the timed challenge.',
   },
+  'fd3401b6f76d': {
+    token: 'fd3401b6f76d', codename: 'Orion-04',
+    hook: 'In the timed challenge: 1.63 cm position error, 0.00° orientation error, 60 Hz publish rate.',
+    hero: '/c/fd3401b6f76d/assets/avatar.jpg', name: 'Arsalan I.',
+    role: 'Senior 3D Vision & Real-Time Graphics Engineer',
+  },
 }
 
 export const POSITIONS: Record<string, PositionMeta> = {
@@ -205,7 +212,7 @@ export const POSITIONS: Record<string, PositionMeta> = {
     clientName: 'Lightcraft',
     position: 'Senior 3D Vision & Real-Time Graphics Engineer (Unreal / Reconstruction)',
     password: 'lightcraft-davis',
-    candidateTokens: ['e4b91c7a2f60', 'c9a4e7b2d1f6', '9f2b1a7c'],
+    candidateTokens: ['e4b91c7a2f60', 'c9a4e7b2d1f6', '9f2b1a7c', 'fd3401b6f76d'],
     get candidates() {
       return this.candidateTokens
         .map((t) => CANDIDATE_DISPLAY[t])
@@ -279,8 +286,8 @@ export const HUBS: Record<string, HubMeta> = {
         clientToken: 'a1d8e3f0c6b5',
         codename: 'ORION',
         role: 'Senior 3D Vision & Real-Time Graphics Engineer',
-        avatars: ['orion01.jpg', 'orion02.jpg', 'orion03.jpg'],
-        count: 3,
+        avatars: ['orion01.jpg', 'orion02.jpg', 'orion03.jpg', 'orion04.jpg'],
+        count: 4,
       },
     ],
     comingSoon: [],
