@@ -116,7 +116,7 @@ export default function CollierSimonStudio() {
           data-media-title="Award-Winning Short Film"
           controlsList="nodownload noremoteplayback noplaybackrate"
           style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/771f261cdcc42f57/collier-shortfilm.mp4.mp4" type="video/mp4" />
+          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/ac7f9a3dbfba53de/collier-shortfilm-n.mp4.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="film-meta"><span className="film-title">Award-Winning Short Film</span><span className="film-kind">Narrative</span></div>
@@ -129,7 +129,7 @@ export default function CollierSimonStudio() {
           data-media-title="Project Horizon (Trailer)"
           controlsList="nodownload noremoteplayback noplaybackrate"
           style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/8fe449a6b53dd7fa/collier-project-horizon.mp4.mp4" type="video/mp4" />
+          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/79b016ecb38e59e2/collier-projecthorizon-n.mp4.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="film-meta"><span className="film-title">Project Horizon (Trailer)</span><span className="film-kind">Trailer</span></div>
@@ -155,7 +155,7 @@ export default function CollierSimonStudio() {
           data-media-title="The Standoff (concept ad)"
           controlsList="nodownload noremoteplayback noplaybackrate"
           style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/973297320a85bc70/collier-the-standoff.mp4.mp4" type="video/mp4" />
+          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/f2a98f3b8d432c71/collier-standoff-n.mp4.mp4" type="video/mp4" />
         </video>
       </div>
       <figcaption><span className="an">The Standoff</span><span className="ak">Concept ad</span></figcaption>
@@ -166,7 +166,7 @@ export default function CollierSimonStudio() {
           data-media-title="Haval (concept ad)"
           controlsList="nodownload noremoteplayback noplaybackrate"
           style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/30d58312c172a065/collier-haval.mp4.mp4" type="video/mp4" />
+          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/6b41eb447cd9b3e7/collier-haval-n.mp4.mp4" type="video/mp4" />
         </video>
       </div>
       <figcaption><span className="an">Haval</span><span className="ak">Concept ad</span></figcaption>
@@ -177,7 +177,7 @@ export default function CollierSimonStudio() {
           data-media-title="Calvin Klein (concept ad)"
           controlsList="nodownload noremoteplayback noplaybackrate"
           style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/e94c5b2cdee805da/collier-calvin-klein.mp4.mp4" type="video/mp4" />
+          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/d842d9b62afd1033/collier-calvinklein-n.mp4.mp4" type="video/mp4" />
         </video>
       </div>
       <figcaption><span className="an">Calvin Klein</span><span className="ak">Concept ad</span></figcaption>
@@ -188,7 +188,7 @@ export default function CollierSimonStudio() {
           data-media-title="Meowlicious (concept ad)"
           controlsList="nodownload noremoteplayback noplaybackrate"
           style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/eb6a79725f9dee83/collier-meowlicious.mp4.mp4" type="video/mp4" />
+          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/def161ebaf6ab41a/collier-meowlicious-n.mp4.mp4" type="video/mp4" />
         </video>
       </div>
       <figcaption><span className="an">Meowlicious</span><span className="ak">Concept ad</span></figcaption>
@@ -199,7 +199,7 @@ export default function CollierSimonStudio() {
           data-media-title="Balloon Planet (concept ad)"
           controlsList="nodownload noremoteplayback noplaybackrate"
           style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/2905a2a41c316af6/collier-balloon-planet.mp4.mp4" type="video/mp4" />
+          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/4d8631ed8c0ed9fc/collier-balloonplanet-n.mp4.mp4" type="video/mp4" />
         </video>
       </div>
       <figcaption><span className="an">Balloon Planet</span><span className="ak">Concept ad</span></figcaption>
@@ -210,7 +210,7 @@ export default function CollierSimonStudio() {
           data-media-title="Chal Dil Merey (music video)"
           controlsList="nodownload noremoteplayback noplaybackrate"
           style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/349b304b0f77bb89/collier-chal-dil-merey.mp4.mp4" type="video/mp4" />
+          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/a6d6ccf479129df3/collier-chaldilmerey-n.mp4.mp4" type="video/mp4" />
         </video>
       </div>
       <figcaption><span className="an">Chal Dil Merey</span><span className="ak">Music video</span></figcaption>
