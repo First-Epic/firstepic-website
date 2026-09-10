@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { CLIENTS, getPositionForCandidate } from '../_registry';
 import AetherLightCraft from '../_clients/aether-lightcraft';
 import CollierSimon from '../_clients/collier-simon';
+import CollierSimonStudio from '../_clients/collier-simon-studio';
 import SiegelGupta from '../_clients/siegel-gupta';
 import CandidateLyra01 from '../_clients/lyra-01';
 import CandidateLyra02 from '../_clients/lyra-02';
@@ -29,6 +30,7 @@ import Tracker from '../../_tracker';
 const COMPONENTS: Record<string, ComponentType> = {
   'f1e5691bd491': AetherLightCraft,
   'c5f085d1a2c0': CollierSimon,
+  'f106140cf026': CollierSimonStudio,
   '86846dc081c6': SiegelGupta,
   '79bb44c4e853': CandidateLyra01,
   'ca86bfd06ed5': CandidateLyra02,
