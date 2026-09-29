@@ -1,3 +1,79 @@
+// Collier.Simon AI Filmmaking Studio - v2 (Arslan-led).
+//
+// MEDIA is the single place to drop in video URLs + posters. Any entry with
+// src: null renders a clearly marked PLACEHOLDER tile (must never ship live).
+// vertical: true = 9:16 source; the tile pillarboxes it cleanly (objectFit contain).
+
+type Media = { src: string | null; poster: string | null; vertical?: boolean };
+
+const BLOB = 'https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments';
+const ASSETS = '/c/f106140cf026/assets';
+
+const MEDIA: Record<string, Media> = {
+  // Arslan's work (existing blob URL reused for the short film)
+  shortfilm: { src: `${BLOB}/ac7f9a3dbfba53de/collier-shortfilm-n.mp4.mp4`, poster: `${ASSETS}/shortfilm.jpg` },
+  horror: { src: `${BLOB}/2f1bf8ccbc072f52/collier-horror.mp4.mp4`, poster: `${ASSETS}/horror.jpg` },
+  stagKing: { src: `${BLOB}/f7af73fcf2dbd2f7/collier-stagKing.mp4.mp4`, poster: `${ASSETS}/stagKing.jpg`, vertical: true },
+  xpotential: { src: `${BLOB}/6a3ac3260eb6d594/collier-xpotential.mp4.mp4`, poster: `${ASSETS}/xpotential.jpg` },
+
+  // More from our AI filmmakers
+  standoff: { src: `${BLOB}/f2a98f3b8d432c71/collier-standoff-n.mp4.mp4`, poster: `${ASSETS}/ad-standoff.jpg` },
+  fastFoodSizzle: { src: `${BLOB}/493a9a700849dcb7/collier-fastFoodSizzle.mp4.mp4`, poster: `${ASSETS}/fastFoodSizzle.jpg` },
+  crumble: { src: `${BLOB}/440d8a6909250a06/collier-crumble.mp4.mp4`, poster: `${ASSETS}/crumble.jpg`, vertical: true },
+  kurkure: { src: `${BLOB}/99f565505afedd2d/collier-kurkure.mp4.mp4`, poster: `${ASSETS}/kurkure.jpg` },
+  goldSnow: { src: `${BLOB}/bb2afe1319b1e245/collier-goldSnow.mp4.mp4`, poster: `${ASSETS}/goldSnow.jpg` },
+  lightbulb: { src: `${BLOB}/65ddef3711a848b1/collier-lightbulb.mp4.mp4`, poster: `${ASSETS}/lightbulb.jpg` },
+  haval: { src: `${BLOB}/6b41eb447cd9b3e7/collier-haval-n.mp4.mp4`, poster: `${ASSETS}/ad-havel.jpg` },
+  kiaSorento: { src: `${BLOB}/6fe60376e3d6fb44/collier-kiaSorento.mp4.mp4`, poster: `${ASSETS}/kiaSorento.jpg` },
+  chalDilMerey: { src: `${BLOB}/a6d6ccf479129df3/collier-chaldilmerey-n.mp4.mp4`, poster: `${ASSETS}/mv-chaldilmerey.jpg` },
+};
+
+const FILMS: { key: string; title: string; kind: string; cap: string }[] = [
+  { key: 'shortfilm', title: 'Award-Winning Short Film', kind: 'Narrative', cap: 'A short film carried by performance, period detail, and mood, made end to end with AI by Arslan, from first concept to final cut.' },
+  { key: 'horror', title: 'Horror Series, Episode One', kind: 'Short episode, under a minute', cap: 'A grieving mother cooks for her son, five years after he vanished in the woods.' },
+  { key: 'stagKing', title: 'The Stag King', kind: 'Vertical series episode', cap: "A hunter tracks a stag through the snow and finds something she didn't expect." },
+  { key: 'xpotential', title: 'Xpotential', kind: 'Brand film', cap: 'A brand and recruiting film for a dental-services company, walking through its services and its AI voice assistant.' },
+];
+
+const TILES: { key: string; title: string; kind: string }[] = [
+  { key: 'standoff', title: 'The Standoff', kind: 'Concept ad' },
+  { key: 'fastFoodSizzle', title: 'Fast Food Sizzle', kind: 'Food' },
+  { key: 'crumble', title: 'Crumble', kind: 'Food' },
+  { key: 'kurkure', title: 'Kurkure', kind: 'Snack' },
+  { key: 'goldSnow', title: 'Gold Snow', kind: 'Product' },
+  { key: 'lightbulb', title: 'Lightbulb', kind: 'Claymation' },
+  { key: 'haval', title: 'Haval', kind: 'Vehicle' },
+  { key: 'kiaSorento', title: 'Kia Sorento', kind: 'Vehicle' },
+  { key: 'chalDilMerey', title: 'Chal Dil Merey', kind: 'Music video' },
+];
+
+const FIT: { h: string; p: string }[] = [
+  { h: 'He brings the idea, not just the hands.', p: "Arslan starts every piece in pre-production: who the character is, what they want, and what the audience should feel, before he generates a single frame. You'll see it in the horror episode below, where a mother cooking for a son who vanished five years ago carries the whole story. The concept does the work, not the effects." },
+  { h: 'He tells a story fast.', p: "The horror episode below lands a complete emotional arc in under a minute, with a setup, a turn, and a final beat. He's brought the same discipline to 100+ media campaigns as a creative director, where the story has to work inside a fixed length and a clear objective." },
+  { h: 'He can lead a team and still execute.', p: "He's led a team of 20 at a marketing agency and has headed a cross-functional team of writers, designers, videographers, and editors. He's also a one-person pipeline who can take a piece from concept to final cut on his own. He could direct your production editors and step in on the work himself." },
+  { h: 'He works across formats.', p: 'The four pieces below cover an award-winning short film, a short horror episode, a vertical series episode for mobile, and a brand and recruiting film for a dental-services company. Same director, four very different briefs.' },
+];
+
+function Vid({ k, title }: { k: string; title: string }) {
+  const m = MEDIA[k];
+  if (!m || !m.src) {
+    return (
+      <div className="ph-media" data-placeholder={k}>
+        <span>PLACEHOLDER</span>
+        <code>MEDIA.{k}</code>
+      </div>
+    );
+  }
+  return (
+    <video controls preload="metadata" playsInline poster={m.poster ?? undefined}
+      data-media-title={title}
+      controlsList="nodownload noremoteplayback noplaybackrate"
+      style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
+      <source src={m.src} type="video/mp4" />
+    </video>
+  );
+}
+
 export default function CollierSimonStudio() {
   return (
     <div>
@@ -95,6 +171,20 @@ export default function CollierSimonStudio() {
   .adtile figcaption{margin:0;padding:12px 14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
   .adtile .an{font-weight:600;color:var(--ink);font-size:.95rem;}
   .adtile .ak{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);white-space:nowrap;}
+  .who-row{display:flex;align-items:center;gap:16px;margin:0 0 22px;}
+  .headshot{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center 30%;flex:none;border:1px solid #374151;box-shadow:0 8px 20px rgba(0,0,0,.4);}
+  @media(min-width:768px){.headshot{width:72px;height:72px;}}
+  .facts{margin-top:22px;}@media(min-width:720px){.facts{grid-template-columns:repeat(3,1fr);}}
+  .stat .f{font-size:1rem;font-weight:700;color:var(--ink);line-height:1.4;}
+  .fitprose{max-width:64ch;}
+  .fitblock{margin:0 0 26px;}.fitblock:last-child{margin-bottom:0;}
+  .fitblock h3{margin-bottom:6px;}
+  .video.vert{aspect-ratio:16/9;}
+  @media(max-width:619px){.video.vert{aspect-ratio:9/16;width:min(100%,calc(78vh * 9 / 16));margin-left:auto;margin-right:auto;}}
+  .ph-media{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+    background:repeating-linear-gradient(45deg,#15161a 0 12px,#101114 12px 24px);border:2px dashed rgba(252,211,77,.55);border-radius:inherit;}
+  .ph-media span{font-size:.72rem;font-weight:800;letter-spacing:.2em;color:var(--amber);}
+  .ph-media code{font-family:"SF Mono",Menlo,Consolas,monospace;font-size:.78rem;color:var(--ink2);}
 `}</style>
 <nav><div className="wrap"><div className="brand"><span className="fe">FE</span> First Epic</div><div className="prep">Prepared exclusively for Collier.Simon</div></div></nav>
 
@@ -102,119 +192,54 @@ export default function CollierSimonStudio() {
   <span className="pill">AI Filmmaking &middot; Capabilities</span>
   <h1>Story first.</h1>
   <div className="role accent">AI filmmaking for Collier.Simon</div>
-  <p className="headline">The AI-film talent we source and place for you. Two original films, each made end to end by a single filmmaker, plus a range of ad and music-video work from finalists we&#x27;ve sourced for other clients.</p>
+  <p className="headline">{"Meet Arslan, the AI filmmaker we'd put on your work first, then a range of ad work from other filmmakers we've sourced, across food, vehicles, product, and animation."}</p>
   <div className="prep-line">Prepared exclusively for Matt and the Collier.Simon team.</div>
 </header>
 
 <section className="wrap">
-  <p className="lbl">/// Original films</p>
-  <p className="prose">These aren&#x27;t ad samples. They&#x27;re here to show the level of craft and storytelling the filmmakers we place can reach, each working solo with AI from first concept to final cut. Watch them the way your clients would.</p>
+  <div className="who-row">
+    <img className="headshot" src="/c/f106140cf026/assets/arslan.jpg" alt="Arslan M." width={72} height={72} />
+    <p className="lbl" style={{ margin: 0 }}>/// Arslan M., AI Filmmaker</p>
+  </div>
+  <p className="prose">{"Arslan is a film-school-trained director with around eight years in production who's moved fully into AI filmmaking over the last two to three years. He's run creative teams and he still does the work himself, from the first idea through script, generation, edit, sound, and color. He's available to start October 1."}</p>
+  <div className="stats facts">
+    <div className="stat"><div className="f">~8 years in film and AI production</div></div>
+    <div className="stat"><div className="f">Led creative teams of up to 20</div></div>
+    <div className="stat"><div className="f">Available October 1</div></div>
+  </div>
+
+  <p className="lbl" style={{ marginTop: '44px' }}>{"/// Why he fits what you're looking for"}</p>
+  <div className="fitprose">
+    {FIT.map((b) => (
+      <div className="fitblock" key={b.h}>
+        <h3>{b.h}</h3>
+        <p className="prose">{b.p}</p>
+      </div>
+    ))}
+  </div>
+
+  <p className="lbl" style={{ marginTop: '44px' }}>/// His work</p>
   <div className="films">
-    <div className="film">
-      <div className="video">
-        <video controls preload="metadata" playsInline poster="/c/f106140cf026/assets/shortfilm.jpg"
-          data-media-title="Award-Winning Short Film"
-          controlsList="nodownload noremoteplayback noplaybackrate"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/ac7f9a3dbfba53de/collier-shortfilm-n.mp4.mp4" type="video/mp4" />
-        </video>
+    {FILMS.map((f) => (
+      <div className="film" key={f.key}>
+        <div className={MEDIA[f.key]?.vertical ? 'video vert' : 'video'}><Vid k={f.key} title={f.title} /></div>
+        <div className="film-meta"><span className="film-title accent">{f.title}</span><span className="film-kind">{f.kind}</span></div>
+        <p className="cap">{f.cap}</p>
       </div>
-      <div className="film-meta"><span className="film-title">Award-Winning Short Film</span><span className="film-kind">Narrative</span></div>
-      <p className="cap">A short narrative film carried by performance, period detail, and mood. One filmmaker, concept through final cut.</p>
-      <div><span className="chip">Narrative</span><span className="chip">One full-stack filmmaker</span><span className="chip">Concept to final cut</span></div>
-    </div>
-    <div className="film">
-      <div className="video">
-        <video controls preload="metadata" playsInline poster="/c/f106140cf026/assets/project-horizon.jpg"
-          data-media-title="Project Horizon (Trailer)"
-          controlsList="nodownload noremoteplayback noplaybackrate"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/79b016ecb38e59e2/collier-projecthorizon-n.mp4.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className="film-meta"><span className="film-title">Project Horizon (Trailer)</span><span className="film-kind">Trailer</span></div>
-      <p className="cap">A cinematic trailer moving across sci-fi worlds, action, and character. The same craft, a different genre and register.</p>
-      <div><span className="chip">Trailer</span><span className="chip">Sci-fi and action</span><span className="chip">One full-stack filmmaker</span></div>
-    </div>
+    ))}
   </div>
 </section>
 
 <section className="wrap spaced">
-  <p className="lbl">/// The two filmmakers</p>
-  <p className="prose">Each film was made by one filmmaker using their own AI credits. What you&#x27;re seeing already stands on its own, and there&#x27;s clear room to push it further with a professional credits budget behind the work. The quality is theirs. Our job, which you&#x27;ve already experienced with your video editor and motion designer placement, is to find that filmmaker, vet them, and give them the infrastructure and support to do their best work for you.</p>
-  <p className="prose" style={{marginTop: '16px', color: 'var(--ink)'}}>Both filmmakers whose work you&#x27;re seeing here are available now for a trial project, and full time beginning October 1 (subject to change).</p>
-</section>
-
-<section className="wrap spaced">
-  <p className="lbl">/// Ad work and a music video</p>
-  <p className="prose" style={{marginBottom: '24px'}}>Beyond original films, here are concept ads and a music video from finalists we&#x27;ve sourced for other clients. These are concept pieces, not commercials made for or sanctioned by the brands shown. The brands appear only to demonstrate what these makers can produce. A few are older, where small defects would be cleaned up in generation or a quick post pass. They&#x27;re here to show range and the quality bar.</p>
+  <p className="lbl">/// More from our AI filmmakers</p>
+  <p className="prose" style={{ marginBottom: '24px' }}>{"A range of ad work from other filmmakers we've sourced, across food, vehicles, product, and animation. These are concept pieces, not commercials made for or sanctioned by the brands shown. The brands appear only to demonstrate what these makers can produce. A few are older, where small defects would be cleaned up in generation or a quick post pass. They're here to show range and the quality bar."}</p>
   <div className="adgrid">
-    <figure className="adtile">
-      <div className="thumb">
-        <video controls preload="metadata" playsInline poster="/c/f106140cf026/assets/ad-standoff.jpg"
-          data-media-title="The Standoff (concept ad)"
-          controlsList="nodownload noremoteplayback noplaybackrate"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/f2a98f3b8d432c71/collier-standoff-n.mp4.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <figcaption><span className="an">The Standoff</span><span className="ak">Concept ad</span></figcaption>
-    </figure>
-    <figure className="adtile">
-      <div className="thumb">
-        <video controls preload="metadata" playsInline poster="/c/f106140cf026/assets/ad-havel.jpg"
-          data-media-title="Haval (concept ad)"
-          controlsList="nodownload noremoteplayback noplaybackrate"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/6b41eb447cd9b3e7/collier-haval-n.mp4.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <figcaption><span className="an">Haval</span><span className="ak">Concept ad</span></figcaption>
-    </figure>
-    <figure className="adtile">
-      <div className="thumb">
-        <video controls preload="metadata" playsInline poster="/c/f106140cf026/assets/ad-calvinklein.jpg"
-          data-media-title="Calvin Klein (concept ad)"
-          controlsList="nodownload noremoteplayback noplaybackrate"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/d842d9b62afd1033/collier-calvinklein-n.mp4.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <figcaption><span className="an">Calvin Klein</span><span className="ak">Concept ad</span></figcaption>
-    </figure>
-    <figure className="adtile">
-      <div className="thumb">
-        <video controls preload="metadata" playsInline poster="/c/f106140cf026/assets/ad-meowlicious.jpg"
-          data-media-title="Meowlicious (concept ad)"
-          controlsList="nodownload noremoteplayback noplaybackrate"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/def161ebaf6ab41a/collier-meowlicious-n.mp4.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <figcaption><span className="an">Meowlicious</span><span className="ak">Concept ad</span></figcaption>
-    </figure>
-    <figure className="adtile">
-      <div className="thumb">
-        <video controls preload="metadata" playsInline poster="/c/f106140cf026/assets/ad-balloonplanet.jpg"
-          data-media-title="Balloon Planet (concept ad)"
-          controlsList="nodownload noremoteplayback noplaybackrate"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/4d8631ed8c0ed9fc/collier-balloonplanet-n.mp4.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <figcaption><span className="an">Balloon Planet</span><span className="ak">Concept ad</span></figcaption>
-    </figure>
-    <figure className="adtile">
-      <div className="thumb">
-        <video controls preload="metadata" playsInline poster="/c/f106140cf026/assets/mv-chaldilmerey.jpg"
-          data-media-title="Chal Dil Merey (music video)"
-          controlsList="nodownload noremoteplayback noplaybackrate"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#000', display: 'block' }}>
-          <source src="https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments/a6d6ccf479129df3/collier-chaldilmerey-n.mp4.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <figcaption><span className="an">Chal Dil Merey</span><span className="ak">Music video</span></figcaption>
-    </figure>
+    {TILES.map((t) => (
+      <figure className="adtile" key={t.key}>
+        <div className={MEDIA[t.key]?.vertical ? 'thumb vert' : 'thumb'}><Vid k={t.key} title={`${t.title} (${t.kind.toLowerCase()})`} /></div>
+        <figcaption><span className="an">{t.title}</span><span className="ak">{t.kind}</span></figcaption>
+      </figure>
+    ))}
   </div>
 </section>
 
