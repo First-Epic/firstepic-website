@@ -136,15 +136,20 @@ export async function POST(request: Request) {
     try {
       const ctrl = new AbortController()
       const t = setTimeout(() => ctrl.abort(), 6000)
-      await fetch(WEBHOOK, {
+      const r = await fetch(WEBHOOK, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-estelle-secret': SECRET },
         body: JSON.stringify({ kind: 'page-event', events: enriched }),
         signal: ctrl.signal,
       })
       clearTimeout(t)
-    } catch {
-      /* best-effort; never break the page */
+      if (!r.ok) {
+        console.error(JSON.stringify({ evt: 'estelle-webhook-failed', route: '/api/track', ...trackLogCtx(enriched), status: r.status }))
+      }
+    } catch (err) {
+      // best-effort; never break the page -- but never fail SILENTLY either (the
+      // 2026-09-12 Estelle outage lost events with no trace). Logged to Vercel runtime logs.
+      console.error(JSON.stringify({ evt: 'estelle-webhook-failed', route: '/api/track', ...trackLogCtx(enriched), error: err instanceof Error ? `${err.name}: ${err.message}` : String(err) }))
     }
   }
 
@@ -155,6 +160,18 @@ export async function POST(request: Request) {
     sameSite: 'lax', path: '/', maxAge: 60 * 60 * 24 * 365,
   })
   return res
+}
+
+// Minimal, secret-free context for a failed-forward log line: which token(s)/pages
+// and which event types were dropped, so a lost batch can be reconstructed.
+function trackLogCtx(events: Array<{ token?: unknown; type?: unknown; pageLabel?: string | null }>) {
+  const uniq = (xs: string[]) => Array.from(new Set(xs.filter(Boolean)))
+  return {
+    tokens: uniq(events.map(e => String(e.token || ''))),
+    pages: uniq(events.map(e => String(e.pageLabel || ''))),
+    types: events.map(e => String(e.type || '')),
+    count: events.length,
+  }
 }
 
 // A URL-safe random id without pulling in Node crypto types (works on the

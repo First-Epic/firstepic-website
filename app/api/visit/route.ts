@@ -41,14 +41,21 @@ export async function POST(request: Request) {
     try {
       const ctrl = new AbortController()
       const t = setTimeout(() => ctrl.abort(), 6000)
-      await fetch(WEBHOOK, {
+      const r = await fetch(WEBHOOK, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-estelle-secret': SECRET },
         body: JSON.stringify({ token, client: meta.name, ip, referrer: request.headers.get('referer') || '' }),
         signal: ctrl.signal,
       })
       clearTimeout(t)
-    } catch { /* best-effort; never break the page */ }
+      if (!r.ok) {
+        console.error(JSON.stringify({ evt: 'estelle-webhook-failed', route: '/api/visit', token, client: meta.name, status: r.status }))
+      }
+    } catch (err) {
+      // best-effort; never break the page -- but never fail SILENTLY either (the
+      // 2026-09-12 Estelle outage lost visits with no trace). Logged to Vercel runtime logs.
+      console.error(JSON.stringify({ evt: 'estelle-webhook-failed', route: '/api/visit', token, client: meta.name, error: err instanceof Error ? `${err.name}: ${err.message}` : String(err) }))
+    }
   }
 
   return NextResponse.json({ ok: true, logged: true })
