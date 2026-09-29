@@ -171,9 +171,9 @@ export default function CollierSimonStudio() {
   .adtile figcaption{margin:0;padding:12px 14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
   .adtile .an{font-weight:600;color:var(--ink);font-size:.95rem;}
   .adtile .ak{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);white-space:nowrap;}
-  .who-row{display:flex;align-items:center;gap:16px;margin:0 0 22px;}
-  .headshot{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center 30%;flex:none;border:1px solid #374151;box-shadow:0 8px 20px rgba(0,0,0,.4);}
-  @media(min-width:768px){.headshot{width:72px;height:72px;}}
+  .who-row{display:flex;align-items:center;gap:28px;margin:0 0 26px;}
+  .headshot{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center 30%;flex:none;border:1px solid #374151;box-shadow:0 8px 20px rgba(0,0,0,.4);}
+  @media(min-width:768px){.headshot{width:200px;height:200px;}}
   .facts{margin-top:22px;}@media(min-width:720px){.facts{grid-template-columns:repeat(3,1fr);}}
   .stat .f{font-size:1rem;font-weight:700;color:var(--ink);line-height:1.4;}
   .fitprose{max-width:64ch;}
@@ -192,16 +192,16 @@ export default function CollierSimonStudio() {
   <span className="pill">AI Filmmaking &middot; Capabilities</span>
   <h1>Story first.</h1>
   <div className="role accent">AI filmmaking for Collier.Simon</div>
-  <p className="headline">{"Meet Arslan, the AI filmmaker we'd put on your work first, then a range of ad work from other filmmakers we've sourced, across food, vehicles, product, and animation."}</p>
-  <div className="prep-line">Prepared exclusively for Matt and the Collier.Simon team.</div>
+  <p className="headline">{"Meet Arslan, an AI filmmaker who could join your team remotely, plus a range of ad work from other filmmakers we've sourced, across food, vehicles, product, and animation."}</p>
+  <div className="prep-line">Prepared exclusively for Matt, Julien, Tucker, and the Collier.Simon team.</div>
 </header>
 
 <section className="wrap">
   <div className="who-row">
-    <img className="headshot" src="/c/f106140cf026/assets/arslan.jpg" alt="Arslan M." width={72} height={72} />
+    <img className="headshot" src="/c/f106140cf026/assets/arslan.jpg" alt="Arslan M." width={200} height={200} />
     <p className="lbl" style={{ margin: 0 }}>/// Arslan M., AI Filmmaker</p>
   </div>
-  <p className="prose">{"Arslan is a film-school-trained director with around eight years in production who's moved fully into AI filmmaking over the last two to three years. He's run creative teams and he still does the work himself, from the first idea through script, generation, edit, sound, and color. He's available to start October 1."}</p>
+  <p className="prose">{"Arslan is a film-school-trained director with around eight years in production who's moved fully into AI filmmaking over the last two to three years. He's run creative teams and he still does the work himself, from the first idea through script, generation, edit, sound, and color. He's available to join your team October 1."}</p>
   <div className="stats facts">
     <div className="stat"><div className="f">~8 years in film and AI production</div></div>
     <div className="stat"><div className="f">Led creative teams of up to 20</div></div>
@@ -231,7 +231,7 @@ export default function CollierSimonStudio() {
 </section>
 
 <section className="wrap spaced">
-  <p className="lbl">/// More from our AI filmmakers</p>
+  <p className="lbl">/// More AI filmmakers we've sourced</p>
   <p className="prose" style={{ marginBottom: '24px' }}>{"A range of ad work from other filmmakers we've sourced, across food, vehicles, product, and animation. These are concept pieces, not commercials made for or sanctioned by the brands shown. The brands appear only to demonstrate what these makers can produce. A few are older, where small defects would be cleaned up in generation or a quick post pass. They're here to show range and the quality bar."}</p>
   <div className="adgrid">
     {TILES.map((t) => (
@@ -248,17 +248,17 @@ export default function CollierSimonStudio() {
   <div className="twocol">
     <div className="panel"><div className="ph">Option one</div>
       <h3>Full-stack AI filmmakers</h3>
-      <p>We source and place full-stack AI filmmakers, each a one-person pipeline covering the whole job: pre-production (concept, script, and storyboard), generation, and post (editing, sound design, color, and final delivery). One maker does what a whole team usually would, working to your direction, exactly like the work above.</p>
+      <p>We source full-stack AI filmmakers who join your team remotely, each a one-person pipeline covering the whole job: pre-production (concept, script, and storyboard), generation, and post (editing, sound design, color, and final delivery). One maker does what a whole team usually would, working to your direction, exactly like the work above.</p>
     </div>
     <div className="panel"><div className="ph">Option two</div>
       <h3>A studio pod</h3>
-      <p>We place a coordinated team with one of them as the point person, and you and your team direct the work. The pod can run as full-stack makers working in parallel, or split the pipeline into specialized roles, one person on pre-production, another on generation, another on post and final cut, so more gets done at once. You can scale up or down as your slate changes.</p>
+      <p>A coordinated group joins your team remotely, with one of them as the point person, and your team directs the work. The pod can run as full-stack makers working in parallel, or split the pipeline into specialized roles, one person on pre-production, another on generation, another on post and final cut, so more gets done at once. You can scale up or down as your slate changes.</p>
     </div>
   </div>
 </section>
 
 <section><div className="cta"><h2 className="accent">Collier.Simon&#x27;s AI filmmaking studio</h2>
-  <p>This could be where your studio begins, whether you start with a single filmmaker or a full pod. The same caliber of work you just watched, talent we source and vet, directed by your team and backed by our infrastructure, built to grow at the pace you set.</p></div></section>
+  <p>This could be where your studio begins, whether you start with a single filmmaker or a full pod. The same caliber of work you just watched, talent we source and vet, working remotely as part of your team, directed by you and backed by our infrastructure, built to grow at the pace you set.</p></div></section>
 
 <footer>&copy; 2026 First Epic. Confidential and proprietary. Prepared exclusively for Collier.Simon.</footer>
     </div>
