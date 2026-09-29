@@ -29,7 +29,7 @@ const MEDIA: Record<string, Media> = {
 };
 
 const FILMS: { key: string; title: string; kind: string; cap: string }[] = [
-  { key: 'shortfilm', title: 'Award-Winning Short Film', kind: 'Narrative', cap: 'A short film carried by performance, period detail, and mood, made end to end with AI by Arslan, from first concept to final cut.' },
+  { key: 'shortfilm', title: 'AI Short Film', kind: 'Narrative', cap: 'A short film carried by performance, period detail, and mood, made end to end with AI by Arslan, from first concept to final cut.' },
   { key: 'horror', title: 'Horror Series, Episode One', kind: 'Short episode, under a minute', cap: 'A grieving mother cooks for her son, five years after he vanished in the woods.' },
   { key: 'stagKing', title: 'The Stag King', kind: 'Vertical series episode', cap: "A hunter tracks a stag through the snow and finds something she didn't expect." },
   { key: 'xpotential', title: 'Xpotential', kind: 'Brand film', cap: 'A brand and recruiting film for a dental-services company, walking through its services and its AI voice assistant.' },
@@ -48,10 +48,10 @@ const TILES: { key: string; title: string; kind: string }[] = [
 ];
 
 const FIT: { h: string; p: string }[] = [
-  { h: 'He brings the idea, not just the hands.', p: "Arslan starts every piece in pre-production: who the character is, what they want, and what the audience should feel, before he generates a single frame. You'll see it in the horror episode below, where a mother cooking for a son who vanished five years ago carries the whole story. The concept does the work, not the effects." },
-  { h: 'He tells a story fast.', p: "The horror episode below lands a complete emotional arc in under a minute, with a setup, a turn, and a final beat. He's brought the same discipline to 100+ media campaigns as a creative director, where the story has to work inside a fixed length and a clear objective." },
-  { h: 'He can lead a team and still execute.', p: "He's led a team of 20 at a marketing agency and has headed a cross-functional team of writers, designers, videographers, and editors. He's also a one-person pipeline who can take a piece from concept to final cut on his own. He could direct your production editors and step in on the work himself." },
-  { h: 'He works across formats.', p: 'The four pieces below cover an award-winning short film, a short horror episode, a vertical series episode for mobile, and a brand and recruiting film for a dental-services company. Same director, four very different briefs.' },
+  { h: "He brings the idea, not just the hands.", p: "Years as a creative director mean Arslan starts with the objective: who it's for, what they should feel, and what they should do next. Then he builds the character and story around it before he generates a single frame. You'll see it in the horror episode below, where a mother cooking for a son who vanished five years ago carries the whole story." },
+  { h: "He's made ads for years, and he tells a story fast.", p: "He's directed 100+ campaigns, including commercials for real estate, restaurant, and consumer brands, and healthcare marketing that's reached millions of viewers. The horror episode below shows the storyteller's side of the same skill: a complete emotional arc in under a minute." },
+  { h: "He can lead a team and still execute.", p: "He's led an agency creative team of 20 across eight real estate developments, and most recently headed a team of screenwriters, designers, videographers, editors, and photographers. He's also a one-person pipeline who can take a piece from concept to final cut on his own. He could direct your production editors and step in on the work himself." },
+  { h: "He has both sides: ad discipline and a storyteller's instincts.", p: "It's rare to find both in one person. The four pieces below cover an AI short film, a short horror episode, a vertical series episode for mobile, and a brand and recruiting film for a dental-services company." },
 ];
 
 function Vid({ k, title }: { k: string; title: string }) {
@@ -201,10 +201,10 @@ export default function CollierSimonStudio() {
     <img className="headshot" src="/c/f106140cf026/assets/arslan.jpg" alt="Arslan M." width={200} height={200} />
     <p className="lbl" style={{ margin: 0 }}>/// Arslan M., AI Filmmaker</p>
   </div>
-  <p className="prose">{"Arslan is a film-school-trained director with around eight years in production who's moved fully into AI filmmaking over the last two to three years. He's run creative teams and he still does the work himself, from the first idea through script, generation, edit, sound, and color. He's available to join your team October 1."}</p>
+  <p className="prose">{"Arslan brings a rare mix. He's spent eight years as a creative director making marketing films for brands and agencies, and today he writes and directs episodic AI drama. He's directed commercials for real estate, restaurant, and consumer brands, plus corporate and healthcare clients, led an agency creative team of 20, and most recently headed a team of screenwriters, designers, videographers, and editors. His films have won festival awards. He takes a piece from the first idea through script, generation, edit, sound, and color himself. He's available to join your team October 1."}</p>
   <div className="stats facts">
-    <div className="stat"><div className="f">~8 years in film and AI production</div></div>
-    <div className="stat"><div className="f">Led creative teams of up to 20</div></div>
+    <div className="stat"><div className="f">8 years directing marketing and brand films</div></div>
+    <div className="stat"><div className="f">100+ brand campaigns</div></div>
     <div className="stat"><div className="f">Available October 1</div></div>
   </div>
 
