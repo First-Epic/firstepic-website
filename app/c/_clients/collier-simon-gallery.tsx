@@ -1,16 +1,56 @@
+'use client';
 // Collier.Simon - silo'd video gallery (6 videos Matt requested to share internally).
 // Separate page/token from the capabilities page (f106140cf026); same login style.
-const BLOB = "https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments";
-const TOK = "6dbbbf98d386";
+// Clean poster + centered play button by default; click reveals native controls
+// (incl. fullscreen) and plays. Real <video> elements so view/play tracking still fires.
+import { useRef, useState } from 'react';
 
-const VIDEOS = [
-  { title: "The Standoff",     poster: "ad-standoff.jpg",     src: `${BLOB}/f2a98f3b8d432c71/collier-standoff-n.mp4.mp4`, vertical: false },
-  { title: "Crumble",          poster: "crumble.jpg",         src: `${BLOB}/440d8a6909250a06/collier-crumble.mp4.mp4`,    vertical: true  },
-  { title: "Haval",            poster: "ad-havel.jpg",        src: `${BLOB}/6b41eb447cd9b3e7/collier-haval-n.mp4.mp4`,    vertical: false },
-  { title: "Kia Sorento",      poster: "kiaSorento.jpg",      src: `${BLOB}/6fe60376e3d6fb44/collier-kiaSorento.mp4.mp4`, vertical: false },
-  { title: "Fast Food Sizzle", poster: "fastFoodSizzle.jpg",  src: `${BLOB}/493a9a700849dcb7/collier-fastFoodSizzle.mp4.mp4`, vertical: false },
-  { title: "Gold Snow",        poster: "goldSnow.jpg",        src: `${BLOB}/bb2afe1319b1e245/collier-goldSnow.mp4.mp4`,   vertical: false },
+const BLOB = 'https://n1gj0ixm5ptx7dl8.public.blob.vercel-storage.com/assessments';
+const TOK = '6dbbbf98d386';
+
+type V = { title: string; poster: string; src: string; vertical: boolean };
+const VIDEOS: V[] = [
+  { title: 'The Standoff',     poster: 'ad-standoff.jpg',    src: `${BLOB}/f2a98f3b8d432c71/collier-standoff-n.mp4.mp4`,    vertical: false },
+  { title: 'Crumble',          poster: 'crumble.jpg',        src: `${BLOB}/440d8a6909250a06/collier-crumble.mp4.mp4`,       vertical: true  },
+  { title: 'Haval',            poster: 'ad-havel.jpg',       src: `${BLOB}/6b41eb447cd9b3e7/collier-haval-n.mp4.mp4`,       vertical: false },
+  { title: 'Kia Sorento',      poster: 'kiaSorento.jpg',     src: `${BLOB}/6fe60376e3d6fb44/collier-kiaSorento.mp4.mp4`,    vertical: false },
+  { title: 'Fast Food Sizzle', poster: 'fastFoodSizzle.jpg', src: `${BLOB}/493a9a700849dcb7/collier-fastFoodSizzle.mp4.mp4`, vertical: false },
+  { title: 'Gold Snow',        poster: 'goldSnow.jpg',       src: `${BLOB}/bb2afe1319b1e245/collier-goldSnow.mp4.mp4`,      vertical: false },
 ];
+
+function Tile({ v }: { v: V }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+  const start = () => {
+    const el = ref.current;
+    if (!el) return;
+    el.controls = true;
+    const p = el.play();
+    if (p && typeof p.then === 'function') p.catch(() => {});
+    setPlaying(true);
+  };
+  return (
+    <div className="card">
+      <video
+        ref={ref}
+        poster={`/c/${TOK}/assets/${v.poster}`}
+        data-media-title={v.title}
+        preload="metadata"
+        playsInline
+        controlsList="nodownload noremoteplayback noplaybackrate"
+        onClick={() => { if (!playing) start(); }}
+      >
+        <source src={v.src} type="video/mp4" />
+      </video>
+      {!playing && (
+        <button type="button" className="play" aria-label={`Play ${v.title}`} onClick={start}>
+          <span aria-hidden="true">&#9654;</span>
+        </button>
+      )}
+      <span className="tag">{v.title}</span>
+    </div>
+  );
+}
 
 export default function CollierSimonGallery() {
   return (
@@ -30,16 +70,24 @@ export default function CollierSimonGallery() {
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase;white-space:nowrap;}
   .fe{width:25px;height:25px;display:grid;place-items:center;background:#fff;color:#0a0a0a;border-radius:6px;font-weight:900;font-size:.7rem;}
   .prep{color:var(--ink3);font-size:.76rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  header{padding:clamp(44px,6vw,72px) 0 clamp(26px,3vw,36px);}
+  header{padding:clamp(64px,8vw,104px) 0 clamp(26px,3vw,36px);}
   .pill{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.06em;color:#c7d2fe;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.22);border-radius:999px;padding:6px 12px;margin-bottom:20px;}
   h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0 0 12px;}
   .sub{color:var(--ink2);font-size:clamp(1rem,1.5vw,1.15rem);max-width:56ch;margin:0;}
   .gallery{column-count:2;column-gap:18px;padding-bottom:28px;}
   @media(max-width:720px){.gallery{column-count:1;}}
   .card{break-inside:avoid;margin:0 0 18px;position:relative;border:1px solid var(--line);
-    border-radius:14px;overflow:hidden;background:#000;}
-  .card video{width:100%;height:auto;display:block;background:#000;}
-  .tag{position:absolute;left:10px;bottom:10px;z-index:2;font-size:.72rem;font-weight:600;color:var(--ink);
+    border-radius:14px;overflow:hidden;background:#000;line-height:0;}
+  .card video{width:100%;height:auto;display:block;background:#000;cursor:pointer;}
+  /* centered play button (hidden once playing) */
+  .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;
+    width:66px;height:66px;border-radius:999px;background:rgba(10,10,10,.5);
+    border:1px solid rgba(255,255,255,.5);color:#fff;display:grid;place-items:center;
+    font-size:1.4rem;padding-left:5px;cursor:pointer;backdrop-filter:blur(3px);
+    transition:transform .18s,background .18s,border-color .18s;}
+  .card:hover .play{transform:translate(-50%,-50%) scale(1.06);background:rgba(99,102,241,.55);border-color:rgba(129,140,248,.8);}
+  /* name tag: fades in on hover, always on for touch; hidden once a control bar is up */
+  .tag{position:absolute;left:10px;bottom:10px;z-index:2;font-size:.72rem;font-weight:600;color:var(--ink);line-height:1.2;
     background:rgba(10,10,10,.62);border:1px solid var(--line);border-radius:7px;padding:4px 9px;
     opacity:0;transition:opacity .18s;pointer-events:none;backdrop-filter:blur(4px);}
   .card:hover .tag{opacity:1;}
@@ -53,29 +101,14 @@ export default function CollierSimonGallery() {
       </div></nav>
 
       <header className="wrap">
-        <span className="pill">First Epic &middot; AI Filmmaking</span>
+        <span className="pill">First Epic &middot; AI Filmmakers</span>
         <h1>Selected <span className="accent">work</span></h1>
         <p className="sub">A sample of what AI filmmakers from First Epic can deliver.</p>
       </header>
 
       <div className="wrap">
         <div className="gallery">
-          {VIDEOS.map((v) => (
-            <div className="card" key={v.title}>
-              <video
-                controls
-                preload="metadata"
-                playsInline
-                poster={`/c/${TOK}/assets/${v.poster}`}
-                data-media-title={v.title}
-                controlsList="nodownload noremoteplayback noplaybackrate"
-                style={{ width: "100%", height: "auto", display: "block", background: "#000" }}
-              >
-                <source src={v.src} type="video/mp4" />
-              </video>
-              <span className="tag">{v.title}</span>
-            </div>
-          ))}
+          {VIDEOS.map((v) => <Tile key={v.title} v={v} />)}
         </div>
       </div>
 
