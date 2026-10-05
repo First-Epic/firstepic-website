@@ -11,6 +11,7 @@ export const CLIENTS: Record<string, ClientMeta> = {
   'c5f085d1a2c0': { name: 'Collier.Simon', password: 'cosi' },
   '86846dc081c6': { name: 'Paul Siegel & Sanjee Gupta', password: 'eagleworld' },
   'f106140cf026': { name: 'Collier.Simon (AI Filmmaking)', password: 'cosiai' },
+  '6dbbbf98d386': { name: 'Collier.Simon (Gallery)', password: 'cosiai' },
   // Candidate presentation (page TYPE differs from the proposal pages above).
   '79bb44c4e853': { name: 'Lyra-01 (Science - Marie Nahon)', password: 'science-marie' },
   'ca86bfd06ed5': { name: 'Lyra-02 (Science - Marie Nahon)', password: 'science-marie' },
