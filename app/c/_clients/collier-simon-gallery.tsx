@@ -63,6 +63,11 @@ export default function CollierSimonGallery() {
     font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  /* canonical dark scrollbar (matches app/globals.css) */
+  ::-webkit-scrollbar{width:10px;}
+  ::-webkit-scrollbar-track{background:rgb(15,23,42);}
+  ::-webkit-scrollbar-thumb{background:rgb(51,65,85);border-radius:5px;}
+  ::-webkit-scrollbar-thumb:hover{background:rgb(71,85,105);}
   .accent{background:linear-gradient(135deg,#6366f1,#a855f7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
   img{max-width:100%;display:block;}
   nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(10,10,10,.82);border-bottom:1px solid var(--line);}
@@ -70,7 +75,7 @@ export default function CollierSimonGallery() {
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase;white-space:nowrap;}
   .fe{width:25px;height:25px;display:grid;place-items:center;background:#fff;color:#0a0a0a;border-radius:6px;font-weight:900;font-size:.7rem;}
   .prep{color:var(--ink3);font-size:.76rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  header{padding:clamp(64px,8vw,104px) 0 clamp(26px,3vw,36px);}
+  header.wrap{padding-top:clamp(64px,8vw,104px);padding-bottom:clamp(26px,3vw,36px);}
   .pill{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.06em;color:#c7d2fe;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.22);border-radius:999px;padding:6px 12px;margin-bottom:20px;}
   h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0 0 12px;}
   .sub{color:var(--ink2);font-size:clamp(1rem,1.5vw,1.15rem);max-width:56ch;margin:0;}
