@@ -39,6 +39,10 @@ export const CLIENTS: Record<string, ClientMeta> = {
   '3b5e50b5b51f': { name: "Vela-03 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
   // Vela-04 (Hassan A.) - resubmitted workflow challenge, live to client 2026-08-14.
   '55284a02c6f5': { name: "Vela-04 (The Artist's Journey - Wilfred Lee)", password: 'journey-wilfred' },
+  // Arslan M. for The Artist's Journey (Wilfred Lee), 2026-10-19. Standalone candidate page
+  // (NOT in a position/hub), with its own password so visits come only via this login.
+  // Label prefix before " (" is what /api/track uses as the candidate name in notifications.
+  '76828a1e8865': { name: "Arslan M. (The Artist's Journey - Wilfred Lee)", password: 'journey-arslan-5252' },
   'e4b91c7a2f60': { name: 'Orion-01 (Lightcraft)', password: 'lightcraft-davis' },
   'c9a4e7b2d1f6': { name: 'Orion-02 (Lightcraft)', password: 'lightcraft-davis' },
   '9f2b1a7c': { name: 'Orion-03 (Lightcraft)', password: 'lightcraft-davis' },

@@ -24,6 +24,7 @@ import CandidateOrion01 from '../_clients/orion-01';
 import CandidateOrion02 from '../_clients/ali-02';
 import CandidateOrion03 from '../_clients/orion-03';
 import CandidateOrion04 from '../_clients/orion-04';
+import ArslanArtistsJourney from '../_clients/arslan-artists-journey';
 import VisitBeacon from '../_visit-beacon';
 import Tracker from '../../_tracker';
 
@@ -51,6 +52,7 @@ const COMPONENTS: Record<string, ComponentType> = {
   'c9a4e7b2d1f6': CandidateOrion02,
   '9f2b1a7c': CandidateOrion03,
   'fd3401b6f76d': CandidateOrion04,
+  '76828a1e8865': ArslanArtistsJourney,
 };
 
 export async function generateMetadata(
